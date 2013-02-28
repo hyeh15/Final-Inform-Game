@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<Skein rootNode="node-0x2b2260" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+  <generator>Zoom</generator>
+  <activeNode nodeId="node-0x5f47de0" />
+  <item nodeId="node-0x2b2260">
+    <command xml:space="preserve">- start -</command>
+    <result xml:space="preserve">
+
+
+
+Game
+An Interactive Fiction by Harrison Yeh
+Release 1 / Serial number 130228 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD
+
+Rivet City
+A busling lively city, full with a market place, bar and hotel.. But remember your task, finding Pinkerton won&apos;t be so easy.
+
+Your friend Joe says &quot;Hey! I heard there was a secret room in the city. Try looking around. I heard it&apos;s really old and no one has ever been there before.&quot;
+
+There&apos;s a security guard dressed in black armor armed with a standard 10 mm SMG.
+
+You can also see an exit here.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="4">NO</temporary>
+    <children>
+      <child nodeId="node-0x2b2300" />
+      <child nodeId="node-0x2b22b0" />
+      <child nodeId="node-0x60c66e0" />
+    </children>
+  </item>
+  <item nodeId="node-0x60c66e0">
+    <command xml:space="preserve">north</command>
+    <result xml:space="preserve">
+Old Closet
+A old closet with a desk.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="4">YES</temporary>
+    <children>
+      <child nodeId="node-0x5f63640" />
+    </children>
+  </item>
+  <item nodeId="node-0x5f63640">
+    <command xml:space="preserve">take all</command>
+    <result xml:space="preserve">(your Combat Shotgun)
+Taken.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="4">YES</temporary>
+    <children>
+      <child nodeId="node-0x5f47de0" />
+    </children>
+  </item>
+  <item nodeId="node-0x5f47de0">
+    <command xml:space="preserve">x combat shotgun</command>
+    <result xml:space="preserve">You see nothing special about your Combat Shotgun.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="3">YES</temporary>
+  </item>
+  <item nodeId="node-0x2b22b0">
+    <command xml:space="preserve">x rivet city</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="4">YES</temporary>
+  </item>
+  <item nodeId="node-0x2b2300">
+    <command xml:space="preserve">x desk</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="3">YES</temporary>
+    <children>
+      <child nodeId="node-0x2b2350" />
+    </children>
+  </item>
+  <item nodeId="node-0x2b2350">
+    <command xml:space="preserve">take combat shotgun</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="2">YES</temporary>
+  </item>
+</Skein>
