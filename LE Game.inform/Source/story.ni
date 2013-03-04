@@ -1,6 +1,9 @@
 "Game" by Harrison Yeh
 
-[Paste everything below this into new story]
+When Play begins:
+	Say "You're in Rivet City. The goal is to find a scientist known as Pinkerton who has barricaded himself in the lower half of the ship. In order to get to him you're going to have to go through the bow."
+
+[Rooms and Scenery]
 
 Rivet City is a room. The description is "A busling lively city, full with a market place, bar and hotel.. But remember your task, finding Pinkerton won't be so easy."
 
@@ -18,6 +21,15 @@ Resturant is scenery. The description is "A small little diner with food. Unfort
 
 Understand "Diner", "food store", "Cafeteria", "snackbar" as Resturant.
 
+Old Closet is a room. It is north of Rivet City. The description of Old Closet is "A old closet with a desk."
+
+Desk is scenery. It is in the Old Closet. The description is "There seems to be some keys on top of it. Better take it."
+
+The exit is a door. The door is locked. The door is closed and openable. The door called exit is west of Rivet City. Understand "door" as the exit. The description is "The exit leads to the bow"
+
+Entrance to bow is a room. It is east of Rivet City.
+
+
 [Health System]
 
 A person has a number called maximum hit points. A person has a number called current hit points.
@@ -25,8 +37,6 @@ A person has a number called maximum hit points. A person has a number called cu
 The maximum hit points of the player is 100.
 
 The current hit points of the player is 100.
-
-
 
 Definition: A person is dead if his current hit points are less than 0.
 
@@ -96,14 +106,14 @@ Joe is a person in Rivet City. "Your friend Joe says 'Hey! I heard there was a s
 An every turn rule:
 	If the player is in Rivet City:
 		Instead of examining Joe: 
-			Say "Joe looks at you and says, 'You need a key to get toeh bow!.'"
+			Say "Joe looks at you and says, 'You need a key to get to the bow!.'"
 			
 The maximum hit points of Joe is 50.
 
 The current hit points of Joe is 50.
 
 Instead of attacking Joe:
-	Say "Don't want to attack your best friend."
+	Say "Don't need to attack him."
 	
 
 [This section for each new character]
@@ -118,58 +128,7 @@ Instead of attacking Joe:
 	Say "Don't want to attack a guard."
 	
 
-Old Closet is a room. It is north of Rivet City. The description of Old Closet is "A old closet with a desk."
-
-Desk is scenery. It is in the Old Closet. The description is "There seems to be some keys on top of it. Better take it."
-
-Understand "table" as desk.
-
-Needles, Sword, Health Potion, Stimpak, and Lock Pick are on the Desk. Sword is a Weapon. The Maximum Damage of Sword is 75. Lock Pick is a thing. Bacon Strips is a weapon. The maximum damage of Bacon Strips is -200. Health Potion is a Weapon. The maximum damage of Health Potion is -200. 
-
-The exit is a door. The door is locked. The door is closed and openable. The door called exit is west of Rivet City. Understand "door" as the exit.
-
-Entrance to bow is a room. It is east of Rivet City. 
-
-understand the command "use" as something new. understand "use [things]" as using. using is an action applying to one thing.
-
-
-[Combinations]
-
-Understand "combine [something] with [something]" as combining it with. Combining it with is an action applying to two carried things. 
-
-Understand the command "attach" as something new. Understand "attach [something] to [something]" as combining it with. Understand the command "connect" as "combine".	
-
-The combining it with action has an object called the item built.
-
-Setting action variables for combining something with something: 
-	let X be a list of objects; 
-	add the noun to X; 
-	add the second noun to X; 
-	sort X; 
-	repeat through the Table of Outcome Objects: 
-		let Y be the component list entry; 
-		sort Y; 
-		if X is Y: 
-			now the item built is the result entry.
-Check combining it with: 
-	if the item built is nothing, 
-		say "You can't combine [the noun] and [the second noun] into anything useful." instead.
-Carry out combining it with: 
-	move the item built to the holder of the noun; 
-Report combining it with: 
-	say "You now have [an item built]!".
-
-	
-Table of Outcome Objects
-component list			result   
-{Sword, needles}			Ripper
-
-Ripper is a weapon. The maximum damage of Ripper is 130. 
 
 
 
 
-
-	
-
-	
