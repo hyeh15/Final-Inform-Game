@@ -1,7 +1,16 @@
-"Game" by Harrison Yeh
+"FIND THE SCIENTIST" by Harrison Yeh
+
+The description of player is "I'm so cool. My sheriff's hat and shades could attract any lady of the wasteland."
 
 When Play begins:
 	Say "You're in Rivet City. The goal is to find a scientist known as Pinkerton who has barricaded himself in the lower half of the ship. In order to get to him you're going to have to go through the bow."
+
+Understand "[any room]" as going by name. Understand "go to [any room]" as going by name.
+Going by name is an action applying to one thing.
+
+Check going by name: 
+    if the noun is the location, say "You're already in [the location]." instead; 
+    if the noun is not adjacent and the noun is unvisited, say "The noun you said doesn't make any sense" instead.
 
 [Rooms and Scenery]
 
@@ -21,13 +30,23 @@ Resturant is scenery. The description is "A small little diner with food. Unfort
 
 Understand "Diner", "food store", "Cafeteria", "snackbar" as Resturant.
 
-Old Closet is a room. It is north of Rivet City. The description of Old Closet is "A old closet with a desk."
+Old Closet is a room. It is north of Rivet City. The description of Old Closet is "A old closet with a rusty stand and some keys."
 
-Desk is scenery. It is in the Old Closet. The description is "There seems to be some keys on top of it. Better take it."
+Rusty Stand is scenery. It is in Old Closet. The description is "A really rusty stand. I'm surprised it's still standing! But there appears to be some keys on it."
+
+Keys is on the Rusty stand. The Keys unlocks the exit. The description is "Keys to the bow."
 
 The exit is a door. The door is locked. The door is closed and openable. The door called exit is west of Rivet City. Understand "door" as the exit. The description is "The exit leads to the bow"
 
-Entrance to bow is a room. It is east of Rivet City.
+Entrance to bow is a room. It is east of Rivet City. The description is "Well no place to go but down!"
+
+Lower Bow is a room. It is south of Entrance to bow. The description is "There appears to be an old armory here to the left. Better go through the stuff just in case but I'm not expecting any laser tech. There's also a stairway to the Engine Room."
+
+Armory is a room. It is west of Bow. The description is "Well, might as well take this old gun."
+
+Desk is scenery. It is in the armory.
+
+Engine is a room. It is south of Lower Bow. "Mutated hostile creatures are wandering around."
 
 
 [Health System]
@@ -43,7 +62,11 @@ Definition: A person is dead if his current hit points are less than 0.
 An every turn rule:
 	If the player is dead:
 		end the game saying "Game Over".
-	
+
+An every turn rule:
+	If the player is in Lower Bow:
+		Decrease the current hit points of the player by 2.
+
 [Combat System]
 	
 A weapon is a kind of thing. A weapon has a number called maximum damage. The maximum damage of a weapon is usually 20.
@@ -74,7 +97,7 @@ Carry out an actor attacking something with something (this is the standard atta
 
 Understand "shoot [someone] with [something preferably held]" or "kill [someone] with [something preferably held]" or "murder [someone] with [something preferably held]" or "hit [someone] with [something preferably held]" or "heal [someone] with [something preferably held]" or "whack [someone] with [something preferably held]" or "slap [someone] with [something preferably held]" or "punch [someone] with [something preferably held]" as attacking it with.
 
-Your Combat Shotgun is in the Desk. "You'll be needing that."
+Your Combat Shotgun is in the Desk. "An old fashioned shotgun. Better than nothing."
 
 Understand "Combat Shotgun" or "Gun" as your Combat Shotgun.
 
@@ -101,12 +124,15 @@ Report someone attacking something with something (this is the standard report a
 		
 [This section for each new character]
 
-Joe is a person in Rivet City. "Your friend Joe says 'Hey! I heard there was a secret room in the city. Try looking around. I heard it's really old and no one has ever been there before.'"
+Joe is a person in Rivet City. "A greeter sits by the entrance of rivet city."
+
+Understand "secretary", "greeter" as Joe.
+
 
 An every turn rule:
 	If the player is in Rivet City:
 		Instead of examining Joe: 
-			Say "Joe looks at you and says, 'You need a key to get to the bow!.'"
+			Say "You explain your mission to the greeter. He is happy to help you and says 'You need a key to get to the bow.'"
 			
 The maximum hit points of Joe is 50.
 
@@ -118,15 +144,34 @@ Instead of attacking Joe:
 
 [This section for each new character]
 
-Security Guard is a person in Rivet City. "There's a security guard dressed in black armor armed with a standard 10 mm SMG."
+Security Guard is a person in Rivet City. "Rivet City is well protected."
 			
 The maximum hit points of Security Guard is 60.
 
 The current hit points of Security Guard is 60.
 
+Understand "guard", "soldier", "militant" as Security Guard.
+
 Instead of attacking Joe:
 	Say "Don't want to attack a guard."
 	
+
+[Character]
+
+The maximum hit points of Mirelurk is 50.
+
+The current hit points of Mirelurk is 50.
+
+When play begins: 
+	now the left hand status line is "You: [current hit points of player]"; 
+	now the right hand status line is "Mirelurk: [current hit points of Mirelurk]".
+	
+Every turn (this is the Mirelurk-attack rule): 
+	if Mirelurk is not dead:
+		if the current hit points of Mirelurk is less than 50, try Mirelurk attacking the player with a random weapon which is carried by Mirelurk.
+		
+	
+Mirelurk is a person in Engine. Mirelurk carries a weapon called Claws. The Maximum Damage of Claws is 30. Mirelurk carries a weapon called Screech. The Maximum Damage of Screech is 75. Mirelurk carries a weapon called Nothing. The Maximum Damage of Nothing is 0.
 
 
 
