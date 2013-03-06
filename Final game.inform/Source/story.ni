@@ -1,9 +1,9 @@
 "FIND THE SCIENTIST" by Harrison Yeh
 
-The description of player is "I'm so cool. My sheriff's hat and shades could attract any lady of the wasteland."
+The description of player is "I'm so cool. My sheriff's hat could attract any lady of the wasteland."
 
 When Play begins:
-	Say "You're in Rivet City. The goal is to find a scientist known as Pinkerton who has barricaded himself in the lower half of the ship. In order to get to him you're going to have to go through the bow."
+	Say "You're in Rivet City. The goal is to find a scientist known as Pinkerton who has barricaded himself in the lower half of the ship. In order to get to him you're going to have to go through the bow. There seems to be a mysterious old door to the south, better check that out first."
 
 Understand "[any room]" as going by name. Understand "go to [any room]" as going by name.
 Going by name is an action applying to one thing.
@@ -14,9 +14,9 @@ Check going by name:
 
 [Rooms and Scenery]
 
-Rivet City is a room. The description is "A busling lively city, full with a market place, bar and hotel.. But remember your task, finding Pinkerton won't be so easy."
+Rivet City is a room. The description is "A busling lively city, full with a market place to the east, bar and hotel.. But remember your task, finding Pinkerton won't be so easy."
 
-Market Place is room. It is north of Rivet City. The description is "A market place with an ammunitions shop, an attire shop and a resturant."
+Market Place is room. It is east of Rivet City. The description is "A market place with an ammunitions shop, an attire shop and a resturant."
 
 Ammunitions shop is scenery. The description is "Ammo and guns everywhere, too bad I'm broke."
 
@@ -32,26 +32,47 @@ Understand "Diner", "food store", "Cafeteria", "snackbar" as Resturant.
 
 Old Closet is a room. It is north of Rivet City. The description of Old Closet is "A old closet with a rusty stand and some keys."
 
-Hotel is a room it is east of Market place. "There seems to be an old caretaker and a robbot butler named 'Mr Gusty'"
+Hotel is a room. It is north of Market place. "There seems to be an old caretaker and a robbot butler named 'Mr Gusty'"
 
-Caretaker is a person in the Hotel. 
+Caretaker is a person in the Hotel. "Seems senile… Talking to her won't do any good."
+
+Mr Gusty is a person in the hotel. "He says 'How may I help you sir?' but doesn't seem to know anything."
+
+Counter is scenery. It is in the hotel. 
+
+Shades is a thing. It is wearable. It is on the counter. The description is "These shades are pretty cool!"
 
 Rusty Stand is scenery. It is in Old Closet. The description is "A really rusty stand. I'm surprised it's still standing! But there appears to be some keys on it."
 
 Keys is on the Rusty stand. The Keys unlocks the exit. The description is "Keys to the bow."
 
-The exit is a door. The door is locked. The door is closed and openable. The door called exit is west of Rivet City. Understand "door" as the exit. The description is "The exit leads to the bow"
+The exit is a door. The door is locked. The door is closed and openable. The exit is south of Rivet City and north of Entrance to Bow. The description is "The exit leads to the bow"
 
-Entrance to bow is a room. It is east of Rivet City. The description is "Well no place to go but down!"
+Understand "door" as the exit. 
+
+Entrance to bow is a room. The description is "Well no place to go but down!"
 
 Lower Bow is a room. It is south of Entrance to bow. The description is "There appears to be an old armory here to the left. Better go through the stuff just in case but I'm not expecting any laser tech. There's also a stairway to the Engine Room."
 
 Armory is a room. It is west of Bow. The description is "Well, might as well take this old gun."
 
+An every turn rule:
+	If the Combat Shotgun is not in the armory and Player is in the armory:
+		change the description of the armory to "You already took the gun."
+
 Desk is scenery. It is in the armory.
 
-Engine is a room. It is south of Lower Bow. "Mutated hostile creatures are wandering around."
+Engine is a room. It is south of Lower Bow. "Mutated hostile creatures are wandering around. Hopefully if I kill enough of them the key will drop. I better take all the loot after killing one."
 
+Corridor is a door. It is south of engine. It is locked. 
+
+Ancient key is a thing. It unlocks the Corridor. The description is "This old key seems to unlock the door to the next room!"
+
+An every turn rule:
+	if the Mirelurk is dead:
+		move Ancient Key to Engine.
+	
+Laboratory is a room. It is south of Corridor. "Pinkerton's lab is a huge pile of filth…. But at least Pinkerton is here."
 
 [Health System]
 
@@ -68,14 +89,23 @@ An every turn rule:
 		end the game saying "Game Over".
 
 An every turn rule:
-	If the player is in Lower Bow:
-		Decrease the current hit points of the player by 2.
+	If the player is in Engine:
+		Decrease the current hit points of the player by 5.
 
 [Combat System]
 	
 A weapon is a kind of thing. A weapon has a number called maximum damage. The maximum damage of a weapon is usually 20.
 		
 Attacking it with is an action applying to one visible thing and one carried thing. Understand "attack [someone] with [something preferably held]" as attacking it with.
+
+Instead of attacking the mirelurk:
+	say "What do I attack the mirelurk with?"
+	
+Instead of attacking the Super Mutant:
+	say "What do I attack the Super Mutant with?"
+	
+Instead of attacking the Mutated Crab:
+	say "What do I attack the Mutated Crab with?"
 
 The attacking it with action has a number called damage inflicted.
 
@@ -136,7 +166,7 @@ Understand "secretary", "greeter" as Joe.
 An every turn rule:
 	If the player is in Rivet City:
 		Instead of examining Joe: 
-			Say "You explain your mission to the greeter. He is happy to help you and says 'You need a key to get to the bow.'"
+			Say "You explain your mission to the greeter. He is happy to help you and says 'You need a key to get to the bow. But no one has been there in a long time.'"
 			
 The maximum hit points of Joe is 50.
 
@@ -177,6 +207,11 @@ Every turn (this is the Mirelurk-attack rule):
 	
 Mirelurk is a person in Engine. Mirelurk carries a weapon called Claws. The Maximum Damage of Claws is 15. Mirelurk carries a weapon called Screech. The Maximum Damage of Screech is 20. Mirelurk carries a weapon called Nothing. The Maximum Damage of Nothing is 0.
 
+An every turn rule:
+	if the Mirelurk is dead:
+		Say "The key to the corridor dropped!"
+
+
 [Character]
 
 The maximum hit points of Mutated Crab is 50.
@@ -210,6 +245,4 @@ Every turn (this is the Super Mutant-attack rule):
 		
 	
 Super Mutant is a person in Engine. Mutated Crab carries a weapon called Assault Rifle. The Maximum Damage of Assault Rifle is 20.
-
-
 
