@@ -8,25 +8,50 @@ When Play begins:
 Understand "[any room]" as going by name. Understand "go to [any room]" as going by name.
 Going by name is an action applying to one thing.
 
+Rule for deciding whether all includes something: it does not.
+
+Rule for printing a parser error when the latest parser error is the nothing to do error:
+   say "Hey stop that! All is disabled." instead
+
 Check going by name: 
     if the noun is the location, say "You're already in [the location]." instead; 
     if the noun is not adjacent and the noun is unvisited, say "The noun you said doesn't make any sense" instead.
 
+[healing items]
+
+The Stimpak is an object. The printed name is "Stimpak x [salve-count]". The Stimpak has a number called salve-count. The salve-count of the Stimpak is usually 0. It is in the loot. the description is "A blue-brown paste with a strong smell. I can probably [bold type]use[roman type] this to heal myself if I get hurt.".
+
+
+understand "use" as eating.
+
+Instead of eating the Stimpak:
+	increase the current hit points of the player by 50;
+	say "The Stimpak heals you![line break](Health: [the current hit points of the player])";
+	
+
+
+
+
+
 [Rooms and Scenery]
+
+Understand "talk to [person]" as examining.
+
+Understand "speak to [person]" as examining. 
 
 Rivet City is a room. The description is "A busling lively city, full with a market place to the east, bar and hotel.. But remember your task, finding Pinkerton won't be so easy."
 
-Market Place is room. It is east of Rivet City. The description is "A market place with an ammunitions shop, an attire shop and a resturant."
+Market Place is room. It is east of Rivet City. The description is "A market place with an ammunitions shop, an attire shop and a resturant. There seems to be a hotel to the north…."
 
-Ammunitions shop is scenery. The description is "Ammo and guns everywhere, too bad I'm broke."
+Ammunitions shop is scenery. It is in Market Place. The description is "Ammo and guns everywhere, too bad I'm broke."
 
 Understand "gun store", "ammo shop", "gun place", "Ammunition Shop", "Shrapnel" as Ammunitions shop.
 
-Attire Shop is scenery. The description is "A store called Patomic Attire, selling some standard goods."
+Attire Shop is scenery. It is in Market Place. The description is "A store called Patomic Attire, selling some standard goods."
 
 Understand "clothing store", "clothes store", "Attire store" as Attire shop.
 
-Resturant is scenery. The description is "A small little diner with food. Unfortunately I'm not hungry."
+Resturant is scenery. It is in Market Place. The description is "A small little diner with food. Unfortunately I'm not hungry."
 
 Understand "Diner", "food store", "Cafeteria", "snackbar" as Resturant.
 
@@ -38,15 +63,21 @@ Caretaker is a person in the Hotel. "Seems senile… Talking to her won't do any
 
 Mr Gusty is a person in the hotel. "He says 'How may I help you sir?' but doesn't seem to know anything."
 
-Counter is scenery. It is in the hotel. 
+The Counter is scenery. It is in the hotel. 
 
 Shades is a thing. It is wearable. It is on the counter. The description is "These shades are pretty cool!"
+
+An every turn rule:
+	If player is wearing Shades:
+		Increase current hit points by 1. 
 
 Rusty Stand is scenery. It is in Old Closet. The description is "A really rusty stand. I'm surprised it's still standing! But there appears to be some keys on it."
 
 Keys is on the Rusty stand. The Keys unlocks the exit. The description is "Keys to the bow."
 
-The exit is a door. The door is locked. The door is closed and openable. The exit is south of Rivet City and north of Entrance to Bow. The description is "The exit leads to the bow"
+Understand "key" as Keys.
+
+The exit is a door. The door is locked. The door is closed and openable. The exit is south of Rivet City and north of Entrance to Bow. The description is "The exit leads to the bow, I bet Pinkerton is down there."
 
 Understand "door" as the exit. 
 
@@ -71,8 +102,23 @@ Ancient key is a thing. It unlocks the Corridor. The description is "This old ke
 An every turn rule:
 	if the Mirelurk is dead:
 		move Ancient Key to Engine.
+		
+A mine is a thing. It is in the stairwell. A thing can be armed or disarmed. Mine is not portable. Mine is armed.
+
+Understand "disarm [something]" as disarming it. Disarming it is an action applying to one thing. 
+
+Check Disarming it: 
+	If the noun is not the mine:
+		Say "You can't disarm that".
+		
+Instead of going south when player is in stairwell: 
+	If mine is armed:
+		Say "There's a mine in the way, better disarm it."
+		  
+
+Stairwell is a room. It is south of corridor. "I think this is the way to the lab…"
 	
-Laboratory is a room. It is south of Corridor. "Pinkerton's lab is a huge pile of filth…. But at least Pinkerton is here."
+Laboratory is a room. It is east of Stairwell. "Pinkerton's lab is a huge pile of filth…. But at least Pinkerton is here."
 
 [Health System]
 
@@ -133,9 +179,9 @@ Understand "shoot [someone] with [something preferably held]" or "kill [someone]
 
 Your Combat Shotgun is in the Desk. "An old fashioned shotgun. Better than nothing."
 
-Understand "Combat Shotgun" or "Gun" as your Combat Shotgun.
+Understand "Shotgun" or "Gun" as your Combat Shotgun.
 
-Your Combat Shotgun is a weapon. The maximum damage of the Your Combat Shotgun is 120.
+Your Combat Shotgun is a weapon. The maximum damage of the Your Combat Shotgun is 90.
 
 Instead of going nowhere, say "There is nothing in that direction."
 
@@ -175,6 +221,15 @@ The current hit points of Joe is 50.
 Instead of attacking Joe:
 	Say "Don't need to attack him."
 	
+[This section for each new character]
+
+Caretaker is a person in Hotel.
+			
+The maximum hit points of Caretaker is 60.
+
+The current hit points of Caretaker is 60.
+
+Understand "Manager" as Caretaker.
 
 [This section for each new character]
 
@@ -209,7 +264,7 @@ Mirelurk is a person in Engine. Mirelurk carries a weapon called Claws. The Maxi
 
 An every turn rule:
 	if the Mirelurk is dead:
-		Say "The key to the corridor dropped!"
+		Say "The Mirelurk had the key to the corridor!"
 
 
 [Character]
@@ -246,3 +301,7 @@ Every turn (this is the Super Mutant-attack rule):
 	
 Super Mutant is a person in Engine. Mutated Crab carries a weapon called Assault Rifle. The Maximum Damage of Assault Rifle is 20.
 
+Understand "door" as corridor.
+
+Instead of player unlocking corridor with key:
+	Say "Keys won't do it, the ancient keys would work better."

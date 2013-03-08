@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<Skein rootNode="node-0x243320" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+<Skein rootNode="node-0x2ada80" xmlns="http://www.logicalshift.org.uk/IF/Skein">
   <generator>Zoom</generator>
-  <activeNode nodeId="node-0x243320" />
-  <item nodeId="node-0x243320">
+  <activeNode nodeId="node-0x2ada80" />
+  <item nodeId="node-0x2ada80">
     <command xml:space="preserve">- start -</command>
     <result xml:space="preserve">
 
@@ -12,7 +12,7 @@ You&apos;re in Rivet City. The goal is to find a scientist known as Pinkerton wh
 
 FIND THE SCIENTIST
 An Interactive Fiction by Harrison Yeh
-Release 1 / Serial number 130306 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD
+Release 1 / Serial number 130308 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD
 
 Rivet City
 A busling lively city, full with a market place to the east, bar and hotel.. But remember your task, finding Pinkerton won&apos;t be so easy.
@@ -26,23 +26,23 @@ You can also see an exit here.
 &gt;</result>
     <played>YES</played>
     <changed>NO</changed>
-    <temporary score="122">NO</temporary>
+    <temporary score="46">NO</temporary>
     <children>
-      <child nodeId="node-0x54ac20" />
-      <child nodeId="node-0x55b68a0" />
-      <child nodeId="node-0x5055700" />
-      <child nodeId="node-0x5054620" />
-      <child nodeId="node-0x5013610" />
-      <child nodeId="node-0x243390" />
-      <child nodeId="node-0x5054e30" />
-      <child nodeId="node-0x5054f90" />
-      <child nodeId="node-0x5054c70" />
-      <child nodeId="node-0x9ac6740" />
-      <child nodeId="node-0x5054c00" />
-      <child nodeId="node-0x5055000" />
+      <child nodeId="node-0x50bf160" />
+      <child nodeId="node-0x50bec20" />
+      <child nodeId="node-0x50be360" />
+      <child nodeId="node-0xc9a7280" />
+      <child nodeId="node-0x50bd950" />
+      <child nodeId="node-0x50bcf40" />
+      <child nodeId="node-0x50bc3e0" />
+      <child nodeId="node-0x50bbf10" />
+      <child nodeId="node-0x94dfc00" />
+      <child nodeId="node-0x50bb500" />
+      <child nodeId="node-0x50bb420" />
+      <child nodeId="node-0x2adaf0" />
     </children>
   </item>
-  <item nodeId="node-0x5055000">
+  <item nodeId="node-0x2adaf0">
     <command xml:space="preserve">north</command>
     <result xml:space="preserve">
 Old Closet
@@ -53,13 +53,15 @@ On Rusty Stand is Keys.
 &gt;</result>
     <played>YES</played>
     <changed>NO</changed>
-    <temporary score="122">YES</temporary>
+    <temporary score="28">YES</temporary>
     <children>
-      <child nodeId="node-0x50551c0" />
-      <child nodeId="node-0x5055070" />
+      <child nodeId="node-0x50bb110" />
+      <child nodeId="node-0x50bad20" />
+      <child nodeId="node-0x2adc70" />
+      <child nodeId="node-0x2adb40" />
     </children>
   </item>
-  <item nodeId="node-0x5055070">
+  <item nodeId="node-0x2adb40">
     <command xml:space="preserve">TAKE KEYS</command>
     <result xml:space="preserve">Taken.
 
@@ -68,10 +70,10 @@ On Rusty Stand is Keys.
     <changed>YES</changed>
     <temporary score="44">YES</temporary>
     <children>
-      <child nodeId="node-0x50550e0" />
+      <child nodeId="node-0x2adb90" />
     </children>
   </item>
-  <item nodeId="node-0x50550e0">
+  <item nodeId="node-0x2adb90">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">
 Rivet City
@@ -88,10 +90,10 @@ You can also see an exit here.
     <changed>YES</changed>
     <temporary score="44">YES</temporary>
     <children>
-      <child nodeId="node-0x5055150" />
+      <child nodeId="node-0x2adc00" />
     </children>
   </item>
-  <item nodeId="node-0x5055150">
+  <item nodeId="node-0x2adc00">
     <command xml:space="preserve">east</command>
     <result xml:space="preserve">
 Entrance to bow
@@ -102,7 +104,7 @@ Well no place to go but down!
     <changed>YES</changed>
     <temporary score="43">YES</temporary>
   </item>
-  <item nodeId="node-0x50551c0">
+  <item nodeId="node-0x2adc70">
     <command xml:space="preserve">take all</command>
     <result xml:space="preserve">(Keys)
 Taken.
@@ -112,10 +114,10 @@ Taken.
     <changed>NO</changed>
     <temporary score="122">YES</temporary>
     <children>
-      <child nodeId="node-0x5055230" />
+      <child nodeId="node-0x2ade10" />
     </children>
   </item>
-  <item nodeId="node-0x5055230">
+  <item nodeId="node-0x2ade10">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">
 Rivet City
@@ -132,11 +134,11 @@ You can also see an exit here.
     <changed>NO</changed>
     <temporary score="122">YES</temporary>
     <children>
-      <child nodeId="node-0x9aa51a0" />
-      <child nodeId="node-0x50552a0" />
+      <child nodeId="node-0x50b9cb0" />
+      <child nodeId="node-0x2adf00" />
     </children>
   </item>
-  <item nodeId="node-0x50552a0">
+  <item nodeId="node-0x2adf00">
     <command xml:space="preserve">east</command>
     <result xml:space="preserve">
 Entrance to bow
@@ -147,10 +149,10 @@ Well no place to go but down!
     <changed>YES</changed>
     <temporary score="40">YES</temporary>
     <children>
-      <child nodeId="node-0x5055310" />
+      <child nodeId="node-0x2adf50" />
     </children>
   </item>
-  <item nodeId="node-0x5055310">
+  <item nodeId="node-0x2adf50">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">
 Lower Bow
@@ -161,10 +163,10 @@ There appears to be an old armory here. Better go through the stuff just in case
     <changed>YES</changed>
     <temporary score="40">YES</temporary>
     <children>
-      <child nodeId="node-0x5055380" />
+      <child nodeId="node-0x2adfa0" />
     </children>
   </item>
-  <item nodeId="node-0x5055380">
+  <item nodeId="node-0x2adfa0">
     <command xml:space="preserve">WEST</command>
     <result xml:space="preserve">
 Armory
@@ -175,10 +177,10 @@ Well, might as well take everything.
     <changed>YES</changed>
     <temporary score="40">YES</temporary>
     <children>
-      <child nodeId="node-0x50553f0" />
+      <child nodeId="node-0x2ae010" />
     </children>
   </item>
-  <item nodeId="node-0x50553f0">
+  <item nodeId="node-0x2ae010">
     <command xml:space="preserve">take all</command>
     <result xml:space="preserve">your Combat Shotgun: Taken.
 
@@ -187,10 +189,10 @@ Well, might as well take everything.
     <changed>YES</changed>
     <temporary score="40">YES</temporary>
     <children>
-      <child nodeId="node-0x5055460" />
+      <child nodeId="node-0x2ae080" />
     </children>
   </item>
-  <item nodeId="node-0x5055460">
+  <item nodeId="node-0x2ae080">
     <command xml:space="preserve">north</command>
     <result xml:space="preserve">There is nothing in that direction.
 
@@ -199,10 +201,10 @@ Well, might as well take everything.
     <changed>YES</changed>
     <temporary score="40">YES</temporary>
     <children>
-      <child nodeId="node-0x50554d0" />
+      <child nodeId="node-0x50b9a80" />
     </children>
   </item>
-  <item nodeId="node-0x50554d0">
+  <item nodeId="node-0x50b9a80">
     <command xml:space="preserve">east</command>
     <result xml:space="preserve">
 Lower Bow
@@ -213,10 +215,10 @@ There appears to be an old armory here. Better go through the stuff just in case
     <changed>YES</changed>
     <temporary score="40">YES</temporary>
     <children>
-      <child nodeId="node-0x5055540" />
+      <child nodeId="node-0x2adea0" />
     </children>
   </item>
-  <item nodeId="node-0x5055540">
+  <item nodeId="node-0x2adea0">
     <command xml:space="preserve">north</command>
     <result xml:space="preserve">
 Entrance to bow
@@ -227,10 +229,10 @@ Well no place to go but down!
     <changed>YES</changed>
     <temporary score="40">YES</temporary>
     <children>
-      <child nodeId="node-0x50555b0" />
+      <child nodeId="node-0x50b9af0" />
     </children>
   </item>
-  <item nodeId="node-0x50555b0">
+  <item nodeId="node-0x50b9af0">
     <command xml:space="preserve">north</command>
     <result xml:space="preserve">There is nothing in that direction.
 
@@ -239,10 +241,10 @@ Well no place to go but down!
     <changed>YES</changed>
     <temporary score="40">YES</temporary>
     <children>
-      <child nodeId="node-0x5055620" />
+      <child nodeId="node-0x50b9b60" />
     </children>
   </item>
-  <item nodeId="node-0x5055620">
+  <item nodeId="node-0x50b9b60">
     <command xml:space="preserve">west</command>
     <result xml:space="preserve">
 Rivet City
@@ -259,10 +261,10 @@ You can also see an exit here.
     <changed>YES</changed>
     <temporary score="40">YES</temporary>
     <children>
-      <child nodeId="node-0x5055690" />
+      <child nodeId="node-0x50b9bd0" />
     </children>
   </item>
-  <item nodeId="node-0x5055690">
+  <item nodeId="node-0x50b9bd0">
     <command xml:space="preserve">attack guard</command>
     <result xml:space="preserve">Violence isn&apos;t the answer to this one.
 
@@ -271,10 +273,10 @@ You can also see an exit here.
     <changed>YES</changed>
     <temporary score="40">YES</temporary>
     <children>
-      <child nodeId="node-0x5054d50" />
+      <child nodeId="node-0x50b9c40" />
     </children>
   </item>
-  <item nodeId="node-0x5054d50">
+  <item nodeId="node-0x50b9c40">
     <command xml:space="preserve">attack joe</command>
     <result xml:space="preserve">Don&apos;t need to attack him.
 
@@ -283,7 +285,7 @@ You can also see an exit here.
     <changed>YES</changed>
     <temporary score="39">YES</temporary>
   </item>
-  <item nodeId="node-0x9aa51a0">
+  <item nodeId="node-0x50b9cb0">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">(first opening the exit)
 It seems to be locked.
@@ -293,10 +295,10 @@ It seems to be locked.
     <changed>NO</changed>
     <temporary score="122">YES</temporary>
     <children>
-      <child nodeId="node-0x9aa0960" />
+      <child nodeId="node-0x50b9d20" />
     </children>
   </item>
-  <item nodeId="node-0x9aa0960">
+  <item nodeId="node-0x50b9d20">
     <command xml:space="preserve">unlock door</command>
     <result xml:space="preserve">(with Keys)
 You unlock the exit.
@@ -306,11 +308,11 @@ You unlock the exit.
     <changed>NO</changed>
     <temporary score="122">YES</temporary>
     <children>
-      <child nodeId="node-0x559a0b0" />
-      <child nodeId="node-0x558da20" />
+      <child nodeId="node-0x50ba060" />
+      <child nodeId="node-0x50b99c0" />
     </children>
   </item>
-  <item nodeId="node-0x558da20">
+  <item nodeId="node-0x50b99c0">
     <command xml:space="preserve">WEST</command>
     <result xml:space="preserve">There is nothing in that direction.
 
@@ -319,10 +321,10 @@ You unlock the exit.
     <changed>YES</changed>
     <temporary score="78">YES</temporary>
     <children>
-      <child nodeId="node-0x9bd6f10" />
+      <child nodeId="node-0x50b9a10" />
     </children>
   </item>
-  <item nodeId="node-0x9bd6f10">
+  <item nodeId="node-0x50b9a10">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">(first opening the exit)
 
@@ -336,10 +338,10 @@ You can see an exit here.
     <changed>YES</changed>
     <temporary score="78">YES</temporary>
     <children>
-      <child nodeId="node-0x8956700" />
+      <child nodeId="node-0x50b9f10" />
     </children>
   </item>
-  <item nodeId="node-0x8956700">
+  <item nodeId="node-0x50b9f10">
     <command xml:space="preserve">east</command>
     <result xml:space="preserve">There is nothing in that direction.
 
@@ -348,10 +350,10 @@ You can see an exit here.
     <changed>YES</changed>
     <temporary score="78">YES</temporary>
     <children>
-      <child nodeId="node-0x559f2b0" />
+      <child nodeId="node-0x50b9f80" />
     </children>
   </item>
-  <item nodeId="node-0x559f2b0">
+  <item nodeId="node-0x50b9f80">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">
 Lower Bow
@@ -362,10 +364,10 @@ There appears to be an old armory here to the left. Better go through the stuff 
     <changed>YES</changed>
     <temporary score="78">YES</temporary>
     <children>
-      <child nodeId="node-0x9bac890" />
+      <child nodeId="node-0x50b9ff0" />
     </children>
   </item>
-  <item nodeId="node-0x9bac890">
+  <item nodeId="node-0x50b9ff0">
     <command xml:space="preserve">west</command>
     <result xml:space="preserve">
 Armory
@@ -378,7 +380,7 @@ You already took the gun.
     <changed>YES</changed>
     <temporary score="77">YES</temporary>
   </item>
-  <item nodeId="node-0x559a0b0">
+  <item nodeId="node-0x50ba060">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">(first opening the exit)
 
@@ -392,10 +394,10 @@ You can see an exit here.
     <changed>NO</changed>
     <temporary score="122">YES</temporary>
     <children>
-      <child nodeId="node-0x9ac7960" />
+      <child nodeId="node-0x50ba0d0" />
     </children>
   </item>
-  <item nodeId="node-0x9ac7960">
+  <item nodeId="node-0x50ba0d0">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">
 Lower Bow
@@ -406,11 +408,11 @@ There appears to be an old armory here to the left. Better go through the stuff 
     <changed>NO</changed>
     <temporary score="122">YES</temporary>
     <children>
-      <child nodeId="node-0x9ac85f0" />
-      <child nodeId="node-0x55506a0" />
+      <child nodeId="node-0x50ba140" />
+      <child nodeId="node-0x50b9e70" />
     </children>
   </item>
-  <item nodeId="node-0x55506a0">
+  <item nodeId="node-0x50b9e70">
     <command xml:space="preserve">east</command>
     <result xml:space="preserve">There is nothing in that direction.
 
@@ -419,10 +421,10 @@ There appears to be an old armory here to the left. Better go through the stuff 
     <changed>YES</changed>
     <temporary score="52">YES</temporary>
     <children>
-      <child nodeId="node-0x55476c0" />
+      <child nodeId="node-0x50ba620" />
     </children>
   </item>
-  <item nodeId="node-0x55476c0">
+  <item nodeId="node-0x50ba620">
     <command xml:space="preserve">west</command>
     <result xml:space="preserve">
 Armory
@@ -433,10 +435,10 @@ Well, might as well take this old gun.
     <changed>YES</changed>
     <temporary score="52">YES</temporary>
     <children>
-      <child nodeId="node-0x55e5880" />
+      <child nodeId="node-0x50ba690" />
     </children>
   </item>
-  <item nodeId="node-0x55e5880">
+  <item nodeId="node-0x50ba690">
     <command xml:space="preserve">take gun</command>
     <result xml:space="preserve">Taken.
 
@@ -445,10 +447,10 @@ Well, might as well take this old gun.
     <changed>YES</changed>
     <temporary score="52">YES</temporary>
     <children>
-      <child nodeId="node-0x503c550" />
+      <child nodeId="node-0x50ba700" />
     </children>
   </item>
-  <item nodeId="node-0x503c550">
+  <item nodeId="node-0x50ba700">
     <command xml:space="preserve">west</command>
     <result xml:space="preserve">There is nothing in that direction.
 
@@ -457,10 +459,10 @@ Well, might as well take this old gun.
     <changed>YES</changed>
     <temporary score="52">YES</temporary>
     <children>
-      <child nodeId="node-0xde53e10" />
+      <child nodeId="node-0x50ba770" />
     </children>
   </item>
-  <item nodeId="node-0xde53e10">
+  <item nodeId="node-0x50ba770">
     <command xml:space="preserve">east</command>
     <result xml:space="preserve">
 Lower Bow
@@ -471,10 +473,10 @@ There appears to be an old armory here to the left. Better go through the stuff 
     <changed>YES</changed>
     <temporary score="52">YES</temporary>
     <children>
-      <child nodeId="node-0x558d160" />
+      <child nodeId="node-0x50ba7e0" />
     </children>
   </item>
-  <item nodeId="node-0x558d160">
+  <item nodeId="node-0x50ba7e0">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">
 Engine
@@ -487,10 +489,10 @@ You can see Mirelurk, Mutated Crab and Super Mutant here.
     <changed>YES</changed>
     <temporary score="52">YES</temporary>
     <children>
-      <child nodeId="node-0xde7d190" />
+      <child nodeId="node-0x50ba850" />
     </children>
   </item>
-  <item nodeId="node-0xde7d190">
+  <item nodeId="node-0x50ba850">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">There is nothing in that direction.
 
@@ -499,10 +501,10 @@ You can see Mirelurk, Mutated Crab and Super Mutant here.
     <changed>YES</changed>
     <temporary score="52">YES</temporary>
     <children>
-      <child nodeId="node-0x5f2b80" />
+      <child nodeId="node-0x50ba8c0" />
     </children>
   </item>
-  <item nodeId="node-0x5f2b80">
+  <item nodeId="node-0x50ba8c0">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">There is nothing in that direction.
 
@@ -511,10 +513,10 @@ You can see Mirelurk, Mutated Crab and Super Mutant here.
     <changed>YES</changed>
     <temporary score="52">YES</temporary>
     <children>
-      <child nodeId="node-0x227530" />
+      <child nodeId="node-0x50ba930" />
     </children>
   </item>
-  <item nodeId="node-0x227530">
+  <item nodeId="node-0x50ba930">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">There is nothing in that direction.
 
@@ -523,10 +525,10 @@ You can see Mirelurk, Mutated Crab and Super Mutant here.
     <changed>YES</changed>
     <temporary score="52">YES</temporary>
     <children>
-      <child nodeId="node-0x559d390" />
+      <child nodeId="node-0x50ba9a0" />
     </children>
   </item>
-  <item nodeId="node-0x559d390">
+  <item nodeId="node-0x50ba9a0">
     <command xml:space="preserve">attack mirelurk</command>
     <result xml:space="preserve">Violence isn&apos;t the answer to this one.
 
@@ -535,10 +537,10 @@ You can see Mirelurk, Mutated Crab and Super Mutant here.
     <changed>YES</changed>
     <temporary score="52">YES</temporary>
     <children>
-      <child nodeId="node-0xde5ac20" />
+      <child nodeId="node-0x50baa10" />
     </children>
   </item>
-  <item nodeId="node-0xde5ac20">
+  <item nodeId="node-0x50baa10">
     <command xml:space="preserve">kill mirelurk</command>
     <result xml:space="preserve">Violence isn&apos;t the answer to this one.
 
@@ -547,10 +549,10 @@ You can see Mirelurk, Mutated Crab and Super Mutant here.
     <changed>YES</changed>
     <temporary score="52">YES</temporary>
     <children>
-      <child nodeId="node-0x5593e20" />
+      <child nodeId="node-0x50baa80" />
     </children>
   </item>
-  <item nodeId="node-0x5593e20">
+  <item nodeId="node-0x50baa80">
     <command xml:space="preserve">kill mirelurk</command>
     <result xml:space="preserve">Violence isn&apos;t the answer to this one.
 
@@ -559,10 +561,10 @@ You can see Mirelurk, Mutated Crab and Super Mutant here.
     <changed>YES</changed>
     <temporary score="52">YES</temporary>
     <children>
-      <child nodeId="node-0x50a8600" />
+      <child nodeId="node-0x50baaf0" />
     </children>
   </item>
-  <item nodeId="node-0x50a8600">
+  <item nodeId="node-0x50baaf0">
     <command xml:space="preserve">kill mutated crab</command>
     <result xml:space="preserve">Violence isn&apos;t the answer to this one.
 
@@ -571,10 +573,10 @@ You can see Mirelurk, Mutated Crab and Super Mutant here.
     <changed>YES</changed>
     <temporary score="52">YES</temporary>
     <children>
-      <child nodeId="node-0x55e7b50" />
+      <child nodeId="node-0x50bab60" />
     </children>
   </item>
-  <item nodeId="node-0x55e7b50">
+  <item nodeId="node-0x50bab60">
     <command xml:space="preserve">attack mirelurk</command>
     <result xml:space="preserve">Violence isn&apos;t the answer to this one.
 
@@ -583,10 +585,10 @@ You can see Mirelurk, Mutated Crab and Super Mutant here.
     <changed>YES</changed>
     <temporary score="52">YES</temporary>
     <children>
-      <child nodeId="node-0x9ad3690" />
+      <child nodeId="node-0x50babd0" />
     </children>
   </item>
-  <item nodeId="node-0x9ad3690">
+  <item nodeId="node-0x50babd0">
     <command xml:space="preserve">ATTACK MIRELURK WIHT GUN</command>
     <result xml:space="preserve">I only understood you as far as wanting to attack Mirelurk.
 
@@ -595,10 +597,10 @@ You can see Mirelurk, Mutated Crab and Super Mutant here.
     <changed>YES</changed>
     <temporary score="52">YES</temporary>
     <children>
-      <child nodeId="node-0x9adf080" />
+      <child nodeId="node-0x50bac40" />
     </children>
   </item>
-  <item nodeId="node-0x9adf080">
+  <item nodeId="node-0x50bac40">
     <command xml:space="preserve">attack mirelurk with gun</command>
     <result xml:space="preserve">You attack Mirelurk with your Combat Shotgun, causing 31 points of damage!
 
@@ -609,10 +611,10 @@ Mirelurk attacks you with Screech, causing 15 points of damage!
     <changed>YES</changed>
     <temporary score="52">YES</temporary>
     <children>
-      <child nodeId="node-0x9a91040" />
+      <child nodeId="node-0x50bacb0" />
     </children>
   </item>
-  <item nodeId="node-0x9a91040">
+  <item nodeId="node-0x50bacb0">
     <command xml:space="preserve">attack mirelurk</command>
     <result xml:space="preserve">Violence isn&apos;t the answer to this one.
 
@@ -623,7 +625,7 @@ Mirelurk attacks you with Screech, causing 7 points of damage!
     <changed>YES</changed>
     <temporary score="51">YES</temporary>
   </item>
-  <item nodeId="node-0x9ac85f0">
+  <item nodeId="node-0x50ba140">
     <command xml:space="preserve">west</command>
     <result xml:space="preserve">
 Armory
@@ -634,10 +636,10 @@ Well, might as well take this old gun.
     <changed>YES</changed>
     <temporary score="122">YES</temporary>
     <children>
-      <child nodeId="node-0x55ea510" />
+      <child nodeId="node-0x50ba1b0" />
     </children>
   </item>
-  <item nodeId="node-0x55ea510">
+  <item nodeId="node-0x50ba1b0">
     <command xml:space="preserve">take all</command>
     <result xml:space="preserve">your Combat Shotgun: Taken.
 
@@ -646,10 +648,10 @@ Well, might as well take this old gun.
     <changed>YES</changed>
     <temporary score="122">YES</temporary>
     <children>
-      <child nodeId="node-0x5552670" />
+      <child nodeId="node-0x50ba220" />
     </children>
   </item>
-  <item nodeId="node-0x5552670">
+  <item nodeId="node-0x50ba220">
     <command xml:space="preserve">east</command>
     <result xml:space="preserve">
 Lower Bow
@@ -660,10 +662,10 @@ There appears to be an old armory here to the left. Better go through the stuff 
     <changed>YES</changed>
     <temporary score="122">YES</temporary>
     <children>
-      <child nodeId="node-0xe57b560" />
+      <child nodeId="node-0x50ba290" />
     </children>
   </item>
-  <item nodeId="node-0xe57b560">
+  <item nodeId="node-0x50ba290">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">
 Engine
@@ -676,10 +678,10 @@ You can see Corridor, Mirelurk, Mutated Crab and Super Mutant here.
     <changed>YES</changed>
     <temporary score="122">YES</temporary>
     <children>
-      <child nodeId="node-0xe554510" />
+      <child nodeId="node-0x50ba300" />
     </children>
   </item>
-  <item nodeId="node-0xe554510">
+  <item nodeId="node-0x50ba300">
     <command xml:space="preserve">attack mirelurk</command>
     <result xml:space="preserve">What do I attack the mirelurk with?
 
@@ -688,10 +690,10 @@ You can see Corridor, Mirelurk, Mutated Crab and Super Mutant here.
     <changed>YES</changed>
     <temporary score="122">YES</temporary>
     <children>
-      <child nodeId="node-0x9bd2c20" />
+      <child nodeId="node-0x50ba370" />
     </children>
   </item>
-  <item nodeId="node-0x9bd2c20">
+  <item nodeId="node-0x50ba370">
     <command xml:space="preserve">shotgun</command>
     <result xml:space="preserve">That noun did not make sense in this context.
 
@@ -700,10 +702,10 @@ You can see Corridor, Mirelurk, Mutated Crab and Super Mutant here.
     <changed>YES</changed>
     <temporary score="122">YES</temporary>
     <children>
-      <child nodeId="node-0x544580" />
+      <child nodeId="node-0x50b9d90" />
     </children>
   </item>
-  <item nodeId="node-0x544580">
+  <item nodeId="node-0x50b9d90">
     <command xml:space="preserve">attack mirelurk with shotgun</command>
     <result xml:space="preserve">You attack with your Combat Shotgun, killing Mirelurk!
 
@@ -712,10 +714,10 @@ You can see Corridor, Mirelurk, Mutated Crab and Super Mutant here.
     <changed>YES</changed>
     <temporary score="122">YES</temporary>
     <children>
-      <child nodeId="node-0x9bb9dd0" />
+      <child nodeId="node-0x50b9e00" />
     </children>
   </item>
-  <item nodeId="node-0x9bb9dd0">
+  <item nodeId="node-0x50b9e00">
     <command xml:space="preserve">TAKE ALL</command>
     <result xml:space="preserve">Ancient key: Taken.
 Pinchers: That seems to belong to Mutated Crab.
@@ -726,7 +728,628 @@ Assault Rifle: That seems to belong to Mutated Crab.
     <changed>YES</changed>
     <temporary score="121">YES</temporary>
   </item>
-  <item nodeId="node-0x5054c00">
+  <item nodeId="node-0x50bad20">
+    <command xml:space="preserve">take key</command>
+    <result xml:space="preserve">Taken.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="78">YES</temporary>
+    <children>
+      <child nodeId="node-0x50ba3e0" />
+    </children>
+  </item>
+  <item nodeId="node-0x50ba3e0">
+    <command xml:space="preserve">south</command>
+    <result xml:space="preserve">
+Rivet City
+A busling lively city, full with a market place to the east, bar and hotel.. But remember your task, finding Pinkerton won&apos;t be so easy.
+
+A greeter sits by the entrance of rivet city.
+
+Rivet City is well protected.
+
+You can also see an exit here.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="78">YES</temporary>
+    <children>
+      <child nodeId="node-0x50ba450" />
+    </children>
+  </item>
+  <item nodeId="node-0x50ba450">
+    <command xml:space="preserve">unlcok door with key</command>
+    <result xml:space="preserve">That noun did not make sense in this context.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="78">YES</temporary>
+    <children>
+      <child nodeId="node-0x50ba4c0" />
+    </children>
+  </item>
+  <item nodeId="node-0x50ba4c0">
+    <command xml:space="preserve">unlock door with key</command>
+    <result xml:space="preserve">You unlock the exit.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="78">YES</temporary>
+    <children>
+      <child nodeId="node-0x50ba530" />
+    </children>
+  </item>
+  <item nodeId="node-0x50ba530">
+    <command xml:space="preserve">south</command>
+    <result xml:space="preserve">(first opening the exit)
+
+Entrance to Bow
+Well no place to go but down!
+
+You can see an exit here.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="78">YES</temporary>
+    <children>
+      <child nodeId="node-0x50ba5a0" />
+    </children>
+  </item>
+  <item nodeId="node-0x50ba5a0">
+    <command xml:space="preserve">south</command>
+    <result xml:space="preserve">
+Lower Bow
+There appears to be an old armory here to the left. Better go through the stuff just in case but I&apos;m not expecting any laser tech. There&apos;s also a stairway to the Engine Room.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="78">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bad90" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bad90">
+    <command xml:space="preserve">west</command>
+    <result xml:space="preserve">
+Armory
+Well, might as well take this old gun.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="78">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bae00" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bae00">
+    <command xml:space="preserve">take gun</command>
+    <result xml:space="preserve">Taken.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="78">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bae70" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bae70">
+    <command xml:space="preserve">east</command>
+    <result xml:space="preserve">
+Lower Bow
+There appears to be an old armory here to the left. Better go through the stuff just in case but I&apos;m not expecting any laser tech. There&apos;s also a stairway to the Engine Room.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="78">YES</temporary>
+    <children>
+      <child nodeId="node-0x50baee0" />
+    </children>
+  </item>
+  <item nodeId="node-0x50baee0">
+    <command xml:space="preserve">south</command>
+    <result xml:space="preserve">
+Engine
+Mutated hostile creatures are wandering around. Hopefully if I kill enough of them the key will drop. I better take all the loot after killing one.
+
+You can see Corridor, Mirelurk, Mutated Crab and Super Mutant here.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="78">YES</temporary>
+    <children>
+      <child nodeId="node-0x50baf50" />
+    </children>
+  </item>
+  <item nodeId="node-0x50baf50">
+    <command xml:space="preserve">attack mirelurk with gun</command>
+    <result xml:space="preserve">You attack Mirelurk with your Combat Shotgun, causing 49 points of damage!
+
+Mirelurk attacks you with Screech, causing 12 points of damage!
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="78">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bafc0" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bafc0">
+    <command xml:space="preserve">attack mirelurk with gun</command>
+    <result xml:space="preserve">You attack with your Combat Shotgun, killing Mirelurk!
+
+The key to the corridor dropped!
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="78">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bb030" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bb030">
+    <command xml:space="preserve">ATTACK SUPER MUTANT WITH GU</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="78">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bb0a0" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bb0a0">
+    <command xml:space="preserve">ATTACK SUPER MUTANT WITH GUN</command>
+    <result xml:space="preserve">You attack Super Mutant with your Combat Shotgun, causing 16 points of damage!
+
+The key to the corridor dropped!
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="77">YES</temporary>
+  </item>
+  <item nodeId="node-0x50bb110">
+    <command xml:space="preserve">take keys</command>
+    <result xml:space="preserve">Taken.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bb180" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bb180">
+    <command xml:space="preserve">south</command>
+    <result xml:space="preserve">
+Rivet City
+A busling lively city, full with a market place to the east, bar and hotel.. But remember your task, finding Pinkerton won&apos;t be so easy.
+
+A greeter sits by the entrance of rivet city.
+
+Rivet City is well protected.
+
+You can also see an exit here.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bb1f0" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bb1f0">
+    <command xml:space="preserve">south</command>
+    <result xml:space="preserve">(first opening the exit)
+It seems to be locked.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bb260" />
+      <child nodeId="node-0x213090" />
+    </children>
+  </item>
+  <item nodeId="node-0x213090">
+    <command xml:space="preserve">west</command>
+    <result xml:space="preserve">There is nothing in that direction.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0xc7c2e50" />
+    </children>
+  </item>
+  <item nodeId="node-0xc7c2e50">
+    <command xml:space="preserve">east</command>
+    <result xml:space="preserve">
+Market Place
+A market place with an ammunitions shop, an attire shop and a resturant.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0xc920e30" />
+    </children>
+  </item>
+  <item nodeId="node-0xc920e30">
+    <command xml:space="preserve">west</command>
+    <result xml:space="preserve">
+Rivet City
+A busling lively city, full with a market place to the east, bar and hotel.. But remember your task, finding Pinkerton won&apos;t be so easy.
+
+A greeter sits by the entrance of rivet city.
+
+Rivet City is well protected.
+
+You can also see an exit here.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0x94dfa50" />
+    </children>
+  </item>
+  <item nodeId="node-0x94dfa50">
+    <command xml:space="preserve">south</command>
+    <result xml:space="preserve">(first opening the exit)
+It seems to be locked.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0x2f96d0" />
+    </children>
+  </item>
+  <item nodeId="node-0x2f96d0">
+    <command xml:space="preserve">unlock door with key</command>
+    <result xml:space="preserve">You unlock the exit.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0xc925ac0" />
+    </children>
+  </item>
+  <item nodeId="node-0xc925ac0">
+    <command xml:space="preserve">south</command>
+    <result xml:space="preserve">(first opening the exit)
+
+Entrance to Bow
+Well no place to go but down!
+
+You can see an exit here.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0x5c8590" />
+    </children>
+  </item>
+  <item nodeId="node-0x5c8590">
+    <command xml:space="preserve">west</command>
+    <result xml:space="preserve">There is nothing in that direction.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0xc921800" />
+    </children>
+  </item>
+  <item nodeId="node-0xc921800">
+    <command xml:space="preserve">east</command>
+    <result xml:space="preserve">There is nothing in that direction.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0x50f8bf0" />
+    </children>
+  </item>
+  <item nodeId="node-0x50f8bf0">
+    <command xml:space="preserve">south</command>
+    <result xml:space="preserve">
+Lower Bow
+There appears to be an old armory here to the left. Better go through the stuff just in case but I&apos;m not expecting any laser tech. There&apos;s also a stairway to the Engine Room.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0x5d5050" />
+    </children>
+  </item>
+  <item nodeId="node-0x5d5050">
+    <command xml:space="preserve">west</command>
+    <result xml:space="preserve">
+Armory
+Well, might as well take this old gun.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0xc941810" />
+    </children>
+  </item>
+  <item nodeId="node-0xc941810">
+    <command xml:space="preserve">take gun</command>
+    <result xml:space="preserve">Taken.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0xc91c620" />
+    </children>
+  </item>
+  <item nodeId="node-0xc91c620">
+    <command xml:space="preserve">east</command>
+    <result xml:space="preserve">
+Lower Bow
+There appears to be an old armory here to the left. Better go through the stuff just in case but I&apos;m not expecting any laser tech. There&apos;s also a stairway to the Engine Room.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0x50d2f90" />
+    </children>
+  </item>
+  <item nodeId="node-0x50d2f90">
+    <command xml:space="preserve">gun</command>
+    <result xml:space="preserve">That noun did not make sense in this context.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0xc7e0ab0" />
+    </children>
+  </item>
+  <item nodeId="node-0xc7e0ab0">
+    <command xml:space="preserve">south</command>
+    <result xml:space="preserve">
+Engine
+Mutated hostile creatures are wandering around. Hopefully if I kill enough of them the key will drop. I better take all the loot after killing one.
+
+You can see Corridor, Mirelurk, Mutated Crab and Super Mutant here.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0xc7b2230" />
+    </children>
+  </item>
+  <item nodeId="node-0xc7b2230">
+    <command xml:space="preserve">attack mirelurk</command>
+    <result xml:space="preserve">What do I attack the mirelurk with?
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0x5eb200" />
+    </children>
+  </item>
+  <item nodeId="node-0x5eb200">
+    <command xml:space="preserve">attack mirelurk with gun</command>
+    <result xml:space="preserve">You attack with your Combat Shotgun, killing Mirelurk!
+
+The Mirelurk had the key to the corridor!
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0xc9dcb50" />
+    </children>
+  </item>
+  <item nodeId="node-0xc9dcb50">
+    <command xml:space="preserve">take key</command>
+    <result xml:space="preserve">(Ancient key)
+Taken.
+
+The Mirelurk had the key to the corridor!
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0xc74b5b0" />
+    </children>
+  </item>
+  <item nodeId="node-0xc74b5b0">
+    <command xml:space="preserve">south</command>
+    <result xml:space="preserve">(first opening Corridor)
+It seems to be locked.
+
+The Mirelurk had the key to the corridor!
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0x50fb910" />
+    </children>
+  </item>
+  <item nodeId="node-0x50fb910">
+    <command xml:space="preserve">unlcok door with key</command>
+    <result xml:space="preserve">That noun did not make sense in this context.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0xc9d67f0" />
+    </children>
+  </item>
+  <item nodeId="node-0xc9d67f0">
+    <command xml:space="preserve">unlock door</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0xc9533e0" />
+    </children>
+  </item>
+  <item nodeId="node-0xc9533e0">
+    <command xml:space="preserve">unlock corridor with key</command>
+    <result xml:space="preserve">(Keys)
+That doesn&apos;t seem to fit the lock.
+
+The Mirelurk had the key to the corridor!
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0xc7abaa0" />
+    </children>
+  </item>
+  <item nodeId="node-0xc7abaa0">
+    <command xml:space="preserve">UNLOCK CORRIDOR WITH ANCIENT KEYS</command>
+    <result xml:space="preserve">I only understood you as far as wanting to unlock Corridor with Ancient key.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="28">YES</temporary>
+    <children>
+      <child nodeId="node-0xc7ae5f0" />
+    </children>
+  </item>
+  <item nodeId="node-0xc7ae5f0">
+    <command xml:space="preserve">unlock corridor with ancient key</command>
+    <result xml:space="preserve">(first taking Ancient key)
+You unlock Corridor.
+
+The Mirelurk had the key to the corridor!
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="27">YES</temporary>
+  </item>
+  <item nodeId="node-0x50bb260">
+    <command xml:space="preserve">south</command>
+    <result xml:space="preserve">(first opening the exit)
+It seems to be locked.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="61">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bb2d0" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bb2d0">
+    <command xml:space="preserve">unlcok door with key</command>
+    <result xml:space="preserve">That noun did not make sense in this context.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="61">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bb340" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bb340">
+    <command xml:space="preserve">unlock door with KEY</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="61">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bb3b0" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bb3b0">
+    <command xml:space="preserve">unlock door with keys</command>
+    <result xml:space="preserve">You unlock the exit.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="60">YES</temporary>
+  </item>
+  <item nodeId="node-0x50bb420">
+    <command xml:space="preserve">SOUTH</command>
+    <result xml:space="preserve">(first opening the exit)
+It seems to be locked.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="63">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bb490" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bb490">
+    <command xml:space="preserve">x door</command>
+    <result xml:space="preserve">The exit leads to the bow
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="62">YES</temporary>
+  </item>
+  <item nodeId="node-0x50bb500">
     <command xml:space="preserve">x greeter</command>
     <result xml:space="preserve">You explain your mission to the greeter. He is happy to help you and says &quot;You need a key to get to the bow. But no one has been there in a long time.&quot;
 
@@ -735,10 +1358,10 @@ Assault Rifle: That seems to belong to Mutated Crab.
     <changed>YES</changed>
     <temporary score="101">YES</temporary>
     <children>
-      <child nodeId="node-0x5596240" />
+      <child nodeId="node-0x50bb570" />
     </children>
   </item>
-  <item nodeId="node-0x5596240">
+  <item nodeId="node-0x50bb570">
     <command xml:space="preserve">x security guard</command>
     <result xml:space="preserve">You see nothing special about Security Guard.
 
@@ -747,10 +1370,10 @@ Assault Rifle: That seems to belong to Mutated Crab.
     <changed>YES</changed>
     <temporary score="101">YES</temporary>
     <children>
-      <child nodeId="node-0x895abe0" />
+      <child nodeId="node-0x50bb5e0" />
     </children>
   </item>
-  <item nodeId="node-0x895abe0">
+  <item nodeId="node-0x50bb5e0">
     <command xml:space="preserve">TAKE POOP</command>
     <result xml:space="preserve">You can&apos;t see any such thing.
 
@@ -759,10 +1382,10 @@ Assault Rifle: That seems to belong to Mutated Crab.
     <changed>YES</changed>
     <temporary score="101">YES</temporary>
     <children>
-      <child nodeId="node-0x8955cf0" />
+      <child nodeId="node-0x50bb650" />
     </children>
   </item>
-  <item nodeId="node-0x8955cf0">
+  <item nodeId="node-0x50bb650">
     <command xml:space="preserve">north</command>
     <result xml:space="preserve">
 Old Closet
@@ -775,10 +1398,10 @@ On Rusty Stand is Keys.
     <changed>YES</changed>
     <temporary score="101">YES</temporary>
     <children>
-      <child nodeId="node-0x554e2c0" />
+      <child nodeId="node-0x50bb6c0" />
     </children>
   </item>
-  <item nodeId="node-0x554e2c0">
+  <item nodeId="node-0x50bb6c0">
     <command xml:space="preserve">take all</command>
     <result xml:space="preserve">(Keys)
 Taken.
@@ -788,10 +1411,10 @@ Taken.
     <changed>YES</changed>
     <temporary score="101">YES</temporary>
     <children>
-      <child nodeId="node-0x5075d30" />
+      <child nodeId="node-0x50bb730" />
     </children>
   </item>
-  <item nodeId="node-0x5075d30">
+  <item nodeId="node-0x50bb730">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">
 Rivet City
@@ -808,10 +1431,10 @@ You can also see an exit here.
     <changed>YES</changed>
     <temporary score="101">YES</temporary>
     <children>
-      <child nodeId="node-0x9b47d70" />
+      <child nodeId="node-0x50bb7a0" />
     </children>
   </item>
-  <item nodeId="node-0x9b47d70">
+  <item nodeId="node-0x50bb7a0">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">(first opening the exit)
 It seems to be locked.
@@ -821,10 +1444,10 @@ It seems to be locked.
     <changed>YES</changed>
     <temporary score="101">YES</temporary>
     <children>
-      <child nodeId="node-0xe557b70" />
+      <child nodeId="node-0x50bb810" />
     </children>
   </item>
-  <item nodeId="node-0xe557b70">
+  <item nodeId="node-0x50bb810">
     <command xml:space="preserve">unlock door</command>
     <result xml:space="preserve">(with Keys)
 You unlock the exit.
@@ -834,10 +1457,10 @@ You unlock the exit.
     <changed>YES</changed>
     <temporary score="101">YES</temporary>
     <children>
-      <child nodeId="node-0x9bcbf50" />
+      <child nodeId="node-0x50bb880" />
     </children>
   </item>
-  <item nodeId="node-0x9bcbf50">
+  <item nodeId="node-0x50bb880">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">(first opening the exit)
 
@@ -851,10 +1474,10 @@ You can see an exit here.
     <changed>YES</changed>
     <temporary score="101">YES</temporary>
     <children>
-      <child nodeId="node-0x9bbd440" />
+      <child nodeId="node-0x50bb8f0" />
     </children>
   </item>
-  <item nodeId="node-0x9bbd440">
+  <item nodeId="node-0x50bb8f0">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">
 Lower Bow
@@ -865,10 +1488,10 @@ There appears to be an old armory here to the left. Better go through the stuff 
     <changed>YES</changed>
     <temporary score="101">YES</temporary>
     <children>
-      <child nodeId="node-0x89511f0" />
+      <child nodeId="node-0x50bb960" />
     </children>
   </item>
-  <item nodeId="node-0x89511f0">
+  <item nodeId="node-0x50bb960">
     <command xml:space="preserve">west</command>
     <result xml:space="preserve">
 Armory
@@ -879,10 +1502,10 @@ Well, might as well take this old gun.
     <changed>YES</changed>
     <temporary score="101">YES</temporary>
     <children>
-      <child nodeId="node-0x9ad4060" />
+      <child nodeId="node-0x50bb9d0" />
     </children>
   </item>
-  <item nodeId="node-0x9ad4060">
+  <item nodeId="node-0x50bb9d0">
     <command xml:space="preserve">take all</command>
     <result xml:space="preserve">your Combat Shotgun: Taken.
 
@@ -891,10 +1514,10 @@ Well, might as well take this old gun.
     <changed>YES</changed>
     <temporary score="101">YES</temporary>
     <children>
-      <child nodeId="node-0x895dbf0" />
+      <child nodeId="node-0x50bba40" />
     </children>
   </item>
-  <item nodeId="node-0x895dbf0">
+  <item nodeId="node-0x50bba40">
     <command xml:space="preserve">east</command>
     <result xml:space="preserve">
 Lower Bow
@@ -905,10 +1528,10 @@ There appears to be an old armory here to the left. Better go through the stuff 
     <changed>YES</changed>
     <temporary score="101">YES</temporary>
     <children>
-      <child nodeId="node-0x9ab6b20" />
+      <child nodeId="node-0x50bbab0" />
     </children>
   </item>
-  <item nodeId="node-0x9ab6b20">
+  <item nodeId="node-0x50bbab0">
     <command xml:space="preserve">west</command>
     <result xml:space="preserve">
 Armory
@@ -919,10 +1542,10 @@ You already took the gun.
     <changed>YES</changed>
     <temporary score="101">YES</temporary>
     <children>
-      <child nodeId="node-0x29c5e0" />
+      <child nodeId="node-0x50bbb20" />
     </children>
   </item>
-  <item nodeId="node-0x29c5e0">
+  <item nodeId="node-0x50bbb20">
     <command xml:space="preserve">east</command>
     <result xml:space="preserve">
 Lower Bow
@@ -933,10 +1556,10 @@ There appears to be an old armory here to the left. Better go through the stuff 
     <changed>YES</changed>
     <temporary score="101">YES</temporary>
     <children>
-      <child nodeId="node-0x9bb2e50" />
+      <child nodeId="node-0x50bbb90" />
     </children>
   </item>
-  <item nodeId="node-0x9bb2e50">
+  <item nodeId="node-0x50bbb90">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">
 Engine
@@ -949,10 +1572,10 @@ You can see Mirelurk, Mutated Crab and Super Mutant here.
     <changed>YES</changed>
     <temporary score="101">YES</temporary>
     <children>
-      <child nodeId="node-0x9b9f500" />
+      <child nodeId="node-0x50bbc00" />
     </children>
   </item>
-  <item nodeId="node-0x9b9f500">
+  <item nodeId="node-0x50bbc00">
     <command xml:space="preserve">attack mirelurk</command>
     <result xml:space="preserve">What do I attack the mirelurk with?
 
@@ -961,10 +1584,10 @@ You can see Mirelurk, Mutated Crab and Super Mutant here.
     <changed>YES</changed>
     <temporary score="101">YES</temporary>
     <children>
-      <child nodeId="node-0x9b0e920" />
+      <child nodeId="node-0x50bbc70" />
     </children>
   </item>
-  <item nodeId="node-0x9b0e920">
+  <item nodeId="node-0x50bbc70">
     <command xml:space="preserve">shotgun</command>
     <result xml:space="preserve">That noun did not make sense in this context.
 
@@ -973,10 +1596,10 @@ You can see Mirelurk, Mutated Crab and Super Mutant here.
     <changed>YES</changed>
     <temporary score="101">YES</temporary>
     <children>
-      <child nodeId="node-0x9ba8a70" />
+      <child nodeId="node-0x50bbce0" />
     </children>
   </item>
-  <item nodeId="node-0x9ba8a70">
+  <item nodeId="node-0x50bbce0">
     <command xml:space="preserve">GUN</command>
     <result xml:space="preserve">That noun did not make sense in this context.
 
@@ -985,10 +1608,10 @@ You can see Mirelurk, Mutated Crab and Super Mutant here.
     <changed>YES</changed>
     <temporary score="101">YES</temporary>
     <children>
-      <child nodeId="node-0x558c3b0" />
+      <child nodeId="node-0x50bbd50" />
     </children>
   </item>
-  <item nodeId="node-0x558c3b0">
+  <item nodeId="node-0x50bbd50">
     <command xml:space="preserve">ATTACK MIRELURK</command>
     <result xml:space="preserve">What do I attack the mirelurk with?
 
@@ -997,10 +1620,10 @@ You can see Mirelurk, Mutated Crab and Super Mutant here.
     <changed>YES</changed>
     <temporary score="101">YES</temporary>
     <children>
-      <child nodeId="node-0xe55bbe0" />
+      <child nodeId="node-0x50bbdc0" />
     </children>
   </item>
-  <item nodeId="node-0xe55bbe0">
+  <item nodeId="node-0x50bbdc0">
     <command xml:space="preserve">GUN</command>
     <result xml:space="preserve">That noun did not make sense in this context.
 
@@ -1009,10 +1632,10 @@ You can see Mirelurk, Mutated Crab and Super Mutant here.
     <changed>YES</changed>
     <temporary score="101">YES</temporary>
     <children>
-      <child nodeId="node-0x55e63a0" />
+      <child nodeId="node-0x50bbe30" />
     </children>
   </item>
-  <item nodeId="node-0x55e63a0">
+  <item nodeId="node-0x50bbe30">
     <command xml:space="preserve">attack mirelurk with gun</command>
     <result xml:space="preserve">You attack Mirelurk with your Combat Shotgun, causing 31 points of damage!
 
@@ -1023,10 +1646,10 @@ Mirelurk attacks you with Screech, causing 14 points of damage!
     <changed>YES</changed>
     <temporary score="101">YES</temporary>
     <children>
-      <child nodeId="node-0xe5b6930" />
+      <child nodeId="node-0x50bbea0" />
     </children>
   </item>
-  <item nodeId="node-0xe5b6930">
+  <item nodeId="node-0x50bbea0">
     <command xml:space="preserve">attack mirelurk with gun</command>
     <result xml:space="preserve">You attack with your Combat Shotgun, killing Mirelurk!
 
@@ -1035,7 +1658,38 @@ Mirelurk attacks you with Screech, causing 14 points of damage!
     <changed>YES</changed>
     <temporary score="100">YES</temporary>
   </item>
-  <item nodeId="node-0x9ac6740">
+  <item nodeId="node-0x94dfc00">
+    <command xml:space="preserve">talk to guard</command>
+    <result xml:space="preserve">You see nothing special about Security Guard.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="34">YES</temporary>
+    <children>
+      <child nodeId="node-0xc93e100" />
+      <child nodeId="node-0xc9ea000" />
+    </children>
+  </item>
+  <item nodeId="node-0xc9ea000">
+    <command xml:space="preserve">TALKING TO GUARD</command>
+    <result xml:space="preserve">You see nothing special about Security Guard.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="31">YES</temporary>
+  </item>
+  <item nodeId="node-0xc93e100">
+    <command xml:space="preserve">talk to greeter</command>
+    <result xml:space="preserve">You explain your mission to the greeter. He is happy to help you and says &quot;You need a key to get to the bow. But no one has been there in a long time.&quot;
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="33">YES</temporary>
+  </item>
+  <item nodeId="node-0x50bbf10">
     <command xml:space="preserve">sout</command>
     <result xml:space="preserve">That noun did not make sense in this context.
 
@@ -1044,10 +1698,10 @@ Mirelurk attacks you with Screech, causing 14 points of damage!
     <changed>YES</changed>
     <temporary score="28">YES</temporary>
     <children>
-      <child nodeId="node-0xde57bf0" />
+      <child nodeId="node-0x50bbf80" />
     </children>
   </item>
-  <item nodeId="node-0xde57bf0">
+  <item nodeId="node-0x50bbf80">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">(first opening the exit)
 It seems to be locked.
@@ -1057,10 +1711,10 @@ It seems to be locked.
     <changed>YES</changed>
     <temporary score="28">YES</temporary>
     <children>
-      <child nodeId="node-0x5041c50" />
+      <child nodeId="node-0x50bbff0" />
     </children>
   </item>
-  <item nodeId="node-0x5041c50">
+  <item nodeId="node-0x50bbff0">
     <command xml:space="preserve">unlock door</command>
     <result xml:space="preserve">What do you want to unlock the exit with?
 
@@ -1069,10 +1723,10 @@ It seems to be locked.
     <changed>YES</changed>
     <temporary score="28">YES</temporary>
     <children>
-      <child nodeId="node-0x516290" />
+      <child nodeId="node-0x50bc060" />
     </children>
   </item>
-  <item nodeId="node-0x516290">
+  <item nodeId="node-0x50bc060">
     <command xml:space="preserve">keys</command>
     <result xml:space="preserve">You can&apos;t see any such thing.
 
@@ -1081,161 +1735,8 @@ It seems to be locked.
     <changed>YES</changed>
     <temporary score="27">YES</temporary>
   </item>
-  <item nodeId="node-0x5054c70">
-    <command xml:space="preserve">x exit</command>
-    <result xml:space="preserve">The exit leads to the bow
-
-&gt;</result>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="8">YES</temporary>
-    <children>
-      <child nodeId="node-0x5054ce0" />
-      <child nodeId="node-0x50153a0" />
-    </children>
-  </item>
-  <item nodeId="node-0x50153a0">
-    <command xml:space="preserve">west</command>
-    <result xml:space="preserve">There is nothing in that direction.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="8">YES</temporary>
-    <children>
-      <child nodeId="node-0x55e2f50" />
-    </children>
-  </item>
-  <item nodeId="node-0x55e2f50">
-    <command xml:space="preserve">west</command>
-    <result xml:space="preserve">There is nothing in that direction.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="8">YES</temporary>
-    <children>
-      <child nodeId="node-0x9bade30" />
-    </children>
-  </item>
-  <item nodeId="node-0x9bade30">
-    <command xml:space="preserve">south</command>
-    <result xml:space="preserve">
-Entrance to bow
-Well no place to go but down!
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="8">YES</temporary>
-    <children>
-      <child nodeId="node-0x5040980" />
-    </children>
-  </item>
-  <item nodeId="node-0x5040980">
-    <command xml:space="preserve">south</command>
-    <result xml:space="preserve">
-Lower Bow
-There appears to be an old armory here to the left. Better go through the stuff just in case but I&apos;m not expecting any laser tech. There&apos;s also a stairway to the Engine Room.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="8">YES</temporary>
-    <children>
-      <child nodeId="node-0x55c54a0" />
-    </children>
-  </item>
-  <item nodeId="node-0x55c54a0">
-    <command xml:space="preserve">south</command>
-    <result xml:space="preserve">
-Engine
-Mutated hostile creatures are wandering around.
-
-You can see Mirelurk, Mutated Crab and Super Mutant here.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="7">YES</temporary>
-  </item>
-  <item nodeId="node-0x5054ce0">
-    <command xml:space="preserve">x rivet city</command>
-    <result xml:space="preserve">You can&apos;t see any such thing.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="6">YES</temporary>
-    <children>
-      <child nodeId="node-0x5054700" />
-    </children>
-  </item>
-  <item nodeId="node-0x5054700">
-    <command xml:space="preserve">x joe</command>
-    <result xml:space="preserve">Joe looks at you and says, &quot;You need a key to get to the bow!.&quot;
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="6">YES</temporary>
-    <children>
-      <child nodeId="node-0x5054770" />
-    </children>
-  </item>
-  <item nodeId="node-0x5054770">
-    <command xml:space="preserve">attack joe</command>
-    <result xml:space="preserve">Don&apos;t need to attack him.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="6">YES</temporary>
-    <children>
-      <child nodeId="node-0x50547e0" />
-    </children>
-  </item>
-  <item nodeId="node-0x50547e0">
-    <command xml:space="preserve">attack guard</command>
-    <result xml:space="preserve">Violence isn&apos;t the answer to this one.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="5">YES</temporary>
-  </item>
-  <item nodeId="node-0x5054f90">
-    <command xml:space="preserve">x me</command>
-    <result xml:space="preserve">I&apos;m so cool. My sheriff&apos;s hat and shades could attract any lady of the wasteland.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="9">YES</temporary>
-  </item>
-  <item nodeId="node-0x5054e30">
-    <command xml:space="preserve">x rivet city</command>
-    <result xml:space="preserve">You can&apos;t see any such thing.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="4">YES</temporary>
-  </item>
-  <item nodeId="node-0x243390">
-    <command xml:space="preserve">x shrapnel</command>
-    <result xml:space="preserve">You can&apos;t see any such thing.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="62">YES</temporary>
-    <children>
-      <child nodeId="node-0x2433e0" />
-    </children>
-  </item>
-  <item nodeId="node-0x2433e0">
-    <command xml:space="preserve">north</command>
+  <item nodeId="node-0x50bc3e0">
+    <command xml:space="preserve">NORTH</command>
     <result xml:space="preserve">
 Old Closet
 A old closet with a rusty stand and some keys.
@@ -1245,29 +1746,28 @@ On Rusty Stand is Keys.
 &gt;</result>
     <played>YES</played>
     <changed>YES</changed>
-    <temporary score="62">YES</temporary>
+    <temporary score="53">YES</temporary>
     <children>
-      <child nodeId="node-0x2436d0" />
+      <child nodeId="node-0x50bc450" />
     </children>
   </item>
-  <item nodeId="node-0x2436d0">
-    <command xml:space="preserve">take all</command>
-    <result xml:space="preserve">(Keys)
-Taken.
+  <item nodeId="node-0x50bc450">
+    <command xml:space="preserve">TAKE KEYS</command>
+    <result xml:space="preserve">Taken.
 
 &gt;</result>
     <played>YES</played>
     <changed>YES</changed>
-    <temporary score="62">YES</temporary>
+    <temporary score="53">YES</temporary>
     <children>
-      <child nodeId="node-0x243720" />
+      <child nodeId="node-0x50bc4c0" />
     </children>
   </item>
-  <item nodeId="node-0x243720">
-    <command xml:space="preserve">south</command>
+  <item nodeId="node-0x50bc4c0">
+    <command xml:space="preserve">SOUTH</command>
     <result xml:space="preserve">
 Rivet City
-A busling lively city, full with a market place, bar and hotel.. But remember your task, finding Pinkerton won&apos;t be so easy.
+A busling lively city, full with a market place to the east, bar and hotel.. But remember your task, finding Pinkerton won&apos;t be so easy.
 
 A greeter sits by the entrance of rivet city.
 
@@ -1278,205 +1778,13 @@ You can also see an exit here.
 &gt;</result>
     <played>YES</played>
     <changed>YES</changed>
-    <temporary score="62">YES</temporary>
+    <temporary score="53">YES</temporary>
     <children>
-      <child nodeId="node-0x243770" />
+      <child nodeId="node-0x50bc530" />
     </children>
   </item>
-  <item nodeId="node-0x243770">
-    <command xml:space="preserve">entrance to bow</command>
-    <result xml:space="preserve">&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="62">YES</temporary>
-    <children>
-      <child nodeId="node-0x2437e0" />
-    </children>
-  </item>
-  <item nodeId="node-0x2437e0">
-    <command xml:space="preserve">west</command>
-    <result xml:space="preserve">There is nothing in that direction.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="62">YES</temporary>
-    <children>
-      <child nodeId="node-0x5054160" />
-    </children>
-  </item>
-  <item nodeId="node-0x5054160">
+  <item nodeId="node-0x50bc530">
     <command xml:space="preserve">EAST</command>
-    <result xml:space="preserve">
-Entrance to bow
-Well no place to go but down!
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="62">YES</temporary>
-    <children>
-      <child nodeId="node-0x50541b0" />
-    </children>
-  </item>
-  <item nodeId="node-0x50541b0">
-    <command xml:space="preserve">south</command>
-    <result xml:space="preserve">
-Lower Bow
-There appears to be an old armory here to the left. Better go through the stuff just in case but I&apos;m not expecting any laser tech. There&apos;s also a stairway to the Engine Room.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="62">YES</temporary>
-    <children>
-      <child nodeId="node-0x5054200" />
-    </children>
-  </item>
-  <item nodeId="node-0x5054200">
-    <command xml:space="preserve">west</command>
-    <result xml:space="preserve">
-Armory
-Well, might as well take this old gun.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="62">YES</temporary>
-    <children>
-      <child nodeId="node-0x5054250" />
-    </children>
-  </item>
-  <item nodeId="node-0x5054250">
-    <command xml:space="preserve">take gun</command>
-    <result xml:space="preserve">Taken.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="62">YES</temporary>
-    <children>
-      <child nodeId="node-0x50542c0" />
-    </children>
-  </item>
-  <item nodeId="node-0x50542c0">
-    <command xml:space="preserve">take all</command>
-    <result xml:space="preserve">There are none at all available!
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="62">YES</temporary>
-    <children>
-      <child nodeId="node-0x50543f0" />
-    </children>
-  </item>
-  <item nodeId="node-0x50543f0">
-    <command xml:space="preserve">east</command>
-    <result xml:space="preserve">
-Lower Bow
-There appears to be an old armory here to the left. Better go through the stuff just in case but I&apos;m not expecting any laser tech. There&apos;s also a stairway to the Engine Room.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="62">YES</temporary>
-    <children>
-      <child nodeId="node-0x5054100" />
-    </children>
-  </item>
-  <item nodeId="node-0x5054100">
-    <command xml:space="preserve">south</command>
-    <result xml:space="preserve">
-Engine
-Mutated hostile creatures are wandering around.
-
-You can see Mirelurk here.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="62">YES</temporary>
-    <children>
-      <child nodeId="node-0x5054460" />
-    </children>
-  </item>
-  <item nodeId="node-0x5054460">
-    <command xml:space="preserve">shoot mirelurk</command>
-    <result xml:space="preserve">What do you want to shoot Mirelurk with?
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="62">YES</temporary>
-    <children>
-      <child nodeId="node-0x50544d0" />
-    </children>
-  </item>
-  <item nodeId="node-0x50544d0">
-    <command xml:space="preserve">gun</command>
-    <result xml:space="preserve">You attack Mirelurk with your Combat Shotgun, causing 32 points of damage!
-
-Mirelurk attacks you with Nothing, causing 0 points of damage!
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="62">YES</temporary>
-    <children>
-      <child nodeId="node-0x5054540" />
-    </children>
-  </item>
-  <item nodeId="node-0x5054540">
-    <command xml:space="preserve">south</command>
-    <result xml:space="preserve">There is nothing in that direction.
-
-Mirelurk attacks you with Screech, causing 3 points of damage!
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="62">YES</temporary>
-    <children>
-      <child nodeId="node-0x50545b0" />
-    </children>
-  </item>
-  <item nodeId="node-0x50545b0">
-    <command xml:space="preserve">attack mirelurk with gun</command>
-    <result xml:space="preserve">You attack with your Combat Shotgun, killing Mirelurk!
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="61">YES</temporary>
-  </item>
-  <item nodeId="node-0x5013610">
-    <command xml:space="preserve">south</command>
-    <result xml:space="preserve">(first opening the exit)
-It seems to be locked.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="19">YES</temporary>
-    <children>
-      <child nodeId="node-0x21ebd0" />
-    </children>
-  </item>
-  <item nodeId="node-0x21ebd0">
-    <command xml:space="preserve">WEST</command>
-    <result xml:space="preserve">There is nothing in that direction.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="19">YES</temporary>
-    <children>
-      <child nodeId="node-0x9aa89e0" />
-    </children>
-  </item>
-  <item nodeId="node-0x9aa89e0">
-    <command xml:space="preserve">east</command>
     <result xml:space="preserve">
 Market Place
 A market place with an ammunitions shop, an attire shop and a resturant.
@@ -1484,49 +1792,349 @@ A market place with an ammunitions shop, an attire shop and a resturant.
 &gt;</result>
     <played>YES</played>
     <changed>YES</changed>
-    <temporary score="19">YES</temporary>
+    <temporary score="53">YES</temporary>
     <children>
-      <child nodeId="node-0x5585ef0" />
+      <child nodeId="node-0x50bc5a0" />
     </children>
   </item>
-  <item nodeId="node-0x5585ef0">
-    <command xml:space="preserve">noth</command>
+  <item nodeId="node-0x50bc5a0">
+    <command xml:space="preserve">WEST</command>
+    <result xml:space="preserve">
+Rivet City
+A busling lively city, full with a market place to the east, bar and hotel.. But remember your task, finding Pinkerton won&apos;t be so easy.
+
+A greeter sits by the entrance of rivet city.
+
+Rivet City is well protected.
+
+You can also see an exit here.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="53">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bc610" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bc610">
+    <command xml:space="preserve">WEST</command>
+    <result xml:space="preserve">There is nothing in that direction.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="53">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bc680" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bc680">
+    <command xml:space="preserve">SOUTH</command>
+    <result xml:space="preserve">(first opening the exit)
+It seems to be locked.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="53">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bc6f0" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bc6f0">
+    <command xml:space="preserve">UNLOCK</command>
+    <result xml:space="preserve">(Keys with Keys)
+That doesn&apos;t seem to be something you can unlock.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="53">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bc760" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bc760">
+    <command xml:space="preserve">UNLOCK DOOR WITH KEYS</command>
+    <result xml:space="preserve">You unlock the exit.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="53">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bc7d0" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bc7d0">
+    <command xml:space="preserve">SOUTH</command>
+    <result xml:space="preserve">(first opening the exit)
+
+Entrance to Bow
+Well no place to go but down!
+
+You can see an exit here.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="53">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bc840" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bc840">
+    <command xml:space="preserve">south</command>
+    <result xml:space="preserve">
+Lower Bow
+There appears to be an old armory here to the left. Better go through the stuff just in case but I&apos;m not expecting any laser tech. There&apos;s also a stairway to the Engine Room.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="53">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bc8b0" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bc8b0">
+    <command xml:space="preserve">WEST</command>
+    <result xml:space="preserve">
+Armory
+Well, might as well take this old gun.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="53">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bc920" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bc920">
+    <command xml:space="preserve">take all</command>
+    <result xml:space="preserve">Hey stop that! All is disabled.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="53">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bc990" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bc990">
+    <command xml:space="preserve">west</command>
+    <result xml:space="preserve">There is nothing in that direction.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="53">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bca00" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bca00">
+    <command xml:space="preserve">east</command>
+    <result xml:space="preserve">
+Lower Bow
+There appears to be an old armory here to the left. Better go through the stuff just in case but I&apos;m not expecting any laser tech. There&apos;s also a stairway to the Engine Room.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="53">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bca70" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bca70">
+    <command xml:space="preserve">south</command>
+    <result xml:space="preserve">
+Engine
+Mutated hostile creatures are wandering around. Hopefully if I kill enough of them the key will drop. I better take all the loot after killing one.
+
+You can see Corridor, Mirelurk, Mutated Crab and Super Mutant here.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="53">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bcae0" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bcae0">
+    <command xml:space="preserve">south</command>
+    <result xml:space="preserve">(first opening Corridor)
+It seems to be locked.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="53">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bcb50" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bcb50">
+    <command xml:space="preserve">attack mutated crab with shotgun</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="53">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bcbc0" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bcbc0">
+    <command xml:space="preserve">attack mutated crab</command>
+    <result xml:space="preserve">What do I attack the Mutated Crab with?
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="53">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bcc30" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bcc30">
+    <command xml:space="preserve">shotgun</command>
     <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
     <played>YES</played>
     <changed>YES</changed>
-    <temporary score="19">YES</temporary>
+    <temporary score="53">YES</temporary>
     <children>
-      <child nodeId="node-0x9a89220" />
+      <child nodeId="node-0x50bcca0" />
     </children>
   </item>
-  <item nodeId="node-0x9a89220">
+  <item nodeId="node-0x50bcca0">
+    <command xml:space="preserve">attack mutated crab with gun</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="53">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bcd10" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bcd10">
     <command xml:space="preserve">north</command>
-    <result xml:space="preserve">There is nothing in that direction.
+    <result xml:space="preserve">
+Lower Bow
+There appears to be an old armory here to the left. Better go through the stuff just in case but I&apos;m not expecting any laser tech. There&apos;s also a stairway to the Engine Room.
 
 &gt;</result>
     <played>YES</played>
     <changed>YES</changed>
-    <temporary score="19">YES</temporary>
+    <temporary score="53">YES</temporary>
     <children>
-      <child nodeId="node-0x50a7990" />
+      <child nodeId="node-0x50bcd80" />
     </children>
   </item>
-  <item nodeId="node-0x50a7990">
-    <command xml:space="preserve">south</command>
-    <result xml:space="preserve">There is nothing in that direction.
+  <item nodeId="node-0x50bcd80">
+    <command xml:space="preserve">west</command>
+    <result xml:space="preserve">
+Armory
+You already took the gun.
 
 &gt;</result>
     <played>YES</played>
     <changed>YES</changed>
-    <temporary score="19">YES</temporary>
+    <temporary score="53">YES</temporary>
     <children>
-      <child nodeId="node-0x9ac2780" />
+      <child nodeId="node-0x50bcdf0" />
     </children>
   </item>
-  <item nodeId="node-0x9ac2780">
+  <item nodeId="node-0x50bcdf0">
     <command xml:space="preserve">east</command>
+    <result xml:space="preserve">
+Lower Bow
+There appears to be an old armory here to the left. Better go through the stuff just in case but I&apos;m not expecting any laser tech. There&apos;s also a stairway to the Engine Room.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="53">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bce60" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bce60">
+    <command xml:space="preserve">south</command>
+    <result xml:space="preserve">
+Engine
+Mutated hostile creatures are wandering around. Hopefully if I kill enough of them the key will drop. I better take all the loot after killing one.
+
+You can see Corridor, Mirelurk, Mutated Crab and Super Mutant here.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="53">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bced0" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bced0">
+    <command xml:space="preserve">attack mirelurk with gun</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="52">YES</temporary>
+  </item>
+  <item nodeId="node-0x50bcf40">
+    <command xml:space="preserve">east</command>
+    <result xml:space="preserve">
+Market Place
+A market place with an ammunitions shop, an attire shop and a resturant.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="30">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bd250" />
+      <child nodeId="node-0x50bcfb0" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bcfb0">
+    <command xml:space="preserve">x ammunitions hsop</command>
+    <result xml:space="preserve">I only understood you as far as wanting to examine Ammunitions shop.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="27">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bd020" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bd020">
+    <command xml:space="preserve">x ammunitions shop</command>
+    <result xml:space="preserve">Ammo and guns everywhere, too bad I&apos;m broke.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="27">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bd090" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bd090">
+    <command xml:space="preserve">north</command>
     <result xml:space="preserve">
 Hotel
 There seems to be an old caretaker and a robbot butler named &quot;Mr Gusty&quot;
@@ -1535,62 +2143,67 @@ Seems senile… Talking to her won&apos;t do any good.
 
 He says &quot;How may I help you sir?&quot; but doesn&apos;t seem to know anything.
 
-On Counter is Shades.
+On the Counter is Shades.
 
 &gt;</result>
     <played>YES</played>
     <changed>YES</changed>
-    <temporary score="19">YES</temporary>
+    <temporary score="27">YES</temporary>
     <children>
-      <child nodeId="node-0x55ec5c0" />
+      <child nodeId="node-0x50bd100" />
     </children>
   </item>
-  <item nodeId="node-0x55ec5c0">
-    <command xml:space="preserve">EAST</command>
-    <result xml:space="preserve">There is nothing in that direction.
+  <item nodeId="node-0x50bd100">
+    <command xml:space="preserve">talkt to caretaker</command>
+    <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
     <played>YES</played>
     <changed>YES</changed>
-    <temporary score="19">YES</temporary>
+    <temporary score="27">YES</temporary>
     <children>
-      <child nodeId="node-0x50eeaa0" />
+      <child nodeId="node-0x50bd170" />
     </children>
   </item>
-  <item nodeId="node-0x50eeaa0">
-    <command xml:space="preserve">NORTH</command>
-    <result xml:space="preserve">There is nothing in that direction.
+  <item nodeId="node-0x50bd170">
+    <command xml:space="preserve">talk to caretaker</command>
+    <result xml:space="preserve">That noun did not make sense in this context.
 
 &gt;</result>
     <played>YES</played>
     <changed>YES</changed>
-    <temporary score="19">YES</temporary>
+    <temporary score="27">YES</temporary>
     <children>
-      <child nodeId="node-0x5593460" />
+      <child nodeId="node-0x50bd1e0" />
     </children>
   </item>
-  <item nodeId="node-0x5593460">
-    <command xml:space="preserve">SOUTH</command>
-    <result xml:space="preserve">There is nothing in that direction.
+  <item nodeId="node-0x50bd1e0">
+    <command xml:space="preserve">x caretaker</command>
+    <result xml:space="preserve">You see nothing special about Caretaker.
 
 &gt;</result>
     <played>YES</played>
     <changed>YES</changed>
-    <temporary score="19">YES</temporary>
-    <children>
-      <child nodeId="node-0x299150" />
-    </children>
+    <temporary score="26">YES</temporary>
   </item>
-  <item nodeId="node-0x299150">
-    <command xml:space="preserve">EAST</command>
-    <result xml:space="preserve">There is nothing in that direction.
+  <item nodeId="node-0x50bd250">
+    <command xml:space="preserve">north</command>
+    <result xml:space="preserve">
+Hotel
+There seems to be an old caretaker and a robbot butler named &quot;Mr Gusty&quot;
+
+Seems senile… Talking to her won&apos;t do any good.
+
+He says &quot;How may I help you sir?&quot; but doesn&apos;t seem to know anything.
+
+On the Counter is Shades.
 
 &gt;</result>
     <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="18">YES</temporary>
+    <changed>NO</changed>
+    <temporary score="29">YES</temporary>
   </item>
-  <item nodeId="node-0x5054620">
+  <item nodeId="node-0x50bd950">
     <command xml:space="preserve">TALK TO JOE</command>
     <result xml:space="preserve">That noun did not make sense in this context.
 
@@ -1599,10 +2212,10 @@ On Counter is Shades.
     <changed>YES</changed>
     <temporary score="26">YES</temporary>
     <children>
-      <child nodeId="node-0x5054690" />
+      <child nodeId="node-0x50bd9c0" />
     </children>
   </item>
-  <item nodeId="node-0x5054690">
+  <item nodeId="node-0x50bd9c0">
     <command xml:space="preserve">speak to joe</command>
     <result xml:space="preserve">I didn&apos;t understand that sentence.
 
@@ -1611,10 +2224,10 @@ On Counter is Shades.
     <changed>YES</changed>
     <temporary score="26">YES</temporary>
     <children>
-      <child nodeId="node-0x5054330" />
+      <child nodeId="node-0x50bda30" />
     </children>
   </item>
-  <item nodeId="node-0x5054330">
+  <item nodeId="node-0x50bda30">
     <command xml:space="preserve">x joe</command>
     <result xml:space="preserve">Joe looks at you and says, &quot;You need a key to get to the bow!&quot;
 
@@ -1623,10 +2236,10 @@ On Counter is Shades.
     <changed>YES</changed>
     <temporary score="26">YES</temporary>
     <children>
-      <child nodeId="node-0x5054380" />
+      <child nodeId="node-0x50bdaa0" />
     </children>
   </item>
-  <item nodeId="node-0x5054380">
+  <item nodeId="node-0x50bdaa0">
     <command xml:space="preserve">x security guard</command>
     <result xml:space="preserve">You see nothing special about Security Guard.
 
@@ -1635,10 +2248,10 @@ On Counter is Shades.
     <changed>YES</changed>
     <temporary score="26">YES</temporary>
     <children>
-      <child nodeId="node-0x5054880" />
+      <child nodeId="node-0x50bdb10" />
     </children>
   </item>
-  <item nodeId="node-0x5054880">
+  <item nodeId="node-0x50bdb10">
     <command xml:space="preserve">x guard</command>
     <result xml:space="preserve">You see nothing special about Security Guard.
 
@@ -1647,10 +2260,10 @@ On Counter is Shades.
     <changed>YES</changed>
     <temporary score="26">YES</temporary>
     <children>
-      <child nodeId="node-0x50548f0" />
+      <child nodeId="node-0x50bdb80" />
     </children>
   </item>
-  <item nodeId="node-0x50548f0">
+  <item nodeId="node-0x50bdb80">
     <command xml:space="preserve">x soldier</command>
     <result xml:space="preserve">You see nothing special about Security Guard.
 
@@ -1659,10 +2272,10 @@ On Counter is Shades.
     <changed>YES</changed>
     <temporary score="26">YES</temporary>
     <children>
-      <child nodeId="node-0x5054960" />
+      <child nodeId="node-0x50bdbf0" />
     </children>
   </item>
-  <item nodeId="node-0x5054960">
+  <item nodeId="node-0x50bdbf0">
     <command xml:space="preserve">lift</command>
     <result xml:space="preserve">That noun did not make sense in this context.
 
@@ -1671,10 +2284,10 @@ On Counter is Shades.
     <changed>YES</changed>
     <temporary score="26">YES</temporary>
     <children>
-      <child nodeId="node-0x50549d0" />
+      <child nodeId="node-0x50bdc60" />
     </children>
   </item>
-  <item nodeId="node-0x50549d0">
+  <item nodeId="node-0x50bdc60">
     <command xml:space="preserve">north</command>
     <result xml:space="preserve">
 Old Closet
@@ -1687,10 +2300,10 @@ On Rusty Stand is Keys.
     <changed>YES</changed>
     <temporary score="26">YES</temporary>
     <children>
-      <child nodeId="node-0x5054a40" />
+      <child nodeId="node-0x50bdcd0" />
     </children>
   </item>
-  <item nodeId="node-0x5054a40">
+  <item nodeId="node-0x50bdcd0">
     <command xml:space="preserve">take keys</command>
     <result xml:space="preserve">Taken.
 
@@ -1699,10 +2312,10 @@ On Rusty Stand is Keys.
     <changed>YES</changed>
     <temporary score="26">YES</temporary>
     <children>
-      <child nodeId="node-0x5054ab0" />
+      <child nodeId="node-0x50bdd40" />
     </children>
   </item>
-  <item nodeId="node-0x5054ab0">
+  <item nodeId="node-0x50bdd40">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">
 Rivet City
@@ -1719,10 +2332,10 @@ You can also see an exit here.
     <changed>YES</changed>
     <temporary score="26">YES</temporary>
     <children>
-      <child nodeId="node-0x5054b20" />
+      <child nodeId="node-0x50bddb0" />
     </children>
   </item>
-  <item nodeId="node-0x5054b20">
+  <item nodeId="node-0x50bddb0">
     <command xml:space="preserve">west</command>
     <result xml:space="preserve">There is nothing in that direction.
 
@@ -1730,55 +2343,388 @@ You can also see an exit here.
     <played>YES</played>
     <changed>YES</changed>
     <temporary score="26">YES</temporary>
+  </item>
+  <item nodeId="node-0xc9a7280">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">You are carrying nothing.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="46">YES</temporary>
     <children>
-      <child nodeId="node-0x5054b90" />
+      <child nodeId="node-0xc9f7ed0" />
     </children>
   </item>
-  <item nodeId="node-0x5054b90">
-    <command xml:space="preserve">east</command>
+  <item nodeId="node-0xc9f7ed0">
+    <command xml:space="preserve">go through exit</command>
+    <result xml:space="preserve">(first opening the exit)
+It seems to be locked.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="46">YES</temporary>
+    <children>
+      <child nodeId="node-0xc794450" />
+    </children>
+  </item>
+  <item nodeId="node-0xc794450">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">
+Market Place
+A market place with an ammunitions shop, an attire shop and a resturant. There seems to be a hotel to the north….
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="46">YES</temporary>
+    <children>
+      <child nodeId="node-0x5b68c0" />
+    </children>
+  </item>
+  <item nodeId="node-0x5b68c0">
+    <command xml:space="preserve">nw</command>
+    <result xml:space="preserve">There is nothing in that direction.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="46">YES</temporary>
+    <children>
+      <child nodeId="node-0xc70d690" />
+    </children>
+  </item>
+  <item nodeId="node-0xc70d690">
+    <command xml:space="preserve">use stimpak</command>
+    <result xml:space="preserve">That noun did not make sense in this context.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="46">YES</temporary>
+    <children>
+      <child nodeId="node-0xc7a4c40" />
+    </children>
+  </item>
+  <item nodeId="node-0xc7a4c40">
+    <command xml:space="preserve">use</command>
+    <result xml:space="preserve">That noun did not make sense in this context.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="46">YES</temporary>
+    <children>
+      <child nodeId="node-0x2d7b80" />
+    </children>
+  </item>
+  <item nodeId="node-0x2d7b80">
+    <command xml:space="preserve">use</command>
+    <result xml:space="preserve">That noun did not make sense in this context.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="46">YES</temporary>
+    <children>
+      <child nodeId="node-0xc92c8f0" />
+    </children>
+  </item>
+  <item nodeId="node-0xc92c8f0">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">There is nothing in that direction.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="46">YES</temporary>
+    <children>
+      <child nodeId="node-0xc7114f0" />
+    </children>
+  </item>
+  <item nodeId="node-0xc7114f0">
+    <command xml:space="preserve">go to attire shop</command>
+    <result xml:space="preserve">That noun did not make sense in this context.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="46">YES</temporary>
+    <children>
+      <child nodeId="node-0xc9e28c0" />
+    </children>
+  </item>
+  <item nodeId="node-0xc9e28c0">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">
+Hotel
+There seems to be an old caretaker and a robbot butler named &quot;Mr Gusty&quot;
+
+Seems senile… Talking to her won&apos;t do any good.
+
+He says &quot;How may I help you sir?&quot; but doesn&apos;t seem to know anything.
+
+On the Counter is Shades.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="46">YES</temporary>
+    <children>
+      <child nodeId="node-0x5c65f0" />
+    </children>
+  </item>
+  <item nodeId="node-0x5c65f0">
+    <command xml:space="preserve">take shades</command>
+    <result xml:space="preserve">Taken.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="46">YES</temporary>
+    <children>
+      <child nodeId="node-0x27c680" />
+    </children>
+  </item>
+  <item nodeId="node-0x27c680">
+    <command xml:space="preserve">use shades</command>
+    <result xml:space="preserve">That noun did not make sense in this context.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="45">YES</temporary>
+  </item>
+  <item nodeId="node-0x50be360">
+    <command xml:space="preserve">x shrapnel</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="62">YES</temporary>
+    <children>
+      <child nodeId="node-0x50be3d0" />
+    </children>
+  </item>
+  <item nodeId="node-0x50be3d0">
+    <command xml:space="preserve">north</command>
+    <result xml:space="preserve">
+Old Closet
+A old closet with a rusty stand and some keys.
+
+On Rusty Stand is Keys.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="62">YES</temporary>
+    <children>
+      <child nodeId="node-0x50be440" />
+    </children>
+  </item>
+  <item nodeId="node-0x50be440">
+    <command xml:space="preserve">take all</command>
+    <result xml:space="preserve">(Keys)
+Taken.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="62">YES</temporary>
+    <children>
+      <child nodeId="node-0x50be4b0" />
+    </children>
+  </item>
+  <item nodeId="node-0x50be4b0">
+    <command xml:space="preserve">south</command>
+    <result xml:space="preserve">
+Rivet City
+A busling lively city, full with a market place, bar and hotel.. But remember your task, finding Pinkerton won&apos;t be so easy.
+
+A greeter sits by the entrance of rivet city.
+
+Rivet City is well protected.
+
+You can also see an exit here.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="62">YES</temporary>
+    <children>
+      <child nodeId="node-0x50be520" />
+    </children>
+  </item>
+  <item nodeId="node-0x50be520">
+    <command xml:space="preserve">entrance to bow</command>
+    <result xml:space="preserve">&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="62">YES</temporary>
+    <children>
+      <child nodeId="node-0x50be590" />
+    </children>
+  </item>
+  <item nodeId="node-0x50be590">
+    <command xml:space="preserve">west</command>
+    <result xml:space="preserve">There is nothing in that direction.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="62">YES</temporary>
+    <children>
+      <child nodeId="node-0x50be600" />
+    </children>
+  </item>
+  <item nodeId="node-0x50be600">
+    <command xml:space="preserve">EAST</command>
     <result xml:space="preserve">
 Entrance to bow
-There appears to be an old armory here. Better go through the stuff just in case but I&apos;m not expecting any laser tech.
+Well no place to go but down!
 
 &gt;</result>
     <played>YES</played>
     <changed>YES</changed>
-    <temporary score="25">YES</temporary>
-  </item>
-  <item nodeId="node-0x5055700">
-    <command xml:space="preserve">attack guard</command>
-    <result xml:space="preserve">Violence isn&apos;t the answer to this one.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="9">YES</temporary>
+    <temporary score="62">YES</temporary>
     <children>
-      <child nodeId="node-0x5055770" />
+      <child nodeId="node-0x50be670" />
     </children>
   </item>
-  <item nodeId="node-0x5055770">
-    <command xml:space="preserve">attack joe</command>
-    <result xml:space="preserve">Don&apos;t need to attack him.
+  <item nodeId="node-0x50be670">
+    <command xml:space="preserve">south</command>
+    <result xml:space="preserve">
+Lower Bow
+There appears to be an old armory here to the left. Better go through the stuff just in case but I&apos;m not expecting any laser tech. There&apos;s also a stairway to the Engine Room.
 
 &gt;</result>
     <played>YES</played>
     <changed>YES</changed>
-    <temporary score="9">YES</temporary>
+    <temporary score="62">YES</temporary>
     <children>
-      <child nodeId="node-0x50557e0" />
+      <child nodeId="node-0x50be6e0" />
     </children>
   </item>
-  <item nodeId="node-0x50557e0">
-    <command xml:space="preserve">x me</command>
-    <result xml:space="preserve">As good-looking as ever.
+  <item nodeId="node-0x50be6e0">
+    <command xml:space="preserve">west</command>
+    <result xml:space="preserve">
+Armory
+Well, might as well take this old gun.
 
 &gt;</result>
     <played>YES</played>
     <changed>YES</changed>
-    <temporary score="8">YES</temporary>
+    <temporary score="62">YES</temporary>
+    <children>
+      <child nodeId="node-0x50be750" />
+    </children>
   </item>
-  <item nodeId="node-0x55b68a0">
+  <item nodeId="node-0x50be750">
+    <command xml:space="preserve">take gun</command>
+    <result xml:space="preserve">Taken.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="62">YES</temporary>
+    <children>
+      <child nodeId="node-0x50be7c0" />
+    </children>
+  </item>
+  <item nodeId="node-0x50be7c0">
+    <command xml:space="preserve">take all</command>
+    <result xml:space="preserve">There are none at all available!
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="62">YES</temporary>
+    <children>
+      <child nodeId="node-0x50be830" />
+    </children>
+  </item>
+  <item nodeId="node-0x50be830">
+    <command xml:space="preserve">east</command>
+    <result xml:space="preserve">
+Lower Bow
+There appears to be an old armory here to the left. Better go through the stuff just in case but I&apos;m not expecting any laser tech. There&apos;s also a stairway to the Engine Room.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="62">YES</temporary>
+    <children>
+      <child nodeId="node-0x50be8a0" />
+    </children>
+  </item>
+  <item nodeId="node-0x50be8a0">
+    <command xml:space="preserve">south</command>
+    <result xml:space="preserve">
+Engine
+Mutated hostile creatures are wandering around.
+
+You can see Mirelurk here.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="62">YES</temporary>
+    <children>
+      <child nodeId="node-0x50be910" />
+    </children>
+  </item>
+  <item nodeId="node-0x50be910">
+    <command xml:space="preserve">shoot mirelurk</command>
+    <result xml:space="preserve">What do you want to shoot Mirelurk with?
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="62">YES</temporary>
+    <children>
+      <child nodeId="node-0x50be980" />
+    </children>
+  </item>
+  <item nodeId="node-0x50be980">
+    <command xml:space="preserve">gun</command>
+    <result xml:space="preserve">You attack Mirelurk with your Combat Shotgun, causing 32 points of damage!
+
+Mirelurk attacks you with Nothing, causing 0 points of damage!
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="62">YES</temporary>
+    <children>
+      <child nodeId="node-0x50be9f0" />
+    </children>
+  </item>
+  <item nodeId="node-0x50be9f0">
+    <command xml:space="preserve">south</command>
+    <result xml:space="preserve">There is nothing in that direction.
+
+Mirelurk attacks you with Screech, causing 3 points of damage!
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="62">YES</temporary>
+    <children>
+      <child nodeId="node-0x50bea60" />
+    </children>
+  </item>
+  <item nodeId="node-0x50bea60">
+    <command xml:space="preserve">attack mirelurk with gun</command>
+    <result xml:space="preserve">You attack with your Combat Shotgun, killing Mirelurk!
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="61">YES</temporary>
+  </item>
+  <item nodeId="node-0x50bec20">
     <command xml:space="preserve">up</command>
     <result xml:space="preserve">There is nothing in that direction.
 
@@ -1787,10 +2733,10 @@ There appears to be an old armory here. Better go through the stuff just in case
     <changed>YES</changed>
     <temporary score="64">YES</temporary>
     <children>
-      <child nodeId="node-0x2fb1d0" />
+      <child nodeId="node-0x50bec90" />
     </children>
   </item>
-  <item nodeId="node-0x2fb1d0">
+  <item nodeId="node-0x50bec90">
     <command xml:space="preserve">north</command>
     <result xml:space="preserve">
 Old Closet
@@ -1803,10 +2749,10 @@ On Rusty Stand is Keys.
     <changed>YES</changed>
     <temporary score="64">YES</temporary>
     <children>
-      <child nodeId="node-0x9ae2760" />
+      <child nodeId="node-0x50bed00" />
     </children>
   </item>
-  <item nodeId="node-0x9ae2760">
+  <item nodeId="node-0x50bed00">
     <command xml:space="preserve">take all</command>
     <result xml:space="preserve">(Keys)
 Taken.
@@ -1816,10 +2762,10 @@ Taken.
     <changed>YES</changed>
     <temporary score="64">YES</temporary>
     <children>
-      <child nodeId="node-0x501ace0" />
+      <child nodeId="node-0x50bed70" />
     </children>
   </item>
-  <item nodeId="node-0x501ace0">
+  <item nodeId="node-0x50bed70">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">
 Rivet City
@@ -1836,10 +2782,10 @@ You can also see an exit here.
     <changed>YES</changed>
     <temporary score="64">YES</temporary>
     <children>
-      <child nodeId="node-0x9b47bb0" />
+      <child nodeId="node-0x50bede0" />
     </children>
   </item>
-  <item nodeId="node-0x9b47bb0">
+  <item nodeId="node-0x50bede0">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">(first opening the exit)
 It seems to be locked.
@@ -1849,10 +2795,10 @@ It seems to be locked.
     <changed>YES</changed>
     <temporary score="64">YES</temporary>
     <children>
-      <child nodeId="node-0x29f8b0" />
+      <child nodeId="node-0x50bee50" />
     </children>
   </item>
-  <item nodeId="node-0x29f8b0">
+  <item nodeId="node-0x50bee50">
     <command xml:space="preserve">unlock door</command>
     <result xml:space="preserve">(with Keys)
 You unlock the exit.
@@ -1862,10 +2808,10 @@ You unlock the exit.
     <changed>YES</changed>
     <temporary score="64">YES</temporary>
     <children>
-      <child nodeId="node-0x9abff10" />
+      <child nodeId="node-0x50beec0" />
     </children>
   </item>
-  <item nodeId="node-0x9abff10">
+  <item nodeId="node-0x50beec0">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">(first opening the exit)
 
@@ -1879,10 +2825,10 @@ You can see an exit here.
     <changed>YES</changed>
     <temporary score="64">YES</temporary>
     <children>
-      <child nodeId="node-0x5582010" />
+      <child nodeId="node-0x50bef30" />
     </children>
   </item>
-  <item nodeId="node-0x5582010">
+  <item nodeId="node-0x50bef30">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">
 Lower Bow
@@ -1893,10 +2839,10 @@ There appears to be an old armory here to the left. Better go through the stuff 
     <changed>YES</changed>
     <temporary score="64">YES</temporary>
     <children>
-      <child nodeId="node-0x558e970" />
+      <child nodeId="node-0x50befa0" />
     </children>
   </item>
-  <item nodeId="node-0x558e970">
+  <item nodeId="node-0x50befa0">
     <command xml:space="preserve">west</command>
     <result xml:space="preserve">
 Armory
@@ -1907,10 +2853,10 @@ Well, might as well take this old gun.
     <changed>YES</changed>
     <temporary score="64">YES</temporary>
     <children>
-      <child nodeId="node-0x9bb26d0" />
+      <child nodeId="node-0x50bf010" />
     </children>
   </item>
-  <item nodeId="node-0x9bb26d0">
+  <item nodeId="node-0x50bf010">
     <command xml:space="preserve">take all</command>
     <result xml:space="preserve">your Combat Shotgun: Taken.
 
@@ -1919,10 +2865,10 @@ Well, might as well take this old gun.
     <changed>YES</changed>
     <temporary score="64">YES</temporary>
     <children>
-      <child nodeId="node-0x55484c0" />
+      <child nodeId="node-0x50bf080" />
     </children>
   </item>
-  <item nodeId="node-0x55484c0">
+  <item nodeId="node-0x50bf080">
     <command xml:space="preserve">east</command>
     <result xml:space="preserve">
 Lower Bow
@@ -1933,10 +2879,10 @@ There appears to be an old armory here to the left. Better go through the stuff 
     <changed>YES</changed>
     <temporary score="64">YES</temporary>
     <children>
-      <child nodeId="node-0xdec51e0" />
+      <child nodeId="node-0x50bf0f0" />
     </children>
   </item>
-  <item nodeId="node-0xdec51e0">
+  <item nodeId="node-0x50bf0f0">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">
 Engine
@@ -1949,7 +2895,7 @@ You can see Mirelurk, Mutated Crab and Super Mutant here.
     <changed>YES</changed>
     <temporary score="63">YES</temporary>
   </item>
-  <item nodeId="node-0x54ac20">
+  <item nodeId="node-0x50bf160">
     <command xml:space="preserve"> north</command>
     <result xml:space="preserve">That noun did not make sense in this context.
 
@@ -1958,10 +2904,10 @@ You can see Mirelurk, Mutated Crab and Super Mutant here.
     <changed>YES</changed>
     <temporary score="107">YES</temporary>
     <children>
-      <child nodeId="node-0x9a0d1b0" />
+      <child nodeId="node-0x50bf1d0" />
     </children>
   </item>
-  <item nodeId="node-0x9a0d1b0">
+  <item nodeId="node-0x50bf1d0">
     <command xml:space="preserve">north</command>
     <result xml:space="preserve">
 Old Closet
@@ -1974,10 +2920,10 @@ On Rusty Stand is Keys.
     <changed>YES</changed>
     <temporary score="107">YES</temporary>
     <children>
-      <child nodeId="node-0x2156f0" />
+      <child nodeId="node-0x50bf240" />
     </children>
   </item>
-  <item nodeId="node-0x2156f0">
+  <item nodeId="node-0x50bf240">
     <command xml:space="preserve">take all</command>
     <result xml:space="preserve">(Keys)
 Taken.
@@ -1987,10 +2933,10 @@ Taken.
     <changed>YES</changed>
     <temporary score="107">YES</temporary>
     <children>
-      <child nodeId="node-0x55b8c80" />
+      <child nodeId="node-0x50bf2b0" />
     </children>
   </item>
-  <item nodeId="node-0x55b8c80">
+  <item nodeId="node-0x50bf2b0">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">
 Rivet City
@@ -2007,10 +2953,10 @@ You can also see an exit here.
     <changed>YES</changed>
     <temporary score="107">YES</temporary>
     <children>
-      <child nodeId="node-0x55a82d0" />
+      <child nodeId="node-0x50bf320" />
     </children>
   </item>
-  <item nodeId="node-0x55a82d0">
+  <item nodeId="node-0x50bf320">
     <command xml:space="preserve">south</command>
     <result xml:space="preserve">(first opening the exit)
 It seems to be locked.
@@ -2020,10 +2966,10 @@ It seems to be locked.
     <changed>YES</changed>
     <temporary score="107">YES</temporary>
     <children>
-      <child nodeId="node-0x899aca0" />
+      <child nodeId="node-0x50bf390" />
     </children>
   </item>
-  <item nodeId="node-0x899aca0">
+  <item nodeId="node-0x50bf390">
     <command xml:space="preserve">unlock exit</command>
     <result xml:space="preserve">(with Keys)
 You unlock the exit.
