@@ -29,7 +29,7 @@ Array UUID_ARRAY string "UUID://49515BAD-FBDC-44E2-A4E4-D4117A290497//";
 Constant Story "FIND THE SCIENTIST";
 Constant Headline "An Interactive Fiction";
 Constant Story_Author SC_2;
-Serial "130308";
+Serial "130312";
 
 Default Story 0;
 Default Headline 0;
@@ -4292,7 +4292,7 @@ Global lightflag = false;
 ];
 
 
-Constant REQUISITION_STACK_SIZE = 3*50;
+Constant REQUISITION_STACK_SIZE = 3*53;
 Array requisition_stack --> REQUISITION_STACK_SIZE;
 Global requisition_stack_pointer = 0;
 
@@ -9315,9 +9315,9 @@ Array KindHierarchy --> K0_kind (0) K1_room (0) K2_thing (0) K3_direction (0) K4
 Constant IK1_First = I90_rivet_city;
 Constant IK2_First = selfobj;
 Constant IK3_First = I46_north;
-Constant IK4_First = I103_exit;
-Constant IK5_First = I89_loot;
-Constant IK6_First = I101_rusty_stand;
+Constant IK4_First = I104_exit;
+Constant IK5_First = I108_desk;
+Constant IK6_First = I102_rusty_stand;
 Constant IK7_First = nothing;
 Constant IK8_First = selfobj;
 Constant IK9_First = nothing;
@@ -9327,7 +9327,7 @@ Constant IK12_First = nothing;
 Constant IK13_First = nothing;
 Constant IK14_First = nothing;
 Constant IK15_First = nothing;
-Constant IK16_First = I115_your_combat_shotgun;
+Constant IK16_First = I118_your_combat_shotgun;
 Constant No_Directions = 12;
 ! Table of direction object alias constants:
 Constant DirectionObject_0 = I46_north;
@@ -9343,16 +9343,17 @@ Constant DirectionObject_9 = I55_down;
 Constant DirectionObject_10 = in_obj;
 Constant DirectionObject_11 = out_obj;
 Array Map_Storage -->
- I95_old_closet 0 0 I103_exit 0 0 I91_market_place 0 0 0 0 0 ! Exits from: I90_rivet_city
+ I95_old_closet 0 0 I104_exit 0 0 I91_market_place 0 0 0 0 0 ! Exits from: I90_rivet_city
  I96_hotel 0 0 0 0 0 0 I90_rivet_city 0 0 0 0 ! Exits from: I91_market_place
  0 0 0 I90_rivet_city 0 0 0 0 0 0 0 0 ! Exits from: I95_old_closet
- 0 0 0 I91_market_place 0 0 0 0 0 0 0 0 ! Exits from: I96_hotel
- I103_exit 0 0 I105_lower_bow 0 0 0 0 0 0 0 0 ! Exits from: I104_entrance_to_bow
- I104_entrance_to_bow 0 0 I108_engine 0 0 0 I106_armory 0 0 0 0 ! Exits from: I105_lower_bow
- 0 0 0 0 0 0 I105_lower_bow 0 0 0 0 0 ! Exits from: I106_armory
- I105_lower_bow 0 0 I109_corridor 0 0 0 0 0 0 0 0 ! Exits from: I108_engine
- I109_corridor 0 0 0 0 0 I113_laboratory 0 0 0 0 0 ! Exits from: I112_stairwell
- 0 0 0 0 0 0 0 I112_stairwell 0 0 0 0 ! Exits from: I113_laboratory
+ 0 0 0 I91_market_place 0 0 I99_mysterious_hotel_room 0 0 0 0 0 ! Exits from: I96_hotel
+ 0 0 0 0 0 0 0 I96_hotel 0 0 0 0 ! Exits from: I99_mysterious_hotel_room
+ I104_exit 0 0 I106_lower_bow 0 0 0 0 0 0 0 0 ! Exits from: I105_entrance_to_bow
+ I105_entrance_to_bow 0 0 I109_engine 0 0 0 I107_armory 0 0 0 0 ! Exits from: I106_lower_bow
+ 0 0 0 0 0 0 I106_lower_bow 0 0 0 0 0 ! Exits from: I107_armory
+ I106_lower_bow 0 0 I110_corridor 0 0 0 0 0 0 0 0 ! Exits from: I109_engine
+ I110_corridor 0 0 0 0 0 I115_laboratory 0 0 0 0 0 ! Exits from: I114_stairwell
+ 0 0 0 0 0 0 0 I114_stairwell 0 0 0 0 ! Exits from: I115_laboratory
 ;
 
 Class VPH_Class;
@@ -9726,41 +9727,11 @@ Object selfobj ""
     with cap_short_name "Yourself"
     has mark_as_thing
     with IK2_Count 0
-    with IK2_Link I89_loot
+    with IK2_Link I119_joe
     with IK8_Count 0
-    with IK8_Link I116_joe
+    with IK8_Link I119_joe
     with KD_Count 8
     with name 'yourself' 
-    with action_bitmap 0 0 0 0 0 0 
-;
-
-Object I89_loot ""
-    class K5_container
-    with short_name "loot"
-    with vector 0
-    with list_together 0
-    has mark_as_thing
-    with IK2_Count 2
-    with IK2_Link I88_stimpak
-    with IK5_Count 0
-    with IK5_Link I107_desk
-    with KD_Count 5
-    with name 'loot' 
-    with action_bitmap 0 0 0 0 0 0 
-;
-
-Object -> I88_stimpak ""
-    class K2_thing
-    with short_name text_routine_0
-    with description text_routine_1
-    with p13_salve_count 0
-    with vector 0
-    with list_together 0
-    has mark_as_thing
-    with IK2_Count 1
-    with IK2_Link I116_joe
-    with KD_Count 2
-    with name 'stimpak' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
@@ -9780,7 +9751,7 @@ Object I90_rivet_city ""
     with name 'rivet' 'city' 
 ;
 
-Object -> I116_joe ""
+Object -> I119_joe ""
     class K8_person
     with short_name "Joe"
     with initial SC_6
@@ -9791,17 +9762,17 @@ Object -> I116_joe ""
     with list_together 0
     with cap_short_name "Joe"
     has mark_as_thing
-    with IK2_Count 18
-    with IK2_Link I117_security_guard
-    with IK8_Count 3
-    with IK8_Link I117_security_guard
+    with IK2_Count 20
+    with IK2_Link I120_security_guard
+    with IK8_Count 4
+    with IK8_Link I120_security_guard
     with KD_Count 8
     with name 'joe' 'secretary' 'greeter' 
-    with parse_name Parse_Name_GV109
+    with parse_name Parse_Name_GV111
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object -> I117_security_guard ""
+Object -> I120_security_guard ""
     class K8_person
     with short_name "Security Guard"
     with initial SC_7
@@ -9812,20 +9783,20 @@ Object -> I117_security_guard ""
     with list_together 0
     with cap_short_name "Security Guard"
     has mark_as_thing
-    with IK2_Count 19
+    with IK2_Count 21
     with IK2_Link I92_ammunitions_shop
-    with IK8_Count 4
+    with IK8_Count 5
     with IK8_Link I97_caretaker
     with KD_Count 8
     with name 'security' 'guard' 'guard' 'soldier' 'militant' 
-    with parse_name Parse_Name_GV111
+    with parse_name Parse_Name_GV113
     with action_bitmap 0 0 0 0 0 0 
 ;
 
 Object I91_market_place ""
     class K1_room
     with short_name "Market Place"
-    with description text_routine_2
+    with description text_routine_0
     has proper
     with vector 0
     with room_index -1
@@ -9888,7 +9859,7 @@ Object -> I94_resturant ""
     with cap_short_name "Resturant"
     has mark_as_thing
     with IK2_Count 5
-    with IK2_Link I101_rusty_stand
+    with IK2_Link I102_rusty_stand
     with KD_Count 2
     with name 'resturant' 'diner' 'cafeteria' 'snackbar' 
     with parse_name Parse_Name_GV100
@@ -9911,7 +9882,7 @@ Object I95_old_closet ""
     with name 'old' 'closet' 
 ;
 
-Object -> I101_rusty_stand ""
+Object -> I102_rusty_stand ""
     class K6_supporter
     with short_name "Rusty Stand"
     with description SC_12
@@ -9923,15 +9894,15 @@ Object -> I101_rusty_stand ""
     with cap_short_name "Rusty Stand"
     has mark_as_thing
     with IK2_Count 10
-    with IK2_Link I102_keys
+    with IK2_Link I103_keys
     with IK6_Count 1
-    with IK6_Link I99_counter
+    with IK6_Link I89_night_stand
     with KD_Count 6
     with name 'rusty' 'stand' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object -> -> I102_keys ""
+Object -> -> I103_keys ""
     class K2_thing
     with short_name "Keys"
     with description SC_13
@@ -9959,7 +9930,7 @@ Object I96_hotel ""
     with cap_short_name "Hotel"
     has mark_as_room
     with IK1_Count 3
-    with IK1_Link I104_entrance_to_bow
+    with IK1_Link I99_mysterious_hotel_room
     with KD_Count 1
     with name 'hotel' 
 ;
@@ -9967,7 +9938,7 @@ Object I96_hotel ""
 Object -> I97_caretaker ""
     class K8_person
     with short_name "Caretaker"
-    with initial text_routine_3
+    with initial text_routine_1
     with p14_maximum_hit_points 60
     with p15_current_hit_points 60
     has proper
@@ -9981,7 +9952,7 @@ Object -> I97_caretaker ""
     with IK8_Link I98_mr_gusty
     with KD_Count 8
     with name 'caretaker' 'manager' 
-    with parse_name Parse_Name_GV110
+    with parse_name Parse_Name_GV112
     with action_bitmap 0 0 0 0 0 0 
 ;
 
@@ -9995,16 +9966,16 @@ Object -> I98_mr_gusty ""
     with cap_short_name "Mr Gusty"
     has mark_as_thing
     with IK2_Count 7
-    with IK2_Link I99_counter
+    with IK2_Link I100_counter
     with IK8_Count 2
-    with IK8_Link I118_mirelurk
+    with IK8_Link I121_mirelurk
     with KD_Count 8
     with name 'mr' 'gusty' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object -> I99_counter ""
-    class K6_supporter
+Object -> I100_counter ""
+    class K2_thing
     with short_name "Counter"
     has static
     has scenery
@@ -10012,18 +9983,65 @@ Object -> I99_counter ""
     with list_together 0
     has mark_as_thing
     with IK2_Count 8
-    with IK2_Link I100_shades
-    with IK6_Count 0
-    with IK6_Link nothing
-    with KD_Count 6
+    with IK2_Link I89_night_stand
+    with KD_Count 2
     with name 'counter' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object -> -> I100_shades ""
+Object I99_mysterious_hotel_room ""
+    class K1_room
+    with short_name "Mysterious Hotel Room"
+    with description text_routine_2
+    has proper
+    with vector 0
+    with room_index -1
+    with list_together 0
+    with cap_short_name "Mysterious Hotel Room"
+    has mark_as_room
+    with IK1_Count 4
+    with IK1_Link I105_entrance_to_bow
+    with KD_Count 1
+    with name 'mysterious' 'hotel' 'room' 
+;
+
+Object -> I89_night_stand ""
+    class K6_supporter
+    with short_name "Night Stand"
+    with description SC_16
+    has static
+    has scenery
+    with vector 0
+    with list_together 0
+    has mark_as_thing
+    with IK2_Count 2
+    with IK2_Link I88_stimpak
+    with IK6_Count 0
+    with IK6_Link nothing
+    with KD_Count 6
+    with name 'night' 'stand' 
+    with action_bitmap 0 0 0 0 0 0 
+;
+
+Object -> -> I88_stimpak ""
+    class K2_thing
+    with short_name text_routine_3
+    with description text_routine_4
+    with p13_salve_count 1
+    with vector 0
+    with list_together 0
+    has mark_as_thing
+    with IK2_Count 1
+    with IK2_Link I101_shades
+    with KD_Count 2
+    with name 'stimpak' 
+    with action_bitmap 0 0 0 0 0 0 
+;
+
+Object -> -> I101_shades ""
     class K2_thing
     with short_name "Shades"
-    with description SC_16
+    with description SC_17
     has proper
     has clothing
     with vector 0
@@ -10031,17 +10049,33 @@ Object -> -> I100_shades ""
     with cap_short_name "Shades"
     has mark_as_thing
     with IK2_Count 9
-    with IK2_Link I103_exit
+    with IK2_Link I112_bomb_kit
     with KD_Count 2
     with name 'shades' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I103_exit ""
+Object -> -> I112_bomb_kit ""
+    class K2_thing
+    with short_name "Bomb kit"
+    has proper
+    has ~static
+    with vector 0
+    with list_together 0
+    with cap_short_name "Bomb kit"
+    has mark_as_thing
+    with IK2_Count 16
+    with IK2_Link I104_exit
+    with KD_Count 2
+    with name 'bomb' 'kit' 
+    with action_bitmap 0 0 0 0 0 0 
+;
+
+Object I104_exit ""
     class K4_door
     with short_name "exit"
-    with description SC_17
-    with with_key I102_keys
+    with description SC_18
+    with with_key I103_keys
     has lockable
     with vector 0
     with door_dir [ loc; loc = location;
@@ -10049,69 +10083,69 @@ Object I103_exit ""
             if (loc == I90_rivet_city) return I49_south; return I46_north; ],
     with door_to [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I90_rivet_city) return I104_entrance_to_bow; return I90_rivet_city; ],
-    with found_in I90_rivet_city I104_entrance_to_bow
+            if (loc == I90_rivet_city) return I105_entrance_to_bow; return I90_rivet_city; ],
+    with found_in I90_rivet_city I105_entrance_to_bow
     with list_together 0
     has mark_as_thing
     with IK2_Count 12
-    with IK2_Link I107_desk
+    with IK2_Link I108_desk
     with IK4_Count 0
-    with IK4_Link I109_corridor
+    with IK4_Link I110_corridor
     with KD_Count 4
     with name 'exit' 'door' 
     with parse_name Parse_Name_GV102
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I104_entrance_to_bow ""
+Object I105_entrance_to_bow ""
     class K1_room
     with short_name "Entrance to Bow"
-    with description SC_18
+    with description SC_19
     has proper
     with vector 0
     with room_index -1
     with list_together 0
     with cap_short_name "Entrance to Bow"
     has mark_as_room
-    with IK1_Count 4
-    with IK1_Link I105_lower_bow
+    with IK1_Count 5
+    with IK1_Link I106_lower_bow
     with KD_Count 1
     with name 'entrance' 'to' 'bow' 
 ;
 
-Object I105_lower_bow ""
+Object I106_lower_bow ""
     class K1_room
     with short_name "Lower Bow"
-    with description SC_19
+    with description SC_20
     has proper
     with vector 0
     with room_index -1
     with list_together 0
     with cap_short_name "Lower Bow"
     has mark_as_room
-    with IK1_Count 5
-    with IK1_Link I106_armory
+    with IK1_Count 6
+    with IK1_Link I107_armory
     with KD_Count 1
     with name 'lower' 'bow' 
 ;
 
-Object I106_armory ""
+Object I107_armory ""
     class K1_room
     with short_name "Armory"
-    with description SC_20
+    with description SC_21
     has proper
     with vector 0
     with room_index -1
     with list_together 0
     with cap_short_name "Armory"
     has mark_as_room
-    with IK1_Count 6
-    with IK1_Link I108_engine
+    with IK1_Count 7
+    with IK1_Link I109_engine
     with KD_Count 1
     with name 'armory' 
 ;
 
-Object -> I107_desk ""
+Object -> I108_desk ""
     class K5_container
     with short_name "Desk"
     has proper
@@ -10122,51 +10156,51 @@ Object -> I107_desk ""
     with cap_short_name "Desk"
     has mark_as_thing
     with IK2_Count 13
-    with IK2_Link I115_your_combat_shotgun
-    with IK5_Count 1
+    with IK2_Link I118_your_combat_shotgun
+    with IK5_Count 0
     with IK5_Link nothing
     with KD_Count 5
     with name 'desk' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object -> -> I115_your_combat_shotgun ""
+Object -> -> I118_your_combat_shotgun ""
     class K16_weapon
     with short_name "your Combat Shotgun"
-    with initial SC_21
+    with initial SC_22
     with p16_maximum_damage 90
     has proper
     with vector 0
     with list_together 0
     with cap_short_name "Your Combat Shotgun"
     has mark_as_thing
-    with IK2_Count 17
-    with IK2_Link I118_mirelurk
+    with IK2_Count 19
+    with IK2_Link I121_mirelurk
     with IK16_Count 0
-    with IK16_Link I119_claws
+    with IK16_Link I122_claws
     with KD_Count 16
     with name 'my' 'combat' 'shotgun' 'shotgun' 'gun' 
-    with parse_name Parse_Name_GV108
+    with parse_name Parse_Name_GV110
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I108_engine ""
+Object I109_engine ""
     class K1_room
     with short_name "Engine"
-    with description SC_22
+    with description SC_23
     has proper
     with vector 0
     with room_index -1
     with list_together 0
     with cap_short_name "Engine"
     has mark_as_room
-    with IK1_Count 7
-    with IK1_Link I112_stairwell
+    with IK1_Count 8
+    with IK1_Link I114_stairwell
     with KD_Count 1
     with name 'engine' 
 ;
 
-Object -> I118_mirelurk ""
+Object -> I121_mirelurk ""
     class K8_person
     with short_name "Mirelurk"
     with p14_maximum_hit_points 50
@@ -10176,16 +10210,16 @@ Object -> I118_mirelurk ""
     with list_together 0
     with cap_short_name "Mirelurk"
     has mark_as_thing
-    with IK2_Count 20
-    with IK2_Link I119_claws
-    with IK8_Count 5
-    with IK8_Link I122_mutated_crab
+    with IK2_Count 22
+    with IK2_Link I122_claws
+    with IK8_Count 6
+    with IK8_Link I125_mutated_crab
     with KD_Count 8
     with name 'mirelurk' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object -> -> I119_claws ""
+Object -> -> I122_claws ""
     class K16_weapon
     with short_name "Claws"
     with p16_maximum_damage 15
@@ -10194,16 +10228,16 @@ Object -> -> I119_claws ""
     with list_together 0
     with cap_short_name "Claws"
     has mark_as_thing
-    with IK2_Count 21
-    with IK2_Link I120_screech
+    with IK2_Count 23
+    with IK2_Link I123_screech
     with IK16_Count 1
-    with IK16_Link I120_screech
+    with IK16_Link I123_screech
     with KD_Count 16
     with name 'claws' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object -> -> I120_screech ""
+Object -> -> I123_screech ""
     class K16_weapon
     with short_name "Screech"
     with p16_maximum_damage 20
@@ -10212,16 +10246,16 @@ Object -> -> I120_screech ""
     with list_together 0
     with cap_short_name "Screech"
     has mark_as_thing
-    with IK2_Count 22
-    with IK2_Link I121_nothing
+    with IK2_Count 24
+    with IK2_Link I124_nothing
     with IK16_Count 2
-    with IK16_Link I121_nothing
+    with IK16_Link I124_nothing
     with KD_Count 16
     with name 'screech' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object -> -> I121_nothing ""
+Object -> -> I124_nothing ""
     class K16_weapon
     with short_name "Nothing"
     with p16_maximum_damage 0
@@ -10230,16 +10264,16 @@ Object -> -> I121_nothing ""
     with list_together 0
     with cap_short_name "Nothing"
     has mark_as_thing
-    with IK2_Count 23
-    with IK2_Link I122_mutated_crab
+    with IK2_Count 25
+    with IK2_Link I125_mutated_crab
     with IK16_Count 3
-    with IK16_Link I123_pinchers
+    with IK16_Link I126_pinchers
     with KD_Count 16
     with name 'nothing' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object -> I122_mutated_crab ""
+Object -> I125_mutated_crab ""
     class K8_person
     with short_name "Mutated Crab"
     with p14_maximum_hit_points 50
@@ -10249,16 +10283,16 @@ Object -> I122_mutated_crab ""
     with list_together 0
     with cap_short_name "Mutated Crab"
     has mark_as_thing
-    with IK2_Count 24
-    with IK2_Link I123_pinchers
-    with IK8_Count 6
-    with IK8_Link I124_super_mutant
+    with IK2_Count 26
+    with IK2_Link I126_pinchers
+    with IK8_Count 7
+    with IK8_Link I127_super_mutant
     with KD_Count 8
     with name 'mutated' 'crab' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object -> -> I123_pinchers ""
+Object -> -> I126_pinchers ""
     class K16_weapon
     with short_name "Pinchers"
     with p16_maximum_damage 20
@@ -10267,16 +10301,16 @@ Object -> -> I123_pinchers ""
     with list_together 0
     with cap_short_name "Pinchers"
     has mark_as_thing
-    with IK2_Count 25
-    with IK2_Link I125_assault_rifle
+    with IK2_Count 27
+    with IK2_Link I128_assault_rifle
     with IK16_Count 4
-    with IK16_Link I125_assault_rifle
+    with IK16_Link I128_assault_rifle
     with KD_Count 16
     with name 'pinchers' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object -> -> I125_assault_rifle ""
+Object -> -> I128_assault_rifle ""
     class K16_weapon
     with short_name "Assault Rifle"
     with p16_maximum_damage 20
@@ -10285,8 +10319,8 @@ Object -> -> I125_assault_rifle ""
     with list_together 0
     with cap_short_name "Assault Rifle"
     has mark_as_thing
-    with IK2_Count 27
-    with IK2_Link I124_super_mutant
+    with IK2_Count 29
+    with IK2_Link I127_super_mutant
     with IK16_Count 5
     with IK16_Link nothing
     with KD_Count 16
@@ -10294,7 +10328,7 @@ Object -> -> I125_assault_rifle ""
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object -> I124_super_mutant ""
+Object -> I127_super_mutant ""
     class K8_person
     with short_name "Super Mutant"
     with p14_maximum_hit_points 50
@@ -10304,74 +10338,74 @@ Object -> I124_super_mutant ""
     with list_together 0
     with cap_short_name "Super Mutant"
     has mark_as_thing
-    with IK2_Count 26
-    with IK2_Link I109_corridor
-    with IK8_Count 7
-    with IK8_Link nothing
+    with IK2_Count 28
+    with IK2_Link I110_corridor
+    with IK8_Count 8
+    with IK8_Link I116_pinkerton
     with KD_Count 8
     with name 'super' 'mutant' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I109_corridor ""
+Object I110_corridor ""
     class K4_door
     with short_name "Corridor"
-    with with_key I110_ancient_key
+    with with_key I111_ancient_key
     has proper
     has lockable
     has locked
     with vector 0
     with door_dir [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I108_engine) return I49_south; return I46_north; ],
+            if (loc == I109_engine) return I49_south; return I46_north; ],
     with door_to [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I108_engine) return I112_stairwell; return I108_engine; ],
-    with found_in I108_engine I112_stairwell
+            if (loc == I109_engine) return I114_stairwell; return I109_engine; ],
+    with found_in I109_engine I114_stairwell
     with list_together 0
     with cap_short_name "Corridor"
     has mark_as_thing
     with IK2_Count 14
-    with IK2_Link I110_ancient_key
+    with IK2_Link I111_ancient_key
     with IK4_Count 1
     with IK4_Link nothing
     with KD_Count 4
     with name 'corridor' 'door' 
-    with parse_name Parse_Name_GV112
+    with parse_name Parse_Name_GV114
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I110_ancient_key ""
+Object I111_ancient_key ""
     class K2_thing
     with short_name "Ancient key"
-    with description SC_23
+    with description SC_24
     has proper
     with vector 0
     with list_together 0
     with cap_short_name "Ancient key"
     has mark_as_thing
     with IK2_Count 15
-    with IK2_Link I111_mine
+    with IK2_Link I113_mine
     with KD_Count 2
     with name 'ancient' 'key' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I112_stairwell ""
+Object I114_stairwell ""
     class K1_room
     with short_name "stairwell"
-    with description text_routine_4
+    with description text_routine_5
     with vector 0
     with room_index -1
     with list_together 0
     has mark_as_room
-    with IK1_Count 8
-    with IK1_Link I113_laboratory
+    with IK1_Count 9
+    with IK1_Link I115_laboratory
     with KD_Count 1
     with name 'stairwell' 
 ;
 
-Object -> I111_mine ""
+Object -> I113_mine ""
     class K2_thing
     with short_name "mine"
     has static
@@ -10379,27 +10413,46 @@ Object -> I111_mine ""
     with vector 0
     with list_together 0
     has mark_as_thing
-    with IK2_Count 16
-    with IK2_Link nothing
+    with IK2_Count 17
+    with IK2_Link I116_pinkerton
     with KD_Count 2
     with name 'mine' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I113_laboratory ""
+Object I115_laboratory ""
     class K1_room
     with short_name "Laboratory"
-    with description text_routine_5
+    with description text_routine_6
     has proper
     with vector 0
     with room_index -1
     with list_together 0
     with cap_short_name "Laboratory"
     has mark_as_room
-    with IK1_Count 9
+    with IK1_Count 10
     with IK1_Link nothing
     with KD_Count 1
     with name 'laboratory' 
+;
+
+Object -> I116_pinkerton ""
+    class K8_person
+    with short_name "Pinkerton"
+    with initial SC_25
+    has proper
+    with vector 0
+    with list_together 0
+    with cap_short_name "Pinkerton"
+    has mark_as_thing
+    with IK2_Count 18
+    with IK2_Link nothing
+    with IK8_Count 3
+    with IK8_Link nothing
+    with KD_Count 8
+    with name 'pinkerton' 'pinker' 'scientist' 
+    with parse_name Parse_Name_GV105
+    with action_bitmap 0 0 0 0 0 0 
 ;
 
 Constant I65_figure_of_cover = 1;
@@ -10426,7 +10479,7 @@ Constant I86_referred_to_a_determinat = 19;
 Constant I87_i_beg_your_pardon_error = 20;
 Array Global_Vars -->
   (false) ! 7
-  (SC_24) ! 24
+  (SC_26) ! 24
   (SC_2) ! 29
   (EMPTY_TEXT_VALUE) ! 30
   (EMPTY_TEXT_VALUE) ! 31
@@ -10439,14 +10492,14 @@ Array Global_Vars -->
 
 
 Array T0_final_question_options table  tab_0_0 tab_0_1 tab_0_2 tab_0_3 tab_0_4;
-Array tab_0_0 table $0064 0  (SC_25)  (SC_26)  (SC_27)  (SC_28)  (SC_29) ;
+Array tab_0_0 table $0064 0  (SC_27)  (SC_28)  (SC_29)  (SC_30)  (SC_31) ;
 Array tab_0_1 table $0465 1  (0)  (0)  (1)  (0)  (0) ;
-Array tab_0_2 table $2066 2  (Consult_Grammar_113)  (Consult_Grammar_114)  (Consult_Grammar_115)  (Consult_Grammar_116)  (Consult_Grammar_117) ;
+Array tab_0_2 table $2066 2  (Consult_Grammar_115)  (Consult_Grammar_116)  (Consult_Grammar_117)  (Consult_Grammar_118)  (Consult_Grammar_119) ;
 Array tab_0_3 table $0067 3  (IMMEDIATELY_RESTART_VM_R)  (IMMEDIATELY_RESTORE_SAVED_R)  TABLE_NOVALUE (IMMEDIATELY_QUIT_R)  (IMMEDIATELY_UNDO_R) ;
 Array tab_0_4 table $0068 4  TABLE_NOVALUE TABLE_NOVALUE (V26_amusing_a_victorious_pla)  TABLE_NOVALUE TABLE_NOVALUE;
 Array T1_locale_priorities table  tab_1_0 tab_1_1;
-Array tab_1_0 table $0869 NULL  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
-Array tab_1_1 table $446a 5  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
+Array tab_1_0 table $0869 NULL  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
+Array tab_1_1 table $446a 5  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
 Array TB_Blanks -> 
   ! For table T0_final_question_options
   $00  ! Column 0
@@ -10456,7 +10509,7 @@ Array TB_Blanks ->
   $1b  ! Column 4
   
   ! For table T1_locale_priorities
-  $ff $ff $ff $1f  ! Column 1
+  $ff $ff $ff $7f  ! Column 1
   
   ! End of table
   NULL NULL;
@@ -11013,29 +11066,18 @@ Array ActionHappened --> 0 0 0 0 0 0;
 [ R_740 ;
       ! phrase 1
       ! [1: say ~You're in Rivet City. The goal is to find a scientist known as Pinkerton who has barricaded himself in the lower half of the ship. In order to get to him you're going to have to go through the bow. There seems to be a mysterious old door to the south, better check that out first.~]
-      say__p=1;ParaContent();  print (PrintText) SC_30;  new_line; .L_Say1; .L_SayX1;
+      say__p=1;ParaContent();  print (PrintText) SC_32;  new_line; .L_Say1; .L_SayX1;
    rfalse;
 ];
 ! No specific request
 ! When play begins:
-[ R_770 ;
+[ R_772 ;
       ! phrase 1
       ! [1: now the left hand status line is ~You: [current hit points of player]~]
-       left_hand_status_line = text_routine_6; 
+       left_hand_status_line = text_routine_7; 
       ! phrase 2
       ! [2: now the right hand status line is ~Mirelurk: [current hit points of Mirelurk]~]
-       right_hand_status_line = text_routine_7; 
-   rfalse;
-];
-! No specific request
-! When play begins:
-[ R_773 ;
-      ! phrase 1
-      ! [1: now the left hand status line is ~You: [current hit points of player]~]
-       left_hand_status_line = text_routine_8; 
-      ! phrase 2
-      ! [2: now the right hand status line is ~Mutated Crab: [current hit points of Mirelurk]~]
-       right_hand_status_line = text_routine_9; 
+       right_hand_status_line = text_routine_8; 
    rfalse;
 ];
 ! No specific request
@@ -11043,10 +11085,21 @@ Array ActionHappened --> 0 0 0 0 0 0;
 [ R_775 ;
       ! phrase 1
       ! [1: now the left hand status line is ~You: [current hit points of player]~]
-       left_hand_status_line = text_routine_10; 
+       left_hand_status_line = text_routine_9; 
+      ! phrase 2
+      ! [2: now the right hand status line is ~Mutated Crab: [current hit points of Mirelurk]~]
+       right_hand_status_line = text_routine_10; 
+   rfalse;
+];
+! No specific request
+! When play begins:
+[ R_777 ;
+      ! phrase 1
+      ! [1: now the left hand status line is ~You: [current hit points of player]~]
+       left_hand_status_line = text_routine_11; 
       ! phrase 2
       ! [2: now the right hand status line is ~Super Mutant: [current hit points of Mirelurk]~]
-       right_hand_status_line = text_routine_11; 
+       right_hand_status_line = text_routine_12; 
    rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
@@ -11098,13 +11151,13 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! Every turn ( this is the Mirelurk-attack rule ):
-[ R_771 ;
+[ R_773 ;
       ! phrase 1
       ! [1: if mirelurk is not dead begin]
-       if (((~~(((Adj_31_t1_v9(I118_mirelurk)))))))  {
+       if (((~~(((Adj_31_t1_v9(I121_mirelurk)))))))  {
          ! phrase 2
          ! [2: if the current hit points of mirelurk is less than 50 , try mirelurk attacking the player with a random weapon which is carried by mirelurk]
-          if (((GProperty(9, I118_mirelurk,p15_current_hit_points) < 50))) {  TryAction(0, I118_mirelurk, ##A82_attacking_it_with, player,  (Prop_0()) );;   }
+          if (((GProperty(9, I121_mirelurk,p15_current_hit_points) < 50))) {  TryAction(0, I121_mirelurk, ##A82_attacking_it_with, player,  (Prop_0()) );;   }
          ! phrase 3
          ! [3: end if]
          }
@@ -11113,13 +11166,13 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ];
 ! No specific request
 ! Every turn ( this is the Mutated Crab-attack rule ):
-[ R_774 ;
+[ R_776 ;
       ! phrase 1
       ! [1: if mirelurk is not dead begin]
-       if (((~~(((Adj_31_t1_v9(I118_mirelurk)))))))  {
+       if (((~~(((Adj_31_t1_v9(I121_mirelurk)))))))  {
          ! phrase 2
          ! [2: if the current hit points of mutated crab is less than 50 , try mutated crab attacking the player with a random weapon which is carried by mutated crab]
-          if (((GProperty(9, I122_mutated_crab,p15_current_hit_points) < 50))) {  TryAction(0, I122_mutated_crab, ##A82_attacking_it_with, player,  (Prop_1()) );;   }
+          if (((GProperty(9, I125_mutated_crab,p15_current_hit_points) < 50))) {  TryAction(0, I125_mutated_crab, ##A82_attacking_it_with, player,  (Prop_1()) );;   }
          ! phrase 3
          ! [3: end if]
          }
@@ -11128,13 +11181,13 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ];
 ! No specific request
 ! Every turn ( this is the Super Mutant-attack rule ):
-[ R_776 ;
+[ R_778 ;
       ! phrase 1
       ! [1: if mirelurk is not dead begin]
-       if (((~~(((Adj_31_t1_v9(I118_mirelurk)))))))  {
+       if (((~~(((Adj_31_t1_v9(I121_mirelurk)))))))  {
          ! phrase 2
          ! [2: if the current hit points of mutated crab is less than 50 , try mutated crab attacking the player with a random weapon which is carried by super mutant]
-          if (((GProperty(9, I122_mutated_crab,p15_current_hit_points) < 50))) {  TryAction(0, I122_mutated_crab, ##A82_attacking_it_with, player,  (Prop_2()) );;   }
+          if (((GProperty(9, I125_mutated_crab,p15_current_hit_points) < 50))) {  TryAction(0, I125_mutated_crab, ##A82_attacking_it_with, player,  (Prop_2()) );;   }
          ! phrase 3
          ! [3: end if]
          }
@@ -11145,11 +11198,11 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! An every turn rule:
 [ R_745 ;
       ! phrase 1
-      ! [1: if player is wearing shades begin]
-       if (((player == WearerOf(I100_shades))))  {
+      ! [1: if the combat shotgun is not in the armory and player is in the armory begin]
+       if ((((~~((I107_armory == ContainerOf(I118_your_combat_shotgun)))))) && (((I107_armory == ContainerOf(player)))))  {
          ! phrase 2
-         ! [2: increase current hit points by 1]
-          WriteGProperty(OBJECT_TY, self,p15_current_hit_points,GProperty(OBJECT_TY, self,p15_current_hit_points) + 1); 
+         ! [2: change the description of the armory to ~You already took the gun.~]
+          WriteGProperty(9, I107_armory,description,SC_33); 
          ! phrase 3
          ! [3: end if]
          }
@@ -11160,26 +11213,11 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! An every turn rule:
 [ R_746 ;
       ! phrase 1
-      ! [1: if the combat shotgun is not in the armory and player is in the armory begin]
-       if ((((~~((I106_armory == ContainerOf(I115_your_combat_shotgun)))))) && (((I106_armory == ContainerOf(player)))))  {
-         ! phrase 2
-         ! [2: change the description of the armory to ~You already took the gun.~]
-          WriteGProperty(9, I106_armory,description,SC_31); 
-         ! phrase 3
-         ! [3: end if]
-         }
-
-   rfalse;
-];
-! No specific request
-! An every turn rule:
-[ R_747 ;
-      ! phrase 1
       ! [1: if the mirelurk is dead begin]
-       if ((((Adj_31_t1_v9(I118_mirelurk)))))  {
+       if ((((Adj_31_t1_v9(I121_mirelurk)))))  {
          ! phrase 2
          ! [2: move ancient key to engine]
-          MoveObject(I110_ancient_key, I108_engine, 0, false); 
+          MoveObject(I111_ancient_key, I109_engine, 0, false); 
          ! phrase 3
          ! [3: end if]
          }
@@ -11188,13 +11226,25 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ];
 ! No specific request
 ! An every turn rule:
-[ R_751 ;
+[ R_750 ;
+      ! phrase 1
+      ! [1: if the player is in laboratory begin]
+       if (((I115_laboratory == ContainerOf(player))))  {
+         ! phrase 2
+         ! [2: end if]
+         }
+
+   rfalse;
+];
+! No specific request
+! An every turn rule:
+[ R_753 ;
       ! phrase 1
       ! [1: if the player is dead begin]
        if ((((Adj_31_t1_v9(player)))))  {
          ! phrase 2
          ! [2: end the game saying ~Game Over~]
-          deadflag=SC_32; story_complete=false; 
+          deadflag=SC_34; story_complete=false; 
          ! phrase 3
          ! [3: end if]
          }
@@ -11203,10 +11253,10 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ];
 ! No specific request
 ! An every turn rule:
-[ R_752 ;
+[ R_754 ;
       ! phrase 1
       ! [1: if the player is in engine begin]
-       if (((I108_engine == ContainerOf(player))))  {
+       if (((I109_engine == ContainerOf(player))))  {
          ! phrase 2
          ! [2: decrease the current hit points of the player by 5]
           WriteGProperty(9, player,p15_current_hit_points,GProperty(9, player,p15_current_hit_points) - 5); 
@@ -11218,7 +11268,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ];
 ! No specific request
 ! An every turn rule:
-[ R_766 ;
+[ R_768 ;
       ! phrase 1
       ! [1: if the player is in rivet city begin]
        if (((I90_rivet_city == ContainerOf(player))))  {
@@ -11230,13 +11280,13 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ];
 ! No specific request
 ! An every turn rule:
-[ R_772 ;
+[ R_774 ;
       ! phrase 1
       ! [1: if the mirelurk is dead begin]
-       if ((((Adj_31_t1_v9(I118_mirelurk)))))  {
+       if ((((Adj_31_t1_v9(I121_mirelurk)))))  {
          ! phrase 2
          ! [2: say ~The Mirelurk had the key to the corridor!~]
-         say__p=1;ParaContent();  print (PrintText) SC_33;  new_line; .L_Say3; .L_SayX3;
+         say__p=1;ParaContent();  print (PrintText) SC_35;  new_line; .L_Say3; .L_SayX3;
          ! phrase 3
          ! [3: end if]
          }
@@ -11276,7 +11326,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 [ R_20 ;
       ! phrase 1
       ! [1: if the current item from the multiple object list is not nothing , say ~[current item from the multiple object list]: [run paragraph on]~]
-       if (((~~((multiple_object_item == nothing))))) { say__p=1;ParaContent();  print (PrintShortName) multiple_object_item; ParaContent();  print (PrintText) SC_34; ParaContent();  RunParagraphOn();  .L_Say4; .L_SayX4;  }
+       if (((~~((multiple_object_item == nothing))))) { say__p=1;ParaContent();  print (PrintShortName) multiple_object_item; ParaContent();  print (PrintText) SC_36; ParaContent();  RunParagraphOn();  .L_Say4; .L_SayX4;  }
    rfalse;
 ];
 ! No specific request
@@ -11330,12 +11380,12 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! Setting action variables for attacking something with something:
-[ R_756 
+[ R_758 
     t_0 ! Local variable e.g. '?-1,-1?' = number
     ;
    if ((action ==##A82_attacking_it_with) && ((noun ofclass K2_thing)) && ((second ofclass K2_thing))) { ! Runs only when pattern matches
 self = noun;
-   if (debug_rules) DB_Rule(R_756, 756);
+   if (debug_rules) DB_Rule(R_758, 758);
       ! phrase 1
       ! [1: if the second noun is a weapon begin]
        if (((second ofclass K16_weapon)))  {
@@ -11350,7 +11400,7 @@ self = noun;
          }
 
    } ! Runs only when pattern matches
-   else if (debug_rules > 1) DB_Rule(R_756, 756, true);
+   else if (debug_rules > 1) DB_Rule(R_758, 758, true);
    rfalse;
 ];
 ! No specific request
@@ -11627,38 +11677,63 @@ self = noun;
 ! ----------------------------------------------------------------------------------------------------
 ! Rules in rulebook: Instead (B21_instead)
 ! ----------------------------------------------------------------------------------------------------
-! Rule 1/10 ! Instead of going south when player is in stairwell:
+! Rule 1/12 ! Instead of going south when player is in stairwell:
+!   === which is equally specific with ===
+! Rule 2/12 ! Instead of going south when player is in stairwell:
 !   >>> I - Number of aspects constrained >>>
-! Rule 2/10 ! Instead of player unlocking corridor with key:
+! Rule 3/12 ! Instead of player unlocking corridor with key:
 !   >>> III.3.1 - Action/What/Second Thing Acted On >>>
-! Rule 3/10 ! Instead of eating the Stimpak:
+! Rule 4/12 ! Instead of eating the Stimpak:
 !   === which is equally specific with ===
-! Rule 4/10 ! Instead of attacking the mirelurk:
+! Rule 5/12 ! Instead of examining Pinkerton:
 !   === which is equally specific with ===
-! Rule 5/10 ! Instead of attacking the Super Mutant:
+! Rule 6/12 ! Instead of attacking the mirelurk:
 !   === which is equally specific with ===
-! Rule 6/10 ! Instead of attacking the Mutated Crab:
+! Rule 7/12 ! Instead of attacking the Super Mutant:
 !   === which is equally specific with ===
-! Rule 7/10 ! Instead of examining Joe:
+! Rule 8/12 ! Instead of attacking the Mutated Crab:
 !   === which is equally specific with ===
-! Rule 8/10 ! Instead of attacking Joe:
+! Rule 9/12 ! Instead of examining Joe:
 !   === which is equally specific with ===
-! Rule 9/10 ! Instead of attacking Joe:
+! Rule 10/12 ! Instead of attacking Joe:
+!   === which is equally specific with ===
+! Rule 11/12 ! Instead of attacking Joe:
 !   >>> III.3.2 - Action/What/Thing Acted On >>>
-! Rule 10/10 ! Instead of going nowhere:
+! Rule 12/12 ! Instead of going nowhere:
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! Instead of going south when player is in stairwell:
+[ R_748 ;
+   if ((action ==##Go) &&  (actor==player) && ((noun == I49_south) && (true)) && (self=actor,true) && (((I114_stairwell == ContainerOf(player))))) { ! Runs only when pattern matches
+self = noun;
+   if (debug_rules) DB_Rule(R_748, 748);
+      ! phrase 1
+      ! [1: if mine is armed begin]
+       if ((((Adj_75_t1_v9(I113_mine)))))  {
+         ! phrase 2
+         ! [2: say ~There's a mine in the way, better disarm it.~]
+         say__p=1;ParaContent();  print (PrintText) SC_37;  new_line; .L_Say5; .L_SayX5;
+         ! phrase 3
+         ! [3: end if]
+         }
+
+      RulebookFails(); rtrue;
+   } ! Runs only when pattern matches
+   else if (debug_rules > 1) DB_Rule(R_748, 748, true);
+   rfalse;
+];
+! No specific request
+! Instead of going south when player is in stairwell:
 [ R_749 ;
-   if ((action ==##Go) &&  (actor==player) && ((noun == I49_south) && (true)) && (self=actor,true) && (((I112_stairwell == ContainerOf(player))))) { ! Runs only when pattern matches
+   if ((action ==##Go) &&  (actor==player) && ((noun == I49_south) && (true)) && (self=actor,true) && (((I114_stairwell == ContainerOf(player))))) { ! Runs only when pattern matches
 self = noun;
    if (debug_rules) DB_Rule(R_749, 749);
       ! phrase 1
-      ! [1: if mine is armed begin]
-       if ((((Adj_75_t1_v9(I111_mine)))))  {
+      ! [1: if player does not have bomb kit begin]
+       if (((~~((player == OwnerOf(I112_bomb_kit))))))  {
          ! phrase 2
-         ! [2: say ~There's a mine in the way, better disarm it.~]
-         say__p=1;ParaContent();  print (PrintText) SC_35;  new_line; .L_Say5; .L_SayX5;
+         ! [2: say ~wait, there's a mine. But I lack the tools to disarm it.~]
+         say__p=1;ParaContent();  print (PrintText) SC_38;  new_line; .L_Say6; .L_SayX6;
          ! phrase 3
          ! [3: end if]
          }
@@ -11670,16 +11745,16 @@ self = noun;
 ];
 ! No specific request
 ! Instead of player unlocking corridor with key:
-[ R_777 ;
-   if ((action ==##Unlock) &&  (actor==player) && ((noun == I109_corridor) && (true)) && ((second == I110_ancient_key) && (true))) { ! Runs only when pattern matches
+[ R_779 ;
+   if ((action ==##Unlock) &&  (actor==player) && ((noun == I110_corridor) && (true)) && ((second == I111_ancient_key) && (true))) { ! Runs only when pattern matches
 self = noun;
-   if (debug_rules) DB_Rule(R_777, 777);
+   if (debug_rules) DB_Rule(R_779, 779);
       ! phrase 1
       ! [1: say ~Keys won't do it, the ancient keys would work better.~]
-      say__p=1;ParaContent();  print (PrintText) SC_36;  new_line; .L_Say6; .L_SayX6;
+      say__p=1;ParaContent();  print (PrintText) SC_39;  new_line; .L_Say7; .L_SayX7;
       RulebookFails(); rtrue;
    } ! Runs only when pattern matches
-   else if (debug_rules > 1) DB_Rule(R_777, 777, true);
+   else if (debug_rules > 1) DB_Rule(R_779, 779, true);
    rfalse;
 ];
 ! No specific request
@@ -11692,109 +11767,126 @@ self = noun;
       ! [1: increase the current hit points of the player by 50]
        WriteGProperty(9, player,p15_current_hit_points,GProperty(9, player,p15_current_hit_points) + 50); 
       ! phrase 2
-      ! [2: say ~The Stimpak heals you![line break](Health: [the current hit points of the player])~]
-      say__p=1;ParaContent();  print (PrintText) SC_37; ParaContent();  new_line; ParaContent();  print (PrintText) SC_38; ParaContent(); @push self;  print (say__n=GProperty(9, self=player,p15_current_hit_points)); @pull self; ParaContent();  print (PrintText) SC_39;  .L_Say7; .L_SayX7;
+      ! [2: say ~Your health has increased![line break](Health: [the current hit points of the player])~]
+      say__p=1;ParaContent();  print (PrintText) SC_40; ParaContent();  new_line; ParaContent();  print (PrintText) SC_41; ParaContent(); @push self;  print (say__n=GProperty(9, self=player,p15_current_hit_points)); @pull self; ParaContent();  print (PrintText) SC_42;  .L_Say8; .L_SayX8;
+      ! phrase 3
+      ! [3: remove stimpak from play]
+       RemoveFromPlay(I88_stimpak); 
       RulebookFails(); rtrue;
    } ! Runs only when pattern matches
    else if (debug_rules > 1) DB_Rule(R_744, 744, true);
    rfalse;
 ];
 ! No specific request
+! Instead of examining Pinkerton:
+[ R_751 ;
+   if ((action ==##Examine) &&  (actor==player) && ((noun == I116_pinkerton) && (true))) { ! Runs only when pattern matches
+self = noun;
+   if (debug_rules) DB_Rule(R_751, 751);
+      ! phrase 1
+      ! [1: say ~You explain your mission to Pinkerton. He says 'Alright, I will help you with your quest. But, you must give me something in return. I want something that can act as eyewear. Im tired of getting splashed by chemicals all the time. You get that for me and in the meantime Ill write something up for you. Im sure rivet city has a store that can help you with that.~]
+      say__p=1;ParaContent();  print (PrintText) SC_43;  new_line; .L_Say9; .L_SayX9;
+      RulebookFails(); rtrue;
+   } ! Runs only when pattern matches
+   else if (debug_rules > 1) DB_Rule(R_751, 751, true);
+   rfalse;
+];
+! No specific request
 ! Instead of attacking the mirelurk:
-[ R_753 ;
-   if ((action ==##Attack) &&  (actor==player) && ((noun == I118_mirelurk) && (true))) { ! Runs only when pattern matches
-self = noun;
-   if (debug_rules) DB_Rule(R_753, 753);
-      ! phrase 1
-      ! [1: say ~What do I attack the mirelurk with?~]
-      say__p=1;ParaContent();  print (PrintText) SC_40;  new_line; .L_Say8; .L_SayX8;
-      RulebookFails(); rtrue;
-   } ! Runs only when pattern matches
-   else if (debug_rules > 1) DB_Rule(R_753, 753, true);
-   rfalse;
-];
-! No specific request
-! Instead of attacking the Super Mutant:
-[ R_754 ;
-   if ((action ==##Attack) &&  (actor==player) && ((noun == I124_super_mutant) && (true))) { ! Runs only when pattern matches
-self = noun;
-   if (debug_rules) DB_Rule(R_754, 754);
-      ! phrase 1
-      ! [1: say ~What do I attack the Super Mutant with?~]
-      say__p=1;ParaContent();  print (PrintText) SC_41;  new_line; .L_Say9; .L_SayX9;
-      RulebookFails(); rtrue;
-   } ! Runs only when pattern matches
-   else if (debug_rules > 1) DB_Rule(R_754, 754, true);
-   rfalse;
-];
-! No specific request
-! Instead of attacking the Mutated Crab:
 [ R_755 ;
-   if ((action ==##Attack) &&  (actor==player) && ((noun == I122_mutated_crab) && (true))) { ! Runs only when pattern matches
+   if ((action ==##Attack) &&  (actor==player) && ((noun == I121_mirelurk) && (true))) { ! Runs only when pattern matches
 self = noun;
    if (debug_rules) DB_Rule(R_755, 755);
       ! phrase 1
-      ! [1: say ~What do I attack the Mutated Crab with?~]
-      say__p=1;ParaContent();  print (PrintText) SC_42;  new_line; .L_Say10; .L_SayX10;
+      ! [1: say ~What do I attack the mirelurk with?~]
+      say__p=1;ParaContent();  print (PrintText) SC_44;  new_line; .L_Say10; .L_SayX10;
       RulebookFails(); rtrue;
    } ! Runs only when pattern matches
    else if (debug_rules > 1) DB_Rule(R_755, 755, true);
    rfalse;
 ];
 ! No specific request
+! Instead of attacking the Super Mutant:
+[ R_756 ;
+   if ((action ==##Attack) &&  (actor==player) && ((noun == I127_super_mutant) && (true))) { ! Runs only when pattern matches
+self = noun;
+   if (debug_rules) DB_Rule(R_756, 756);
+      ! phrase 1
+      ! [1: say ~What do I attack the Super Mutant with?~]
+      say__p=1;ParaContent();  print (PrintText) SC_45;  new_line; .L_Say11; .L_SayX11;
+      RulebookFails(); rtrue;
+   } ! Runs only when pattern matches
+   else if (debug_rules > 1) DB_Rule(R_756, 756, true);
+   rfalse;
+];
+! No specific request
+! Instead of attacking the Mutated Crab:
+[ R_757 ;
+   if ((action ==##Attack) &&  (actor==player) && ((noun == I125_mutated_crab) && (true))) { ! Runs only when pattern matches
+self = noun;
+   if (debug_rules) DB_Rule(R_757, 757);
+      ! phrase 1
+      ! [1: say ~What do I attack the Mutated Crab with?~]
+      say__p=1;ParaContent();  print (PrintText) SC_46;  new_line; .L_Say12; .L_SayX12;
+      RulebookFails(); rtrue;
+   } ! Runs only when pattern matches
+   else if (debug_rules > 1) DB_Rule(R_757, 757, true);
+   rfalse;
+];
+! No specific request
 ! Instead of examining Joe:
-[ R_767 ;
-   if ((action ==##Examine) &&  (actor==player) && ((noun == I116_joe) && (true))) { ! Runs only when pattern matches
-self = noun;
-   if (debug_rules) DB_Rule(R_767, 767);
-      ! phrase 1
-      ! [1: say ~You explain your mission to the greeter. He is happy to help you and says 'You need a key to get to the bow. But no one has been there in a long time.'~]
-      say__p=1;ParaContent();  print (PrintText) SC_43;  new_line; .L_Say11; .L_SayX11;
-      RulebookFails(); rtrue;
-   } ! Runs only when pattern matches
-   else if (debug_rules > 1) DB_Rule(R_767, 767, true);
-   rfalse;
-];
-! No specific request
-! Instead of attacking Joe:
-[ R_768 ;
-   if ((action ==##Attack) &&  (actor==player) && ((noun == I116_joe) && (true))) { ! Runs only when pattern matches
-self = noun;
-   if (debug_rules) DB_Rule(R_768, 768);
-      ! phrase 1
-      ! [1: say ~Don't need to attack him.~]
-      say__p=1;ParaContent();  print (PrintText) SC_44;  new_line; .L_Say12; .L_SayX12;
-      RulebookFails(); rtrue;
-   } ! Runs only when pattern matches
-   else if (debug_rules > 1) DB_Rule(R_768, 768, true);
-   rfalse;
-];
-! No specific request
-! Instead of attacking Joe:
 [ R_769 ;
-   if ((action ==##Attack) &&  (actor==player) && ((noun == I116_joe) && (true))) { ! Runs only when pattern matches
+   if ((action ==##Examine) &&  (actor==player) && ((noun == I119_joe) && (true))) { ! Runs only when pattern matches
 self = noun;
    if (debug_rules) DB_Rule(R_769, 769);
       ! phrase 1
-      ! [1: say ~Don't want to attack a guard.~]
-      say__p=1;ParaContent();  print (PrintText) SC_45;  new_line; .L_Say13; .L_SayX13;
+      ! [1: say ~You explain your mission to the greeter. He is happy to help you and says 'You need a key to get to the bow. But no one has been there in a long time.'~]
+      say__p=1;ParaContent();  print (PrintText) SC_47;  new_line; .L_Say13; .L_SayX13;
       RulebookFails(); rtrue;
    } ! Runs only when pattern matches
    else if (debug_rules > 1) DB_Rule(R_769, 769, true);
    rfalse;
 ];
 ! No specific request
-! Instead of going nowhere:
-[ R_760 ;
-   if ((action ==##Go) &&  (actor==player) && ((MStack-->MstVON(20007,1)) == nothing)) { ! Runs only when pattern matches
+! Instead of attacking Joe:
+[ R_770 ;
+   if ((action ==##Attack) &&  (actor==player) && ((noun == I119_joe) && (true))) { ! Runs only when pattern matches
 self = noun;
-   if (debug_rules) DB_Rule(R_760, 760);
+   if (debug_rules) DB_Rule(R_770, 770);
       ! phrase 1
-      ! [1: say ~There is nothing in that direction.~]
-      say__p=1;ParaContent();  print (PrintText) SC_46;  new_line; .L_Say14; .L_SayX14;
+      ! [1: say ~Don't need to attack him.~]
+      say__p=1;ParaContent();  print (PrintText) SC_48;  new_line; .L_Say14; .L_SayX14;
       RulebookFails(); rtrue;
    } ! Runs only when pattern matches
-   else if (debug_rules > 1) DB_Rule(R_760, 760, true);
+   else if (debug_rules > 1) DB_Rule(R_770, 770, true);
+   rfalse;
+];
+! No specific request
+! Instead of attacking Joe:
+[ R_771 ;
+   if ((action ==##Attack) &&  (actor==player) && ((noun == I119_joe) && (true))) { ! Runs only when pattern matches
+self = noun;
+   if (debug_rules) DB_Rule(R_771, 771);
+      ! phrase 1
+      ! [1: say ~Don't want to attack a guard.~]
+      say__p=1;ParaContent();  print (PrintText) SC_49;  new_line; .L_Say15; .L_SayX15;
+      RulebookFails(); rtrue;
+   } ! Runs only when pattern matches
+   else if (debug_rules > 1) DB_Rule(R_771, 771, true);
+   rfalse;
+];
+! No specific request
+! Instead of going nowhere:
+[ R_762 ;
+   if ((action ==##Go) &&  (actor==player) && ((MStack-->MstVON(20007,1)) == nothing)) { ! Runs only when pattern matches
+self = noun;
+   if (debug_rules) DB_Rule(R_762, 762);
+      ! phrase 1
+      ! [1: say ~There is nothing in that direction.~]
+      say__p=1;ParaContent();  print (PrintText) SC_50;  new_line; .L_Say16; .L_SayX16;
+      RulebookFails(); rtrue;
+   } ! Runs only when pattern matches
+   else if (debug_rules > 1) DB_Rule(R_762, 762, true);
    rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
@@ -11858,7 +11950,7 @@ self = noun;
    if (debug_rules) DB_Rule(R_59, 59);
       ! phrase 1
       ! [1: say the printed plural name of the item]
-      say__p=1;ParaContent(); @push self;  print (PrintText) GProperty(9, self=t_0,plural); @pull self;  .L_Say15; .L_SayX15;
+      say__p=1;ParaContent(); @push self;  print (PrintText) GProperty(9, self=t_0,plural); @pull self;  .L_Say17; .L_SayX17;
       RulebookSucceeds(); rtrue;
    } ! Runs only when pattern matches
    else if (debug_rules > 1) DB_Rule(R_59, 59, true);
@@ -11881,7 +11973,7 @@ self = noun;
    if (debug_rules) DB_Rule(R_60, 60);
       ! phrase 1
       ! [1: say ~[listing group size in words] ~]
-      say__p=1;ParaContent();  print (number) say__n=(listing_size); ParaContent();  print (PrintText) SC_47;  .L_Say16; .L_SayX16;
+      say__p=1;ParaContent();  print (number) say__n=(listing_size); ParaContent();  print (PrintText) SC_51;  .L_Say18; .L_SayX18;
       ! phrase 2
       ! [2: carry out the printing the plural name activity with the item]
        CarryOutActivity(V1_printing_the_plural_name_, t_0); 
@@ -11995,7 +12087,7 @@ self = noun;
    if (debug_rules) DB_Rule(R_742, 742);
       ! phrase 1
       ! [1: say ~Hey stop that! All is disabled.~ instead]
-      say__p=1;ParaContent();  print (PrintText) SC_48;  new_line; rtrue; .L_Say17; .L_SayX17; rtrue;
+      say__p=1;ParaContent();  print (PrintText) SC_52;  new_line; rtrue; .L_Say19; .L_SayX19; rtrue;
       RulebookSucceeds(); rtrue;
    } ! Runs only while condition holds
    else if (debug_rules > 1) DB_Rule(R_742, 742, true);
@@ -12130,7 +12222,7 @@ self = noun;
        if (((t_0 < 1))) {  if (ProcessRulebook(IMMEDIATELY_QUIT_R)) rtrue;   }
       ! phrase 10
       ! [10: say ~Would you like to ~]
-      say__p=1;ParaContent();  print (PrintText) SC_49;  .L_Say18; .L_SayX18;
+      say__p=1;ParaContent();  print (PrintText) SC_53;  .L_Say20; .L_SayX20;
       ! phrase 11
       ! [11: repeat through the table of final question options begin]
        @push ct_0; @push ct_1;
@@ -12148,7 +12240,7 @@ self = noun;
                 if (( (ExistsTableLookUpEntry(ct_0,100,ct_1)) ))  {
                   ! phrase 15
                   ! [15: say final question wording entry]
-                  say__p=1;ParaContent();  print (PrintText) TableLookUpEntry(ct_0,100,ct_1);  .L_Say19; .L_SayX19;
+                  say__p=1;ParaContent();  print (PrintText) TableLookUpEntry(ct_0,100,ct_1);  .L_Say21; .L_SayX21;
                   ! phrase 16
                   ! [16: decrease named options count by 1]
                    t_0 = t_0 - 1; 
@@ -12157,23 +12249,23 @@ self = noun;
                    if (((t_0 == 0)))  {
                      ! phrase 18
                      ! [18: say ~?[line break]~]
-                     say__p=1;ParaContent();  print (PrintText) SC_50; ParaContent();  new_line;  .L_Say20; .L_SayX20;
+                     say__p=1;ParaContent();  print (PrintText) SC_54; ParaContent();  new_line;  .L_Say22; .L_SayX22;
                      ! phrase 19
                      ! [19: otherwise if the named options count is 1]
                       } else if (((t_0 == 1))) { 
                      ! phrase 20
                      ! [20: if the serial comma option is active , say ~,~]
-                      if ((((Adj_22_t1_v15(5))))) { say__p=1;ParaContent();  print (PrintText) SC_51;  .L_Say21; .L_SayX21;  }
+                      if ((((Adj_22_t1_v15(5))))) { say__p=1;ParaContent();  print (PrintText) SC_55;  .L_Say23; .L_SayX23;  }
                      ! phrase 21
                      ! [21: say ~ or ~]
-                     say__p=1;ParaContent();  print (PrintText) SC_52;  .L_Say22; .L_SayX22;
+                     say__p=1;ParaContent();  print (PrintText) SC_56;  .L_Say24; .L_SayX24;
                      ! phrase 22
                      ! [22: otherwise]
                      } else {
 
                      ! phrase 23
                      ! [23: say ~, ~]
-                     say__p=1;ParaContent();  print (PrintText) SC_53;  .L_Say23; .L_SayX23;
+                     say__p=1;ParaContent();  print (PrintText) SC_57;  .L_Say25; .L_SayX25;
                      ! phrase 24
                      ! [24: end if]
                      }
@@ -12202,7 +12294,7 @@ self = noun;
 [ R_68 ;
       ! phrase 1
       ! [1: say ~> [run paragraph on]~]
-      say__p=1;ParaContent();  print (PrintText) SC_54; ParaContent();  RunParagraphOn();  .L_Say24; .L_SayX24;
+      say__p=1;ParaContent();  print (PrintText) SC_58; ParaContent();  RunParagraphOn();  .L_Say26; .L_SayX26;
    rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
@@ -12455,40 +12547,40 @@ self = noun;
                 if (((t_0 ofclass K1_room)))  {
                   ! phrase 22
                   ! [22: if the domain is the location , say ~You ~]
-                   if (((t_0 == real_location))) { say__p=1;ParaContent();  print (PrintText) SC_55;  .L_Say25; .L_SayX25;  }
+                   if (((t_0 == real_location))) { say__p=1;ParaContent();  print (PrintText) SC_59;  .L_Say27; .L_SayX27;  }
                   ! phrase 23
                   ! [23: otherwise say ~In [the domain] you ~]
-                   else { say__p=1;ParaContent();  print (PrintText) SC_56; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_57;  .L_Say26; .L_SayX26;  }
+                   else { say__p=1;ParaContent();  print (PrintText) SC_60; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_61;  .L_Say28; .L_SayX28;  }
                   ! phrase 24
                   ! [24: otherwise if the domain is a supporter]
                    } else if (((t_0 ofclass K6_supporter))) { 
                   ! phrase 25
                   ! [25: say ~On [the domain] you ~]
-                  say__p=1;ParaContent();  print (PrintText) SC_58; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_57;  .L_Say27; .L_SayX27;
+                  say__p=1;ParaContent();  print (PrintText) SC_62; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_61;  .L_Say29; .L_SayX29;
                   ! phrase 26
                   ! [26: otherwise if the domain is an animal]
                    } else if (((t_0 ofclass K12_animal))) { 
                   ! phrase 27
                   ! [27: say ~On [the domain] you ~]
-                  say__p=1;ParaContent();  print (PrintText) SC_58; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_57;  .L_Say28; .L_SayX28;
+                  say__p=1;ParaContent();  print (PrintText) SC_62; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_61;  .L_Say30; .L_SayX30;
                   ! phrase 28
                   ! [28: otherwise]
                   } else {
 
                   ! phrase 29
                   ! [29: say ~In [the domain] you ~]
-                  say__p=1;ParaContent();  print (PrintText) SC_56; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_57;  .L_Say29; .L_SayX29;
+                  say__p=1;ParaContent();  print (PrintText) SC_60; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_61;  .L_Say31; .L_SayX31;
                   ! phrase 30
                   ! [30: end if]
                   }
 
                ! phrase 31
                ! [31: say ~can [if the locale paragraph count is greater than 0]also [end if]see ~]
-               say__p=1;ParaContent();  print (PrintText) SC_59; 
-	if (~~(((((Global_Vars-->8) > 0))))) jump L_Say30;
-		ParaContent();  print (PrintText) SC_60; 
-	.L_Say30; .L_SayX30;
-		ParaContent();  print (PrintText) SC_61;  .L_Say31; .L_SayX31;
+               say__p=1;ParaContent();  print (PrintText) SC_63; 
+	if (~~(((((Global_Vars-->8) > 0))))) jump L_Say32;
+		ParaContent();  print (PrintText) SC_64; 
+	.L_Say32; .L_SayX32;
+		ParaContent();  print (PrintText) SC_65;  .L_Say33; .L_SayX33;
                ! phrase 32
                ! [32: let the common holder be nothing]
                 t_2 = nothing; 
@@ -12531,13 +12623,13 @@ self = noun;
 		give subst__v workflag2; else give subst__v ~workflag2;
 		WriteListOfMarkedObjects(ENGLISH_BIT+RECURSE_BIT+PARTINV_BIT+
 			TERSE_BIT+CONCEAL_BIT);
-		@pull subst__v;  .L_Say32; .L_SayX32;  }
+		@pull subst__v;  .L_Say34; .L_SayX34;  }
                ! phrase 44
                ! [44: if the domain is the location , say ~ here~]
-                if (((t_0 == real_location))) { say__p=1;ParaContent();  print (PrintText) SC_62;  .L_Say33; .L_SayX33;  }
+                if (((t_0 == real_location))) { say__p=1;ParaContent();  print (PrintText) SC_66;  .L_Say35; .L_SayX35;  }
                ! phrase 45
                ! [45: say ~.[paragraph break]~]
-               say__p=1;ParaContent();  print (PrintText) SC_63; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say34; .L_SayX34;
+               say__p=1;ParaContent();  print (PrintText) SC_67; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say36; .L_SayX36;
                ! phrase 46
                ! [46: unfilter list recursion]
                 list_filter_routine = 0; 
@@ -12716,7 +12808,7 @@ self = noun;
        if (((~~(((Adj_56_t1_v9(t_0)))))))  {
          ! phrase 2
          ! [2: if a paragraph break is pending , say ~[conditional paragraph break]~]
-          if (( (say__p) )) { say__p=1;ParaContent();  DivideParagraphPoint();  .L_Say35; .L_SayX35;  }
+          if (( (say__p) )) { say__p=1;ParaContent();  DivideParagraphPoint();  .L_Say37; .L_SayX37;  }
          ! phrase 3
          ! [3: carry out the writing a paragraph about activity with the item]
           CarryOutActivity(V6_writing_a_paragraph_about, t_0); 
@@ -12731,7 +12823,7 @@ self = noun;
              (Adj_56_t2_v9(t_0)); 
             ! phrase 7
             ! [7: say ~[command clarification break]~]
-            say__p=1;ParaContent();  CommandClarificationBreak();  .L_Say36; .L_SayX36;
+            say__p=1;ParaContent();  CommandClarificationBreak();  .L_Say38; .L_SayX38;
             ! phrase 8
             ! [8: end if]
             }
@@ -12769,10 +12861,10 @@ self = noun;
              (Global_Vars-->8) = (Global_Vars-->8) + 1; 
             ! phrase 4
             ! [4: say ~[initial appearance of the item]~]
-            say__p=1;ParaContent(); @push self;  print (PrintText) GProperty(9, self=t_0,initial); @pull self;  .L_Say37; .L_SayX37;
+            say__p=1;ParaContent(); @push self;  print (PrintText) GProperty(9, self=t_0,initial); @pull self;  .L_Say39; .L_SayX39;
             ! phrase 5
             ! [5: say ~[paragraph break]~]
-            say__p=1;ParaContent();  DivideParagraphPoint(); new_line;  .L_Say38; .L_SayX38;
+            say__p=1;ParaContent();  DivideParagraphPoint(); new_line;  .L_Say40; .L_SayX40;
             ! phrase 6
             ! [6: if a locale-supportable thing is on the item begin]
              if ((Prop_10(,t_0)))  {
@@ -12798,13 +12890,13 @@ self = noun;
 
                ! phrase 13
                ! [13: say ~On [the item] ~]
-               say__p=1;ParaContent();  print (PrintText) SC_58; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_47;  .L_Say39; .L_SayX39;
+               say__p=1;ParaContent();  print (PrintText) SC_62; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_51;  .L_Say41; .L_SayX41;
                ! phrase 14
                ! [14: list the contents of the item , as a sentence , including contents , giving brief inventory information , tersely , not listing concealed items , prefacing with is/are , listing marked items only]
                 WriteListFrom(child(t_0), 3800); 
                ! phrase 15
                ! [15: say ~.[paragraph break]~]
-               say__p=1;ParaContent();  print (PrintText) SC_63; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say40; .L_SayX40;
+               say__p=1;ParaContent();  print (PrintText) SC_67; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say42; .L_SayX42;
                ! phrase 16
                ! [16: end if]
                }
@@ -12872,13 +12964,13 @@ self = noun;
              (Global_Vars-->8) = (Global_Vars-->8) + 1; 
             ! phrase 11
             ! [11: say ~On [the item] ~]
-            say__p=1;ParaContent();  print (PrintText) SC_58; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_47;  .L_Say41; .L_SayX41;
+            say__p=1;ParaContent();  print (PrintText) SC_62; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_51;  .L_Say43; .L_SayX43;
             ! phrase 12
             ! [12: list the contents of the item , as a sentence , including contents , giving brief inventory information , tersely , not listing concealed items , prefacing with is/are , listing marked items only]
              WriteListFrom(child(t_0), 3800); 
             ! phrase 13
             ! [13: say ~.[paragraph break]~]
-            say__p=1;ParaContent();  print (PrintText) SC_63; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say42; .L_SayX42;
+            say__p=1;ParaContent();  print (PrintText) SC_67; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say44; .L_SayX44;
             ! phrase 14
             ! [14: end if]
             }
@@ -12928,7 +13020,7 @@ self = noun;
        GL__M(##Inv,2,noun); 
       ! phrase 2
       ! [2: say ~:[line break]~]
-      say__p=1;ParaContent();  print (PrintText) SC_64; ParaContent();  new_line;  .L_Say43; .L_SayX43;
+      say__p=1;ParaContent();  print (PrintText) SC_68; ParaContent();  new_line;  .L_Say45; .L_SayX45;
       ! phrase 3
       ! [3: list the contents of the player , with newlines , indented , including contents , giving inventory information , with extra indentation]
        WriteListFrom(child(player), 8215); 
@@ -14524,7 +14616,7 @@ self = noun;
           if (((~~(((MStack-->MstVO(20007,3)) == nothing)))))  {
             ! phrase 49
             ! [49: say ~ ~]
-            say__p=1;ParaContent();  print (PrintText) SC_47;  .L_Say44; .L_SayX44;
+            say__p=1;ParaContent();  print (PrintText) SC_51;  .L_Say46; .L_SayX46;
             ! phrase 50
             ! [50: if the vehicle gone by is a supporter , issue actor-based library message going action number 20 for the vehicle gone by]
              if ((((MStack-->MstVO(20007,3)) ofclass K6_supporter))) {  AGL__M(##Go,20,(MStack-->MstVO(20007,3)));   }
@@ -14579,7 +14671,7 @@ self = noun;
              AGL__M(##Go,26,noun); 
             ! phrase 66
             ! [66: say ~.~]
-            say__p=1;ParaContent();  print (PrintText) SC_63;  new_line; .L_Say45; .L_SayX45;
+            say__p=1;ParaContent();  print (PrintText) SC_67;  new_line; .L_Say47; .L_SayX47;
             ! phrase 67
             ! [67: try looking]
              TryAction(0, player, ##Look, 0, 0);; 
@@ -14592,7 +14684,7 @@ self = noun;
 
          ! phrase 70
          ! [70: say ~.~]
-         say__p=1;ParaContent();  print (PrintText) SC_63;  new_line; .L_Say46; .L_SayX46;
+         say__p=1;ParaContent();  print (PrintText) SC_67;  new_line; .L_Say48; .L_SayX48;
          ! phrase 71
          ! [71: end if]
          }
@@ -15179,7 +15271,7 @@ self = noun;
    if (debug_rules) DB_Rule(R_172, 172);
       ! phrase 1
       ! [1: say bold type]
-      say__p=1;ParaContent();  style bold;  .L_Say47; .L_SayX47;
+      say__p=1;ParaContent();  style bold;  .L_Say49; .L_SayX49;
       ! phrase 2
       ! [2: if the visibility level count is 0 begin]
        if ((((MStack-->MstVO(20011,2)) == 0)))  {
@@ -15197,21 +15289,21 @@ self = noun;
           } else if ((((MStack-->MstVO(20011,3)) == real_location))) { 
          ! phrase 7
          ! [7: say ~[visibility ceiling]~]
-         say__p=1;ParaContent();  print (PrintShortName) (MStack-->MstVO(20011,3));  .L_Say48; .L_SayX48;
+         say__p=1;ParaContent();  print (PrintShortName) (MStack-->MstVO(20011,3));  .L_Say50; .L_SayX50;
          ! phrase 8
          ! [8: otherwise]
          } else {
 
          ! phrase 9
          ! [9: say ~[The visibility ceiling]~]
-         say__p=1;ParaContent();  print (The) (MStack-->MstVO(20011,3));  .L_Say49; .L_SayX49;
+         say__p=1;ParaContent();  print (The) (MStack-->MstVO(20011,3));  .L_Say51; .L_SayX51;
          ! phrase 10
          ! [10: end if]
          }
 
       ! phrase 11
       ! [11: say roman type]
-      say__p=1;ParaContent();  style roman;  .L_Say50; .L_SayX50;
+      say__p=1;ParaContent();  style roman;  .L_Say52; .L_SayX52;
       ! phrase 12
       ! [12: let intermediate level be the visibility-holder of the actor]
        t_0 =  VisibilityParent(actor) ; 
@@ -15230,10 +15322,10 @@ self = noun;
 
       ! phrase 17
       ! [17: say line break]
-      say__p=1;ParaContent();  new_line;  .L_Say51; .L_SayX51;
+      say__p=1;ParaContent();  new_line;  .L_Say53; .L_SayX53;
       ! phrase 18
       ! [18: say run paragraph on with special look spacing]
-      say__p=1;ParaContent();  SpecialLookSpacingBreak();  .L_Say52; .L_SayX52;
+      say__p=1;ParaContent();  SpecialLookSpacingBreak();  .L_Say54; .L_SayX54;
    } ! Runs only when actor is the player
    else if (debug_rules > 1) DB_Rule(R_172, 172, true);
    rfalse;
@@ -15439,7 +15531,7 @@ self = noun;
        if ((((WhetherProvides(noun, false, description)))) && (((~~((GProperty(OBJECT_TY, noun,description) == EMPTY_TEXT_VALUE))))))  {
          ! phrase 2
          ! [2: say ~[the description of the noun][line break]~]
-         say__p=1;ParaContent(); @push self;  print (PrintText) GProperty(OBJECT_TY, self=noun,description); @pull self; ParaContent();  new_line;  .L_Say53; .L_SayX53;
+         say__p=1;ParaContent(); @push self;  print (PrintText) GProperty(OBJECT_TY, self=noun,description); @pull self; ParaContent();  new_line;  .L_Say55; .L_SayX55;
          ! phrase 3
          ! [3: now examine text printed is true]
           (MStack-->MstVO(20012,0)) = 1; 
@@ -18107,10 +18199,10 @@ self = noun;
    if (debug_rules) DB_Rule(R_743, 743);
       ! phrase 1
       ! [1: if the noun is the location , say ~You're already in [the location].~ instead]
-       if (((noun == real_location))) { say__p=1;ParaContent();  print (PrintText) SC_65; ParaContent();  print (the) real_location; ParaContent();  print (PrintText) SC_63;  new_line; .L_Say54; .L_SayX54;  rtrue; }
+       if (((noun == real_location))) { say__p=1;ParaContent();  print (PrintText) SC_69; ParaContent();  print (the) real_location; ParaContent();  print (PrintText) SC_67;  new_line; .L_Say56; .L_SayX56;  rtrue; }
       ! phrase 2
       ! [2: if the noun is not adjacent and the noun is unvisited , say ~The noun you said doesn't make any sense~ instead]
-       if ((((~~(((Adj_11_t1_v9(noun))))))) && ((((Adj_41_t1_v9(noun)))))) { say__p=1;ParaContent();  print (PrintText) SC_66;  .L_Say55; .L_SayX55;  rtrue; }
+       if ((((~~(((Adj_11_t1_v9(noun))))))) && ((((Adj_41_t1_v9(noun)))))) { say__p=1;ParaContent();  print (PrintText) SC_70;  .L_Say57; .L_SayX57;  rtrue; }
    } ! Runs only when actor is the player
    else if (debug_rules > 1) DB_Rule(R_743, 743, true);
    rfalse;
@@ -18124,21 +18216,21 @@ self = noun;
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! Check Disarming it:
-[ R_748 ;
+[ R_747 ;
    if (actor == player) {
-   if (debug_rules) DB_Rule(R_748, 748);
+   if (debug_rules) DB_Rule(R_747, 747);
       ! phrase 1
       ! [1: if the noun is not the mine begin]
-       if (((~~((noun == I111_mine)))))  {
+       if (((~~((noun == I113_mine)))))  {
          ! phrase 2
          ! [2: say ~You can't disarm that~]
-         say__p=1;ParaContent();  print (PrintText) SC_67;  .L_Say56; .L_SayX56;
+         say__p=1;ParaContent();  print (PrintText) SC_71;  .L_Say58; .L_SayX58;
          ! phrase 3
          ! [3: end if]
          }
 
    } ! Runs only when actor is the player
-   else if (debug_rules > 1) DB_Rule(R_748, 748, true);
+   else if (debug_rules > 1) DB_Rule(R_747, 747, true);
    rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
@@ -18152,16 +18244,16 @@ self = noun;
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! Check an actor attacking something with something ( this is the can't attack with something that isn't a weapon rule ):
-[ R_757 ;
+[ R_759 ;
    if ((act_requester==nothing) && ((noun ofclass K2_thing)) && ((second ofclass K2_thing))) { ! Runs only when pattern matches
 self = noun;
-   if (debug_rules) DB_Rule(R_757, 757);
+   if (debug_rules) DB_Rule(R_759, 759);
       ! phrase 1
       ! [1: if the second noun is not a weapon begin]
        if (((~~((second ofclass K16_weapon)))))  {
          ! phrase 2
          ! [2: if the actor is the player , say ~[The second noun] does not qualify as a weapon.~]
-          if (((actor == player))) { say__p=1;ParaContent();  print (The) second; ParaContent();  print (PrintText) SC_68;  new_line; .L_Say57; .L_SayX57;  }
+          if (((actor == player))) { say__p=1;ParaContent();  print (The) second; ParaContent();  print (PrintText) SC_72;  new_line; .L_Say59; .L_SayX59;  }
          ! phrase 3
          ! [3: stop the action]
           rtrue; 
@@ -18170,21 +18262,21 @@ self = noun;
          }
 
    } ! Runs only when pattern matches
-   else if (debug_rules > 1) DB_Rule(R_757, 757, true);
+   else if (debug_rules > 1) DB_Rule(R_759, 759, true);
    rfalse;
 ];
 ! No specific request
 ! Check an actor attacking something with something ( this is the can't attack a non-person rule ):
-[ R_758 ;
+[ R_760 ;
    if ((act_requester==nothing) && ((noun ofclass K2_thing)) && ((second ofclass K2_thing))) { ! Runs only when pattern matches
 self = noun;
-   if (debug_rules) DB_Rule(R_758, 758);
+   if (debug_rules) DB_Rule(R_760, 760);
       ! phrase 1
       ! [1: if the noun is not a person begin]
        if (((~~((noun ofclass K8_person)))))  {
          ! phrase 2
          ! [2: if the actor is the player , say ~[The noun] is not a person, and therefore can't be attacked.~]
-          if (((actor == player))) { say__p=1;ParaContent();  print (The) noun; ParaContent();  print (PrintText) SC_69;  new_line; .L_Say58; .L_SayX58;  }
+          if (((actor == player))) { say__p=1;ParaContent();  print (The) noun; ParaContent();  print (PrintText) SC_73;  new_line; .L_Say60; .L_SayX60;  }
          ! phrase 3
          ! [3: stop the action]
           rtrue; 
@@ -18193,7 +18285,7 @@ self = noun;
          }
 
    } ! Runs only when pattern matches
-   else if (debug_rules > 1) DB_Rule(R_758, 758, true);
+   else if (debug_rules > 1) DB_Rule(R_760, 760, true);
    rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
@@ -18205,10 +18297,10 @@ self = noun;
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! Carry out an actor attacking something with something ( this is the standard attacking it with a weapon rule ):
-[ R_759 ;
+[ R_761 ;
    if ((act_requester==nothing) && ((noun ofclass K2_thing)) && ((second ofclass K2_thing))) { ! Runs only when pattern matches
 self = noun;
-   if (debug_rules) DB_Rule(R_759, 759);
+   if (debug_rules) DB_Rule(R_761, 761);
       ! phrase 1
       ! [1: decrease the current hit points of the noun by the damage inflicted]
        WriteGProperty(OBJECT_TY, noun,p15_current_hit_points,GProperty(OBJECT_TY, noun,p15_current_hit_points) - (MStack-->MstVO(20082,0))); 
@@ -18223,7 +18315,7 @@ self = noun;
          }
 
    } ! Runs only when pattern matches
-   else if (debug_rules > 1) DB_Rule(R_759, 759, true);
+   else if (debug_rules > 1) DB_Rule(R_761, 761, true);
    rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
@@ -18243,13 +18335,13 @@ self = noun;
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! Report someone attacking the player with something when the player is dead ( this is the player's-death priority rule ):
-[ R_763 ;
+[ R_765 ;
    if ( (actor~=player) && (act_requester==nothing) && ((actor ofclass K8_person)) && ((noun == player) && (true)) && ((second ofclass K2_thing)) && (self=actor,true) && ((((Adj_31_t1_v9(player)))))) { ! Runs only when pattern matches
 self = noun;
-   if (debug_rules) DB_Rule(R_763, 763);
+   if (debug_rules) DB_Rule(R_765, 765);
       ! phrase 1
       ! [1: say ~[The actor] attacks you with [the second noun], finishing you off!~]
-      say__p=1;ParaContent();  print (The) actor; ParaContent();  print (PrintText) SC_70; ParaContent();  print (the) second; ParaContent();  print (PrintText) SC_71;  new_line; .L_Say59; .L_SayX59;
+      say__p=1;ParaContent();  print (The) actor; ParaContent();  print (PrintText) SC_74; ParaContent();  print (the) second; ParaContent();  print (PrintText) SC_75;  new_line; .L_Say61; .L_SayX61;
       ! phrase 2
       ! [2: end the story]
        deadflag=3; story_complete=false; 
@@ -18257,59 +18349,59 @@ self = noun;
       ! [3: stop the action]
        rtrue; 
    } ! Runs only when pattern matches
-   else if (debug_rules > 1) DB_Rule(R_763, 763, true);
+   else if (debug_rules > 1) DB_Rule(R_765, 765, true);
    rfalse;
 ];
 ! No specific request
 ! Report someone attacking the player with something ( this is the standard report someone attacking the player with rule ):
-[ R_764 ;
+[ R_766 ;
    if ( (actor~=player) && (act_requester==nothing) && ((actor ofclass K8_person)) && ((noun == player) && (true)) && ((second ofclass K2_thing))) { ! Runs only when pattern matches
+self = noun;
+   if (debug_rules) DB_Rule(R_766, 766);
+      ! phrase 1
+      ! [1: say ~[The actor] attacks you with [the second noun], causing [damage inflicted] point[s] of damage!~ instead]
+      say__p=1;ParaContent();  print (The) actor; ParaContent();  print (PrintText) SC_74; ParaContent();  print (the) second; ParaContent();  print (PrintText) SC_76; ParaContent();  print (say__n=(MStack-->MstVO(20082,0))); ParaContent();  print (PrintText) SC_77; ParaContent();  STextSubstitution(); ParaContent();  print (PrintText) SC_78;  new_line; rtrue; .L_Say62; .L_SayX62; rtrue;
+   } ! Runs only when pattern matches
+   else if (debug_rules > 1) DB_Rule(R_766, 766, true);
+   rfalse;
+];
+! No specific request
+! Report attacking a dead person with something ( this is the death-report priority rule ):
+[ R_763 ;
+   if ( (actor==player) && ((noun ofclass K8_person) && ((Adj_31_t1_v9(noun)))) && ((second ofclass K2_thing))) { ! Runs only when pattern matches
+self = noun;
+   if (debug_rules) DB_Rule(R_763, 763);
+      ! phrase 1
+      ! [1: say ~You attack with [the second noun], killing [the noun]!~ instead]
+      say__p=1;ParaContent();  print (PrintText) SC_79; ParaContent();  print (the) second; ParaContent();  print (PrintText) SC_80; ParaContent();  print (the) noun; ParaContent();  print (PrintText) SC_81;  new_line; rtrue; .L_Say63; .L_SayX63; rtrue;
+   } ! Runs only when pattern matches
+   else if (debug_rules > 1) DB_Rule(R_763, 763, true);
+   rfalse;
+];
+! No specific request
+! Report attacking someone with something ( this is the normal attacking report rule ):
+[ R_764 ;
+   if ( (actor==player) && ((noun ofclass K8_person)) && ((second ofclass K2_thing))) { ! Runs only when pattern matches
 self = noun;
    if (debug_rules) DB_Rule(R_764, 764);
       ! phrase 1
-      ! [1: say ~[The actor] attacks you with [the second noun], causing [damage inflicted] point[s] of damage!~ instead]
-      say__p=1;ParaContent();  print (The) actor; ParaContent();  print (PrintText) SC_70; ParaContent();  print (the) second; ParaContent();  print (PrintText) SC_72; ParaContent();  print (say__n=(MStack-->MstVO(20082,0))); ParaContent();  print (PrintText) SC_73; ParaContent();  STextSubstitution(); ParaContent();  print (PrintText) SC_74;  new_line; rtrue; .L_Say60; .L_SayX60; rtrue;
+      ! [1: say ~You attack [the noun] with [the second noun], causing [damage inflicted] point[s] of damage!~ instead]
+      say__p=1;ParaContent();  print (PrintText) SC_82; ParaContent();  print (the) noun; ParaContent();  print (PrintText) SC_83; ParaContent();  print (the) second; ParaContent();  print (PrintText) SC_76; ParaContent();  print (say__n=(MStack-->MstVO(20082,0))); ParaContent();  print (PrintText) SC_77; ParaContent();  STextSubstitution(); ParaContent();  print (PrintText) SC_78;  new_line; rtrue; .L_Say64; .L_SayX64; rtrue;
    } ! Runs only when pattern matches
    else if (debug_rules > 1) DB_Rule(R_764, 764, true);
    rfalse;
 ];
 ! No specific request
-! Report attacking a dead person with something ( this is the death-report priority rule ):
-[ R_761 ;
-   if ( (actor==player) && ((noun ofclass K8_person) && ((Adj_31_t1_v9(noun)))) && ((second ofclass K2_thing))) { ! Runs only when pattern matches
-self = noun;
-   if (debug_rules) DB_Rule(R_761, 761);
-      ! phrase 1
-      ! [1: say ~You attack with [the second noun], killing [the noun]!~ instead]
-      say__p=1;ParaContent();  print (PrintText) SC_75; ParaContent();  print (the) second; ParaContent();  print (PrintText) SC_76; ParaContent();  print (the) noun; ParaContent();  print (PrintText) SC_77;  new_line; rtrue; .L_Say61; .L_SayX61; rtrue;
-   } ! Runs only when pattern matches
-   else if (debug_rules > 1) DB_Rule(R_761, 761, true);
-   rfalse;
-];
-! No specific request
-! Report attacking someone with something ( this is the normal attacking report rule ):
-[ R_762 ;
-   if ( (actor==player) && ((noun ofclass K8_person)) && ((second ofclass K2_thing))) { ! Runs only when pattern matches
-self = noun;
-   if (debug_rules) DB_Rule(R_762, 762);
-      ! phrase 1
-      ! [1: say ~You attack [the noun] with [the second noun], causing [damage inflicted] point[s] of damage!~ instead]
-      say__p=1;ParaContent();  print (PrintText) SC_78; ParaContent();  print (the) noun; ParaContent();  print (PrintText) SC_79; ParaContent();  print (the) second; ParaContent();  print (PrintText) SC_72; ParaContent();  print (say__n=(MStack-->MstVO(20082,0))); ParaContent();  print (PrintText) SC_73; ParaContent();  STextSubstitution(); ParaContent();  print (PrintText) SC_74;  new_line; rtrue; .L_Say62; .L_SayX62; rtrue;
-   } ! Runs only when pattern matches
-   else if (debug_rules > 1) DB_Rule(R_762, 762, true);
-   rfalse;
-];
-! No specific request
 ! Report someone attacking something with something ( this is the standard report attacking it with rule ):
-[ R_765 ;
+[ R_767 ;
    if ( (actor~=player) && (act_requester==nothing) && ((actor ofclass K8_person)) && ((noun ofclass K2_thing)) && ((second ofclass K2_thing))) { ! Runs only when pattern matches
 self = noun;
-   if (debug_rules) DB_Rule(R_765, 765);
+   if (debug_rules) DB_Rule(R_767, 767);
       ! phrase 1
       ! [1: say ~[The actor] attacks [the noun] with [the second noun], causing [damage inflicted] point[s] of damage!~ instead]
-      say__p=1;ParaContent();  print (The) actor; ParaContent();  print (PrintText) SC_80; ParaContent();  print (the) noun; ParaContent();  print (PrintText) SC_79; ParaContent();  print (the) second; ParaContent();  print (PrintText) SC_72; ParaContent();  print (say__n=(MStack-->MstVO(20082,0))); ParaContent();  print (PrintText) SC_73; ParaContent();  STextSubstitution(); ParaContent();  print (PrintText) SC_74;  new_line; rtrue; .L_Say63; .L_SayX63; rtrue;
+      say__p=1;ParaContent();  print (The) actor; ParaContent();  print (PrintText) SC_84; ParaContent();  print (the) noun; ParaContent();  print (PrintText) SC_83; ParaContent();  print (the) second; ParaContent();  print (PrintText) SC_76; ParaContent();  print (say__n=(MStack-->MstVO(20082,0))); ParaContent();  print (PrintText) SC_77; ParaContent();  STextSubstitution(); ParaContent();  print (PrintText) SC_78;  new_line; rtrue; .L_Say65; .L_SayX65; rtrue;
    } ! Runs only when pattern matches
-   else if (debug_rules > 1) DB_Rule(R_765, 765, true);
+   else if (debug_rules > 1) DB_Rule(R_767, 767, true);
    rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
@@ -18551,7 +18643,7 @@ self = noun;
 ];
 ! No specific request
 ! Definition:
-[ R_750 
+[ R_752 
     t_0 ! Call parameter 'it' = object
     ;
    rfalse;
@@ -20235,13 +20327,13 @@ Array B1_startup --> INITIALISE_MEMORY_R VIRTUAL_MACHINE_STARTUP_R SEED_RANDOM_N
 Array B2_turn_sequence --> PARSE_COMMAND_R GENERATE_ACTION_R R_14 R_13 TIMED_EVENTS_R ADVANCE_TIME_R UPDATE_CHRONOLOGICAL_RECORDS_R R_15 ADJUST_LIGHT_R NOTE_OBJECT_ACQUISITIONS_R R_16 NULL; ! 11 rule(s)
 Array B3_shutdown --> R_17 RESURRECT_PLAYER_IF_ASKED_R R_18 ASK_FINAL_QUESTION_R NULL; ! 4 rule(s)
 Array B4_scene_changing --> DetectSceneChange NULL; ! 1 rule(s)
-Array B5_when_play_begins --> R_740 R_770 R_773 R_775 NULL; ! 4 rule(s)
+Array B5_when_play_begins --> R_740 R_772 R_775 R_777 NULL; ! 4 rule(s)
 Constant B6_when_play_ends = EMPTY_RULEBOOK;
 Array B7_when_scene_begins --> R_57 NULL; ! 1 rule(s)
 Constant B8_when_scene_ends = EMPTY_RULEBOOK;
-Array B9_every_turn --> R_771 R_774 R_776 R_745 R_746 R_747 R_751 R_752 R_766 R_772 NULL; ! 10 rule(s)
+Array B9_every_turn --> R_773 R_776 R_778 R_745 R_746 R_750 R_753 R_754 R_768 R_774 NULL; ! 10 rule(s)
 Array B10_action_processing --> R_20 R_19 R_21 BASIC_VISIBILITY_R BASIC_ACCESSIBILITY_R CARRYING_REQUIREMENTS_R R_22 REQUESTED_ACTIONS_REQUIRE_R CARRY_OUT_REQUESTED_ACTIONS_R DESCEND_TO_SPECIFIC_ACTION_R R_23 NULL; ! 11 rule(s)
-Array B11_setting_action_variables --> R_756 R_137 R_171 R_159 NULL; ! 4 rule(s)
+Array B11_setting_action_variables --> R_758 R_137 R_171 R_159 NULL; ! 4 rule(s)
 Array B12_specific_action_processi --> WORK_OUT_DETAILS_OF_SPECIFIC_R R_24 R_25 R_26 R_27 R_28 R_29 R_30 NULL; ! 8 rule(s)
 Array B13_player_s_action_awarenes --> R_31 R_32 R_33 R_34 NULL; ! 4 rule(s)
 Array B14_accessibility --> ACCESS_THROUGH_BARRIERS_R NULL; ! 1 rule(s)
@@ -20251,7 +20343,7 @@ Array B17_visibility --> R_35 NULL; ! 1 rule(s)
 Constant B18_persuasion = EMPTY_RULEBOOK;
 Constant B19_unsuccessful_attempt_by = EMPTY_RULEBOOK;
 Constant B20_before = EMPTY_RULEBOOK;
-Array B21_instead --> R_749 R_777 R_744 R_753 R_754 R_755 R_767 R_768 R_769 R_760 NULL; ! 10 rule(s)
+Array B21_instead --> R_748 R_749 R_779 R_744 R_751 R_755 R_756 R_757 R_769 R_770 R_771 R_762 NULL; ! 12 rule(s)
 Constant B22_check = EMPTY_RULEBOOK;
 Constant B23_carry_out = EMPTY_RULEBOOK;
 Constant B24_after = EMPTY_RULEBOOK;
@@ -20598,12 +20690,12 @@ Constant B364_report_requesting_the_p = EMPTY_RULEBOOK;
 Array B365_check_going_by_name --> R_743 NULL; ! 1 rule(s)
 Constant B366_carry_out_going_by_name = EMPTY_RULEBOOK;
 Constant B367_report_going_by_name = EMPTY_RULEBOOK;
-Array B368_check_disarming_it --> R_748 NULL; ! 1 rule(s)
+Array B368_check_disarming_it --> R_747 NULL; ! 1 rule(s)
 Constant B369_carry_out_disarming_it = EMPTY_RULEBOOK;
 Constant B370_report_disarming_it = EMPTY_RULEBOOK;
-Array B371_check_attacking_it_with --> R_757 R_758 NULL; ! 2 rule(s)
-Array B372_carry_out_attacking_it_ --> R_759 NULL; ! 1 rule(s)
-Array B373_report_attacking_it_wit --> R_763 R_764 R_761 R_762 R_765 NULL; ! 5 rule(s)
+Array B371_check_attacking_it_with --> R_759 R_760 NULL; ! 2 rule(s)
+Array B372_carry_out_attacking_it_ --> R_761 NULL; ! 1 rule(s)
+Array B373_report_attacking_it_wit --> R_765 R_766 R_763 R_764 R_767 NULL; ! 5 rule(s)
 
 Constant BR_0 = R_8;
 Constant BR_1 = R_9;
@@ -20870,39 +20962,39 @@ Constant BR_261 = R_296;
 Constant BR_262 = R_297;
 Constant BR_263 = R_298;
 Constant BR_264 = R_299;
-Constant BR_265 = R_757;
-Constant BR_266 = R_758;
-Constant BR_267 = R_759;
-Constant BR_268 = R_761;
-Constant BR_269 = R_762;
-Constant BR_270 = R_763;
-Constant BR_271 = R_764;
-Constant BR_272 = R_765;
-Constant BR_273 = R_771;
-Constant BR_274 = R_774;
-Constant BR_275 = R_776;
-Constant BR_737 = R_8;
-Constant BR_743 = R_9;
-Constant BR_744 = R_10;
-Constant BR_745 = R_11;
-Constant BR_746 = R_12;
-Constant BR_754 = R_16;
-Constant BR_755 = R_17;
-Constant BR_757 = R_18;
-Constant BR_760 = R_21;
-Constant BR_761 = R_19;
-Constant BR_762 = R_20;
-Constant BR_766 = R_22;
-Constant BR_770 = R_23;
-Constant BR_776 = R_35;
-Constant BR_778 = R_59;
-Constant BR_779 = R_60;
-Constant BR_781 = R_61;
-Constant BR_786 = R_69;
-Constant BR_787 = R_68;
-Constant BR_789 = R_70;
-Constant BR_790 = R_91;
-Constant BR_791 = R_148;
+Constant BR_265 = R_759;
+Constant BR_266 = R_760;
+Constant BR_267 = R_761;
+Constant BR_268 = R_763;
+Constant BR_269 = R_764;
+Constant BR_270 = R_765;
+Constant BR_271 = R_766;
+Constant BR_272 = R_767;
+Constant BR_273 = R_773;
+Constant BR_274 = R_776;
+Constant BR_275 = R_778;
+Constant BR_739 = R_8;
+Constant BR_745 = R_9;
+Constant BR_746 = R_10;
+Constant BR_747 = R_11;
+Constant BR_748 = R_12;
+Constant BR_756 = R_16;
+Constant BR_757 = R_17;
+Constant BR_759 = R_18;
+Constant BR_762 = R_21;
+Constant BR_763 = R_19;
+Constant BR_764 = R_20;
+Constant BR_768 = R_22;
+Constant BR_772 = R_23;
+Constant BR_778 = R_35;
+Constant BR_780 = R_59;
+Constant BR_781 = R_60;
+Constant BR_783 = R_61;
+Constant BR_788 = R_69;
+Constant BR_789 = R_68;
+Constant BR_791 = R_70;
+Constant BR_792 = R_91;
+Constant BR_793 = R_148;
 
 
 
@@ -23138,7 +23230,7 @@ Constant SLOW_ROUTE_FINDING;
 #endif;
 
 Constant NUM_DOORS = 2;
-Constant NUM_ROOMS = 10;
+Constant NUM_ROOMS = 11;
 
 Array DoorRoutingViable -> NUM_DOORS+1;
 
@@ -23325,7 +23417,7 @@ Array FWMatrix --> NUM_ROOMS*NUM_ROOMS;
 ];
 #ENDIF;
 
-Constant MAX_ROUTE_LENGTH = 50 + 32;
+Constant MAX_ROUTE_LENGTH = 53 + 32;
 
 [ RelationRouteTo relation from to count  handler;
 	if (count) {
@@ -24750,17 +24842,17 @@ Array RulebookNames -->
 		if (R == R_297) { print "block singing rule"; return; } ! 262, case 1
 		if (R == R_298) { print "block climbing rule"; return; } ! 263, case 1
 		if (R == R_299) { print "block sleeping rule"; return; } ! 264, case 1
-		if (R == R_757) { print "can't attack with something that isn't a weapon rule"; return; } ! 265, case 1
-		if (R == R_758) { print "can't attack a non-person rule"; return; } ! 266, case 1
-		if (R == R_759) { print "standard attacking it with a weapon rule"; return; } ! 267, case 1
-		if (R == R_761) { print "death-report priority rule"; return; } ! 268, case 1
-		if (R == R_762) { print "normal attacking report rule"; return; } ! 269, case 1
-		if (R == R_763) { print "player's-death priority rule"; return; } ! 270, case 1
-		if (R == R_764) { print "standard report someone attacking the player with rule"; return; } ! 271, case 1
-		if (R == R_765) { print "standard report attacking it with rule"; return; } ! 272, case 1
-		if (R == R_771) { print "Mirelurk-attack rule"; return; } ! 273, case 1
-		if (R == R_774) { print "Mutated Crab-attack rule"; return; } ! 274, case 1
-		if (R == R_776) { print "Super Mutant-attack rule"; return; } ! 275, case 1
+		if (R == R_759) { print "can't attack with something that isn't a weapon rule"; return; } ! 265, case 1
+		if (R == R_760) { print "can't attack a non-person rule"; return; } ! 266, case 1
+		if (R == R_761) { print "standard attacking it with a weapon rule"; return; } ! 267, case 1
+		if (R == R_763) { print "death-report priority rule"; return; } ! 268, case 1
+		if (R == R_764) { print "normal attacking report rule"; return; } ! 269, case 1
+		if (R == R_765) { print "player's-death priority rule"; return; } ! 270, case 1
+		if (R == R_766) { print "standard report someone attacking the player with rule"; return; } ! 271, case 1
+		if (R == R_767) { print "standard report attacking it with rule"; return; } ! 272, case 1
+		if (R == R_773) { print "Mirelurk-attack rule"; return; } ! 273, case 1
+		if (R == R_776) { print "Mutated Crab-attack rule"; return; } ! 274, case 1
+		if (R == R_778) { print "Super Mutant-attack rule"; return; } ! 275, case 1
 		if (R == LITTLE_USED_DO_NOTHING_R) { print "little-used do nothing rule"; return; } ! 303, case 1
 		if (R == VIRTUAL_MACHINE_STARTUP_R) { print "virtual machine startup rule"; return; } ! 304, case 1
 		if (R == INITIALISE_MEMORY_R) { print "initialise memory rule"; return; } ! 305, case 1
@@ -24829,100 +24921,102 @@ Array RulebookNames -->
 		if (R == R_744) { print "Instead of eating the Stimpak"; return; } ! 715, case 2
 		if (R == R_745) { print "An every turn rule"; return; } ! 716, case 2
 		if (R == R_746) { print "An every turn rule"; return; } ! 717, case 2
-		if (R == R_747) { print "An every turn rule"; return; } ! 718, case 2
-		if (R == R_748) { print "Check Disarming it"; return; } ! 719, case 2
+		if (R == R_747) { print "Check Disarming it"; return; } ! 718, case 2
+		if (R == R_748) { print "Instead of going south when player is in stairwell"; return; } ! 719, case 2
 		if (R == R_749) { print "Instead of going south when player is in stairwell"; return; } ! 720, case 2
-		if (R == R_751) { print "An every turn rule"; return; } ! 721, case 2
-		if (R == R_752) { print "An every turn rule"; return; } ! 722, case 2
-		if (R == R_753) { print "Instead of attacking the mirelurk"; return; } ! 723, case 2
-		if (R == R_754) { print "Instead of attacking the Super Mutant"; return; } ! 724, case 2
-		if (R == R_755) { print "Instead of attacking the Mutated Crab"; return; } ! 725, case 2
-		if (R == R_756) { print "Setting action variables for attacking something with something"; return; } ! 726, case 2
-		if (R == R_760) { print "Instead of going nowhere"; return; } ! 727, case 2
-		if (R == R_766) { print "An every turn rule"; return; } ! 728, case 2
-		if (R == R_767) { print "Instead of examining Joe"; return; } ! 729, case 2
-		if (R == R_768) { print "Instead of attacking Joe"; return; } ! 730, case 2
-		if (R == R_769) { print "Instead of attacking Joe"; return; } ! 731, case 2
-		if (R == R_770) { print "When play begins"; return; } ! 732, case 2
-		if (R == R_772) { print "An every turn rule"; return; } ! 733, case 2
-		if (R == R_773) { print "When play begins"; return; } ! 734, case 2
-		if (R == R_775) { print "When play begins"; return; } ! 735, case 2
-		if (R == R_777) { print "Instead of player unlocking corridor with key"; return; } ! 736, case 2
-		if (R == R_8) { print "start in the correct scenes rule"; return; } ! 737, case 1
-		if (R == POSITION_PLAYER_IN_MODEL_R) { print "position player in model world rule"; return; } ! 738, case 1
-		if (R == UPDATE_CHRONOLOGICAL_RECORDS_R) { print "update chronological records rule"; return; } ! 739, case 1
-		if (R == SEED_RANDOM_NUMBER_GENERATOR_R) { print "seed random number generator rule"; return; } ! 740, case 1
-		if (R == VIRTUAL_MACHINE_STARTUP_R) { print "virtual machine startup rule"; return; } ! 741, case 1
-		if (R == INITIALISE_MEMORY_R) { print "initialise memory rule"; return; } ! 742, case 1
-		if (R == R_9) { print "when play begins stage rule"; return; } ! 743, case 1
-		if (R == R_10) { print "fix baseline scoring rule"; return; } ! 744, case 1
-		if (R == R_11) { print "display banner rule"; return; } ! 745, case 1
-		if (R == R_12) { print "initial room description rule"; return; } ! 746, case 1
-		if (R == GENERATE_ACTION_R) { print "generate action rule"; return; } ! 747, case 1
-		if (R == PARSE_COMMAND_R) { print "parse command rule"; return; } ! 748, case 1
-		if (R == TIMED_EVENTS_R) { print "timed events rule"; return; } ! 749, case 1
-		if (R == ADVANCE_TIME_R) { print "advance time rule"; return; } ! 750, case 1
-		if (R == UPDATE_CHRONOLOGICAL_RECORDS_R) { print "update chronological records rule"; return; } ! 751, case 1
-		if (R == ADJUST_LIGHT_R) { print "adjust light rule"; return; } ! 752, case 1
-		if (R == NOTE_OBJECT_ACQUISITIONS_R) { print "note object acquisitions rule"; return; } ! 753, case 1
-		if (R == R_16) { print "notify score changes rule"; return; } ! 754, case 1
-		if (R == R_17) { print "when play ends stage rule"; return; } ! 755, case 1
-		if (R == RESURRECT_PLAYER_IF_ASKED_R) { print "resurrect player if asked rule"; return; } ! 756, case 1
-		if (R == R_18) { print "print player's obituary rule"; return; } ! 757, case 1
-		if (R == ASK_FINAL_QUESTION_R) { print "ask the final question rule"; return; } ! 758, case 1
-		if (R == DetectSceneChange) { print "scene change machinery rule"; return; } ! 759, case 1
-		if (R == R_21) { print "before stage rule"; return; } ! 760, case 1
-		if (R == R_19) { print "set pronouns from items from multiple object lists rule"; return; } ! 761, case 1
-		if (R == R_20) { print "announce items from multiple object lists rule"; return; } ! 762, case 1
-		if (R == BASIC_VISIBILITY_R) { print "basic visibility rule"; return; } ! 763, case 1
-		if (R == BASIC_ACCESSIBILITY_R) { print "basic accessibility rule"; return; } ! 764, case 1
-		if (R == CARRYING_REQUIREMENTS_R) { print "carrying requirements rule"; return; } ! 765, case 1
-		if (R == R_22) { print "instead stage rule"; return; } ! 766, case 1
-		if (R == REQUESTED_ACTIONS_REQUIRE_R) { print "requested actions require persuasion rule"; return; } ! 767, case 1
-		if (R == CARRY_OUT_REQUESTED_ACTIONS_R) { print "carry out requested actions rule"; return; } ! 768, case 1
-		if (R == DESCEND_TO_SPECIFIC_ACTION_R) { print "descend to specific action-processing rule"; return; } ! 769, case 1
-		if (R == R_23) { print "end action-processing in success rule"; return; } ! 770, case 1
-		if (R == WORK_OUT_DETAILS_OF_SPECIFIC_R) { print "work out details of specific action rule"; return; } ! 771, case 1
-		if (R == ACCESS_THROUGH_BARRIERS_R) { print "access through barriers rule"; return; } ! 772, case 1
-		if (R == CANT_REACH_INSIDE_ROOMS_R) { print "can't reach inside rooms rule"; return; } ! 773, case 1
-		if (R == CANT_REACH_INSIDE_CLOSED_R) { print "can't reach inside closed containers rule"; return; } ! 774, case 1
-		if (R == CANT_REACH_OUTSIDE_CLOSED_R) { print "can't reach outside closed containers rule"; return; } ! 775, case 1
-		if (R == R_35) { print "can't act in the dark rule"; return; } ! 776, case 1
-		if (R == STANDARD_NAME_PRINTING_R) { print "standard name printing rule"; return; } ! 777, case 1
-		if (R == R_59) { print "standard printing the plural name rule"; return; } ! 778, case 1
-		if (R == R_60) { print "standard printing a number of something rule"; return; } ! 779, case 1
-		if (R == STANDARD_CONTENTS_LISTING_R) { print "standard contents listing rule"; return; } ! 780, case 1
-		if (R == R_61) { print "look around once light available rule"; return; } ! 781, case 1
-		if (R == ENABLE_GLULX_ACCEL_R) { print "enable Glulx acceleration rule"; return; } ! 782, case 1
-		if (R == PRINT_OBITUARY_HEADLINE_R) { print "print obituary headline rule"; return; } ! 783, case 1
-		if (R == PRINT_FINAL_SCORE_R) { print "print final score rule"; return; } ! 784, case 1
-		if (R == DISPLAY_FINAL_STATUS_LINE_R) { print "display final status line rule"; return; } ! 785, case 1
-		if (R == R_69) { print "print the final question rule"; return; } ! 786, case 1
-		if (R == R_68) { print "print the final prompt rule"; return; } ! 787, case 1
-		if (R == READ_FINAL_ANSWER_R) { print "read the final answer rule"; return; } ! 788, case 1
-		if (R == R_70) { print "standard respond to final question rule"; return; } ! 789, case 1
-		if (R == R_91) { print "can't take component parts rule"; return; } ! 790, case 1
-		if (R == R_148) { print "find what to enter rule"; return; } ! 791, case 1
-		if (R == QUIT_THE_GAME_R) { print "quit the game rule"; return; } ! 792, case 1
-		if (R == SAVE_THE_GAME_R) { print "save the game rule"; return; } ! 793, case 1
-		if (R == RESTORE_THE_GAME_R) { print "restore the game rule"; return; } ! 794, case 1
-		if (R == RESTART_THE_GAME_R) { print "restart the game rule"; return; } ! 795, case 1
-		if (R == VERIFY_THE_STORY_FILE_R) { print "verify the story file rule"; return; } ! 796, case 1
-		if (R == SWITCH_TRANSCRIPT_ON_R) { print "switch the story transcript on rule"; return; } ! 797, case 1
-		if (R == SWITCH_TRANSCRIPT_OFF_R) { print "switch the story transcript off rule"; return; } ! 798, case 1
-		if (R == ANNOUNCE_STORY_FILE_VERSION_R) { print "announce the story file version rule"; return; } ! 799, case 1
-		if (R == ANNOUNCE_SCORE_R) { print "announce the score rule"; return; } ! 800, case 1
-		if (R == PREFER_ABBREVIATED_R) { print "prefer abbreviated room descriptions rule"; return; } ! 801, case 1
-		if (R == REP_PREFER_ABBREVIATED_R) { print "standard report preferring abbreviated room descriptions rule"; return; } ! 802, case 1
-		if (R == PREFER_UNABBREVIATED_R) { print "prefer unabbreviated room descriptions rule"; return; } ! 803, case 1
-		if (R == REP_PREFER_UNABBREVIATED_R) { print "standard report preferring unabbreviated room descriptions rule"; return; } ! 804, case 1
-		if (R == PREFER_SOMETIMES_ABBREVIATED_R) { print "prefer sometimes abbreviated room descriptions rule"; return; } ! 805, case 1
-		if (R == REP_PREFER_SOMETIMES_ABBR_R) { print "standard report preferring sometimes abbreviated room descriptions rule"; return; } ! 806, case 1
-		if (R == SWITCH_SCORE_NOTIFY_ON_R) { print "switch score notification on rule"; return; } ! 807, case 1
-		if (R == REP_SWITCH_NOTIFY_ON_R) { print "standard report switching score notification on rule"; return; } ! 808, case 1
-		if (R == SWITCH_SCORE_NOTIFY_OFF_R) { print "switch score notification off rule"; return; } ! 809, case 1
-		if (R == REP_SWITCH_NOTIFY_OFF_R) { print "standard report switching score notification off rule"; return; } ! 810, case 1
-		if (R == ANNOUNCE_PRONOUN_MEANINGS_R) { print "announce the pronoun meanings rule"; return; } ! 811, case 1
+		if (R == R_750) { print "An every turn rule"; return; } ! 721, case 2
+		if (R == R_751) { print "Instead of examining Pinkerton"; return; } ! 722, case 2
+		if (R == R_753) { print "An every turn rule"; return; } ! 723, case 2
+		if (R == R_754) { print "An every turn rule"; return; } ! 724, case 2
+		if (R == R_755) { print "Instead of attacking the mirelurk"; return; } ! 725, case 2
+		if (R == R_756) { print "Instead of attacking the Super Mutant"; return; } ! 726, case 2
+		if (R == R_757) { print "Instead of attacking the Mutated Crab"; return; } ! 727, case 2
+		if (R == R_758) { print "Setting action variables for attacking something with something"; return; } ! 728, case 2
+		if (R == R_762) { print "Instead of going nowhere"; return; } ! 729, case 2
+		if (R == R_768) { print "An every turn rule"; return; } ! 730, case 2
+		if (R == R_769) { print "Instead of examining Joe"; return; } ! 731, case 2
+		if (R == R_770) { print "Instead of attacking Joe"; return; } ! 732, case 2
+		if (R == R_771) { print "Instead of attacking Joe"; return; } ! 733, case 2
+		if (R == R_772) { print "When play begins"; return; } ! 734, case 2
+		if (R == R_774) { print "An every turn rule"; return; } ! 735, case 2
+		if (R == R_775) { print "When play begins"; return; } ! 736, case 2
+		if (R == R_777) { print "When play begins"; return; } ! 737, case 2
+		if (R == R_779) { print "Instead of player unlocking corridor with key"; return; } ! 738, case 2
+		if (R == R_8) { print "start in the correct scenes rule"; return; } ! 739, case 1
+		if (R == POSITION_PLAYER_IN_MODEL_R) { print "position player in model world rule"; return; } ! 740, case 1
+		if (R == UPDATE_CHRONOLOGICAL_RECORDS_R) { print "update chronological records rule"; return; } ! 741, case 1
+		if (R == SEED_RANDOM_NUMBER_GENERATOR_R) { print "seed random number generator rule"; return; } ! 742, case 1
+		if (R == VIRTUAL_MACHINE_STARTUP_R) { print "virtual machine startup rule"; return; } ! 743, case 1
+		if (R == INITIALISE_MEMORY_R) { print "initialise memory rule"; return; } ! 744, case 1
+		if (R == R_9) { print "when play begins stage rule"; return; } ! 745, case 1
+		if (R == R_10) { print "fix baseline scoring rule"; return; } ! 746, case 1
+		if (R == R_11) { print "display banner rule"; return; } ! 747, case 1
+		if (R == R_12) { print "initial room description rule"; return; } ! 748, case 1
+		if (R == GENERATE_ACTION_R) { print "generate action rule"; return; } ! 749, case 1
+		if (R == PARSE_COMMAND_R) { print "parse command rule"; return; } ! 750, case 1
+		if (R == TIMED_EVENTS_R) { print "timed events rule"; return; } ! 751, case 1
+		if (R == ADVANCE_TIME_R) { print "advance time rule"; return; } ! 752, case 1
+		if (R == UPDATE_CHRONOLOGICAL_RECORDS_R) { print "update chronological records rule"; return; } ! 753, case 1
+		if (R == ADJUST_LIGHT_R) { print "adjust light rule"; return; } ! 754, case 1
+		if (R == NOTE_OBJECT_ACQUISITIONS_R) { print "note object acquisitions rule"; return; } ! 755, case 1
+		if (R == R_16) { print "notify score changes rule"; return; } ! 756, case 1
+		if (R == R_17) { print "when play ends stage rule"; return; } ! 757, case 1
+		if (R == RESURRECT_PLAYER_IF_ASKED_R) { print "resurrect player if asked rule"; return; } ! 758, case 1
+		if (R == R_18) { print "print player's obituary rule"; return; } ! 759, case 1
+		if (R == ASK_FINAL_QUESTION_R) { print "ask the final question rule"; return; } ! 760, case 1
+		if (R == DetectSceneChange) { print "scene change machinery rule"; return; } ! 761, case 1
+		if (R == R_21) { print "before stage rule"; return; } ! 762, case 1
+		if (R == R_19) { print "set pronouns from items from multiple object lists rule"; return; } ! 763, case 1
+		if (R == R_20) { print "announce items from multiple object lists rule"; return; } ! 764, case 1
+		if (R == BASIC_VISIBILITY_R) { print "basic visibility rule"; return; } ! 765, case 1
+		if (R == BASIC_ACCESSIBILITY_R) { print "basic accessibility rule"; return; } ! 766, case 1
+		if (R == CARRYING_REQUIREMENTS_R) { print "carrying requirements rule"; return; } ! 767, case 1
+		if (R == R_22) { print "instead stage rule"; return; } ! 768, case 1
+		if (R == REQUESTED_ACTIONS_REQUIRE_R) { print "requested actions require persuasion rule"; return; } ! 769, case 1
+		if (R == CARRY_OUT_REQUESTED_ACTIONS_R) { print "carry out requested actions rule"; return; } ! 770, case 1
+		if (R == DESCEND_TO_SPECIFIC_ACTION_R) { print "descend to specific action-processing rule"; return; } ! 771, case 1
+		if (R == R_23) { print "end action-processing in success rule"; return; } ! 772, case 1
+		if (R == WORK_OUT_DETAILS_OF_SPECIFIC_R) { print "work out details of specific action rule"; return; } ! 773, case 1
+		if (R == ACCESS_THROUGH_BARRIERS_R) { print "access through barriers rule"; return; } ! 774, case 1
+		if (R == CANT_REACH_INSIDE_ROOMS_R) { print "can't reach inside rooms rule"; return; } ! 775, case 1
+		if (R == CANT_REACH_INSIDE_CLOSED_R) { print "can't reach inside closed containers rule"; return; } ! 776, case 1
+		if (R == CANT_REACH_OUTSIDE_CLOSED_R) { print "can't reach outside closed containers rule"; return; } ! 777, case 1
+		if (R == R_35) { print "can't act in the dark rule"; return; } ! 778, case 1
+		if (R == STANDARD_NAME_PRINTING_R) { print "standard name printing rule"; return; } ! 779, case 1
+		if (R == R_59) { print "standard printing the plural name rule"; return; } ! 780, case 1
+		if (R == R_60) { print "standard printing a number of something rule"; return; } ! 781, case 1
+		if (R == STANDARD_CONTENTS_LISTING_R) { print "standard contents listing rule"; return; } ! 782, case 1
+		if (R == R_61) { print "look around once light available rule"; return; } ! 783, case 1
+		if (R == ENABLE_GLULX_ACCEL_R) { print "enable Glulx acceleration rule"; return; } ! 784, case 1
+		if (R == PRINT_OBITUARY_HEADLINE_R) { print "print obituary headline rule"; return; } ! 785, case 1
+		if (R == PRINT_FINAL_SCORE_R) { print "print final score rule"; return; } ! 786, case 1
+		if (R == DISPLAY_FINAL_STATUS_LINE_R) { print "display final status line rule"; return; } ! 787, case 1
+		if (R == R_69) { print "print the final question rule"; return; } ! 788, case 1
+		if (R == R_68) { print "print the final prompt rule"; return; } ! 789, case 1
+		if (R == READ_FINAL_ANSWER_R) { print "read the final answer rule"; return; } ! 790, case 1
+		if (R == R_70) { print "standard respond to final question rule"; return; } ! 791, case 1
+		if (R == R_91) { print "can't take component parts rule"; return; } ! 792, case 1
+		if (R == R_148) { print "find what to enter rule"; return; } ! 793, case 1
+		if (R == QUIT_THE_GAME_R) { print "quit the game rule"; return; } ! 794, case 1
+		if (R == SAVE_THE_GAME_R) { print "save the game rule"; return; } ! 795, case 1
+		if (R == RESTORE_THE_GAME_R) { print "restore the game rule"; return; } ! 796, case 1
+		if (R == RESTART_THE_GAME_R) { print "restart the game rule"; return; } ! 797, case 1
+		if (R == VERIFY_THE_STORY_FILE_R) { print "verify the story file rule"; return; } ! 798, case 1
+		if (R == SWITCH_TRANSCRIPT_ON_R) { print "switch the story transcript on rule"; return; } ! 799, case 1
+		if (R == SWITCH_TRANSCRIPT_OFF_R) { print "switch the story transcript off rule"; return; } ! 800, case 1
+		if (R == ANNOUNCE_STORY_FILE_VERSION_R) { print "announce the story file version rule"; return; } ! 801, case 1
+		if (R == ANNOUNCE_SCORE_R) { print "announce the score rule"; return; } ! 802, case 1
+		if (R == PREFER_ABBREVIATED_R) { print "prefer abbreviated room descriptions rule"; return; } ! 803, case 1
+		if (R == REP_PREFER_ABBREVIATED_R) { print "standard report preferring abbreviated room descriptions rule"; return; } ! 804, case 1
+		if (R == PREFER_UNABBREVIATED_R) { print "prefer unabbreviated room descriptions rule"; return; } ! 805, case 1
+		if (R == REP_PREFER_UNABBREVIATED_R) { print "standard report preferring unabbreviated room descriptions rule"; return; } ! 806, case 1
+		if (R == PREFER_SOMETIMES_ABBREVIATED_R) { print "prefer sometimes abbreviated room descriptions rule"; return; } ! 807, case 1
+		if (R == REP_PREFER_SOMETIMES_ABBR_R) { print "standard report preferring sometimes abbreviated room descriptions rule"; return; } ! 808, case 1
+		if (R == SWITCH_SCORE_NOTIFY_ON_R) { print "switch score notification on rule"; return; } ! 809, case 1
+		if (R == REP_SWITCH_NOTIFY_ON_R) { print "standard report switching score notification on rule"; return; } ! 810, case 1
+		if (R == SWITCH_SCORE_NOTIFY_OFF_R) { print "switch score notification off rule"; return; } ! 811, case 1
+		if (R == REP_SWITCH_NOTIFY_OFF_R) { print "standard report switching score notification off rule"; return; } ! 812, case 1
+		if (R == ANNOUNCE_PRONOUN_MEANINGS_R) { print "announce the pronoun meanings rule"; return; } ! 813, case 1
 
 		print "(nameless rule at address ", R, ")";
 	}
@@ -27182,66 +27276,72 @@ Verb meta 'tree'
    rfalse;
 ];
 [ text_routine_0;
-say__p=1;ParaContent();  print (PrintText) SC_81; ParaContent(); @push self;  print (say__n=GProperty(OBJECT_TY, self=self,p13_salve_count)); @pull self;  .L_Say64; .L_SayX64;
+say__p=1;ParaContent();  print (PrintText) SC_85; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
+	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  print (PrintText) SC_67;  .L_Say66; .L_SayX66;
     rtrue;
 ];
 
 [ text_routine_1;
-say__p=1;ParaContent();  print (PrintText) SC_82; ParaContent();  style bold; ParaContent();  print (PrintText) SC_83; ParaContent();  style roman; ParaContent();  print (PrintText) SC_84;  .L_Say65; .L_SayX65;
-    rtrue;
-];
-
-[ text_routine_2;
-say__p=1;ParaContent();  print (PrintText) SC_85; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
-	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  print (PrintText) SC_63;  .L_Say66; .L_SayX66;
-    rtrue;
-];
-
-[ text_routine_3;
 say__p=1;ParaContent();  print (PrintText) SC_86; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
 	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  print (PrintText) SC_87;  .L_Say67; .L_SayX67;
     rtrue;
 ];
 
-[ text_routine_4;
+[ text_routine_2;
 say__p=1;ParaContent();  print (PrintText) SC_88; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
-	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif;  .L_Say68; .L_SayX68;
+	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  print (PrintText) SC_89;  .L_Say68; .L_SayX68;
+    rtrue;
+];
+
+[ text_routine_3;
+say__p=1;ParaContent();  print (PrintText) SC_90; ParaContent(); @push self;  print (say__n=GProperty(OBJECT_TY, self=self,p13_salve_count)); @pull self;  .L_Say69; .L_SayX69;
+    rtrue;
+];
+
+[ text_routine_4;
+say__p=1;ParaContent();  print (PrintText) SC_91; ParaContent();  style bold; ParaContent();  print (PrintText) SC_92; ParaContent();  style roman; ParaContent();  print (PrintText) SC_93;  .L_Say70; .L_SayX70;
     rtrue;
 ];
 
 [ text_routine_5;
-say__p=1;ParaContent();  print (PrintText) SC_89; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
-	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  print (PrintText) SC_90;  .L_Say69; .L_SayX69;
+say__p=1;ParaContent();  print (PrintText) SC_94; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
+	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif;  .L_Say71; .L_SayX71;
     rtrue;
 ];
 
 [ text_routine_6;
-say__p=1;ParaContent();  print (PrintText) SC_91; ParaContent(); @push self;  print (say__n=GProperty(9, self=player,p15_current_hit_points)); @pull self;  .L_Say70; .L_SayX70;
+say__p=1;ParaContent();  print (PrintText) SC_95; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
+	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  print (PrintText) SC_96;  .L_Say72; .L_SayX72;
     rtrue;
 ];
 
 [ text_routine_7;
-say__p=1;ParaContent();  print (PrintText) SC_92; ParaContent(); @push self;  print (say__n=GProperty(9, self=I118_mirelurk,p15_current_hit_points)); @pull self;  .L_Say71; .L_SayX71;
+say__p=1;ParaContent();  print (PrintText) SC_97; ParaContent(); @push self;  print (say__n=GProperty(9, self=player,p15_current_hit_points)); @pull self;  .L_Say73; .L_SayX73;
     rtrue;
 ];
 
 [ text_routine_8;
-say__p=1;ParaContent();  print (PrintText) SC_91; ParaContent(); @push self;  print (say__n=GProperty(9, self=player,p15_current_hit_points)); @pull self;  .L_Say72; .L_SayX72;
+say__p=1;ParaContent();  print (PrintText) SC_98; ParaContent(); @push self;  print (say__n=GProperty(9, self=I121_mirelurk,p15_current_hit_points)); @pull self;  .L_Say74; .L_SayX74;
     rtrue;
 ];
 
 [ text_routine_9;
-say__p=1;ParaContent();  print (PrintText) SC_93; ParaContent(); @push self;  print (say__n=GProperty(9, self=I118_mirelurk,p15_current_hit_points)); @pull self;  .L_Say73; .L_SayX73;
+say__p=1;ParaContent();  print (PrintText) SC_97; ParaContent(); @push self;  print (say__n=GProperty(9, self=player,p15_current_hit_points)); @pull self;  .L_Say75; .L_SayX75;
     rtrue;
 ];
 
 [ text_routine_10;
-say__p=1;ParaContent();  print (PrintText) SC_91; ParaContent(); @push self;  print (say__n=GProperty(9, self=player,p15_current_hit_points)); @pull self;  .L_Say74; .L_SayX74;
+say__p=1;ParaContent();  print (PrintText) SC_99; ParaContent(); @push self;  print (say__n=GProperty(9, self=I121_mirelurk,p15_current_hit_points)); @pull self;  .L_Say76; .L_SayX76;
     rtrue;
 ];
 
 [ text_routine_11;
-say__p=1;ParaContent();  print (PrintText) SC_94; ParaContent(); @push self;  print (say__n=GProperty(9, self=I118_mirelurk,p15_current_hit_points)); @pull self;  .L_Say75; .L_SayX75;
+say__p=1;ParaContent();  print (PrintText) SC_97; ParaContent(); @push self;  print (say__n=GProperty(9, self=player,p15_current_hit_points)); @pull self;  .L_Say77; .L_SayX77;
+    rtrue;
+];
+
+[ text_routine_12;
+say__p=1;ParaContent();  print (PrintText) SC_100; ParaContent(); @push self;  print (say__n=GProperty(9, self=I121_mirelurk,p15_current_hit_points)); @pull self;  .L_Say78; .L_SayX78;
     rtrue;
 ];
 
@@ -27671,6 +27771,9 @@ Verb 'talk'
     * 'to' noun=Noun_Filter_7  -> Examine
 ;
 Verb 'disarm'
+    * noun  -> A81_disarming_it
+;
+Verb 'disarming'
     * noun  -> A81_disarming_it
 ;
 Verb 'shoot'
@@ -28567,57 +28670,7 @@ Verb 'slap'
     DetectPluralWord(original_wn, n);
     return n;
 ];
-[ Parse_Name_GV108
-    original_wn  ! first word of text parsed
-    group_wn  ! first word matched against A/B/C/... disjunction
-    try_from_wn  ! position to try matching from
-    n  ! number of words matched
-    f  ! flag: sufficiently good match found to justify success
-    w  ! for use by individual grammar lines
-    rv  ! for use by individual grammar lines
-    g  ! temporary: success flag for parsing visibles
-    ss  ! temporary: saves 'self' in distinguishing visibles
-    spn  ! temporary: saves 'parsed_number' in parsing visibles
-    pass  ! pass counter (1 to 3)
-    pass1_n  ! value of n recorded during pass 1
-    pass2_n  ! value of n recorded during pass 2
-    ;
-    if (parser_trace >= 3) print "Parse_name called^";
-    if (parser_action == ##TheSame) return 0;
-    original_wn = wn;
-    for (pass = 1: pass <= 3: pass++) {
-        wn = original_wn;
-        try_from_wn = wn; f = false; n = 0;
-        while (true) {
-            ! On pass 1 only, advance wn past name property words
-            ! (but do not do this for ##TheSame, when wn is undefined)
-            if ((parser_action ~= ##TheSame) && (pass == 1)) {
-                while (WordInProperty(NextWordStopped(), self, name)) f = true;
-                wn--; try_from_wn = wn;
-            }
-            if (pass == 1 or 2) {
-            }
-            if ((parser_action ~= ##TheSame) && (pass == 1)) {
-                while (WordInProperty(NextWordStopped(), self, name)) f = true;
-                wn--; try_from_wn = wn;
-            }
-            break;
-        } ! End of endless loop
-        while (WordInProperty(NextWordStopped(), self, name)) n++;
-        if ((f) || (n>0)) n = n + try_from_wn - original_wn;
-        if (pass == 1) pass1_n = n;
-        if (pass == 2) pass2_n = n;
-    } ! End of pass loop
-    if (parser_trace >= 3)
-        print "Pass 1: ", pass1_n, " Pass 2: ", pass2_n, " Pass 3: ", n, "^";
-    if (pass1_n > n) n = pass1_n;
-    if (pass2_n > n) n = pass2_n;
-    wn = original_wn + n;
-    if (n == 0) return -1;
-    DetectPluralWord(original_wn, n);
-    return n;
-];
-[ Parse_Name_GV109
+[ Parse_Name_GV105
     original_wn  ! first word of text parsed
     group_wn  ! first word matched against A/B/C/... disjunction
     try_from_wn  ! position to try matching from
@@ -28817,7 +28870,107 @@ Verb 'slap'
     DetectPluralWord(original_wn, n);
     return n;
 ];
-[ Consult_Grammar_113
+[ Parse_Name_GV113
+    original_wn  ! first word of text parsed
+    group_wn  ! first word matched against A/B/C/... disjunction
+    try_from_wn  ! position to try matching from
+    n  ! number of words matched
+    f  ! flag: sufficiently good match found to justify success
+    w  ! for use by individual grammar lines
+    rv  ! for use by individual grammar lines
+    g  ! temporary: success flag for parsing visibles
+    ss  ! temporary: saves 'self' in distinguishing visibles
+    spn  ! temporary: saves 'parsed_number' in parsing visibles
+    pass  ! pass counter (1 to 3)
+    pass1_n  ! value of n recorded during pass 1
+    pass2_n  ! value of n recorded during pass 2
+    ;
+    if (parser_trace >= 3) print "Parse_name called^";
+    if (parser_action == ##TheSame) return 0;
+    original_wn = wn;
+    for (pass = 1: pass <= 3: pass++) {
+        wn = original_wn;
+        try_from_wn = wn; f = false; n = 0;
+        while (true) {
+            ! On pass 1 only, advance wn past name property words
+            ! (but do not do this for ##TheSame, when wn is undefined)
+            if ((parser_action ~= ##TheSame) && (pass == 1)) {
+                while (WordInProperty(NextWordStopped(), self, name)) f = true;
+                wn--; try_from_wn = wn;
+            }
+            if (pass == 1 or 2) {
+            }
+            if ((parser_action ~= ##TheSame) && (pass == 1)) {
+                while (WordInProperty(NextWordStopped(), self, name)) f = true;
+                wn--; try_from_wn = wn;
+            }
+            break;
+        } ! End of endless loop
+        while (WordInProperty(NextWordStopped(), self, name)) n++;
+        if ((f) || (n>0)) n = n + try_from_wn - original_wn;
+        if (pass == 1) pass1_n = n;
+        if (pass == 2) pass2_n = n;
+    } ! End of pass loop
+    if (parser_trace >= 3)
+        print "Pass 1: ", pass1_n, " Pass 2: ", pass2_n, " Pass 3: ", n, "^";
+    if (pass1_n > n) n = pass1_n;
+    if (pass2_n > n) n = pass2_n;
+    wn = original_wn + n;
+    if (n == 0) return -1;
+    DetectPluralWord(original_wn, n);
+    return n;
+];
+[ Parse_Name_GV114
+    original_wn  ! first word of text parsed
+    group_wn  ! first word matched against A/B/C/... disjunction
+    try_from_wn  ! position to try matching from
+    n  ! number of words matched
+    f  ! flag: sufficiently good match found to justify success
+    w  ! for use by individual grammar lines
+    rv  ! for use by individual grammar lines
+    g  ! temporary: success flag for parsing visibles
+    ss  ! temporary: saves 'self' in distinguishing visibles
+    spn  ! temporary: saves 'parsed_number' in parsing visibles
+    pass  ! pass counter (1 to 3)
+    pass1_n  ! value of n recorded during pass 1
+    pass2_n  ! value of n recorded during pass 2
+    ;
+    if (parser_trace >= 3) print "Parse_name called^";
+    if (parser_action == ##TheSame) return 0;
+    original_wn = wn;
+    for (pass = 1: pass <= 3: pass++) {
+        wn = original_wn;
+        try_from_wn = wn; f = false; n = 0;
+        while (true) {
+            ! On pass 1 only, advance wn past name property words
+            ! (but do not do this for ##TheSame, when wn is undefined)
+            if ((parser_action ~= ##TheSame) && (pass == 1)) {
+                while (WordInProperty(NextWordStopped(), self, name)) f = true;
+                wn--; try_from_wn = wn;
+            }
+            if (pass == 1 or 2) {
+            }
+            if ((parser_action ~= ##TheSame) && (pass == 1)) {
+                while (WordInProperty(NextWordStopped(), self, name)) f = true;
+                wn--; try_from_wn = wn;
+            }
+            break;
+        } ! End of endless loop
+        while (WordInProperty(NextWordStopped(), self, name)) n++;
+        if ((f) || (n>0)) n = n + try_from_wn - original_wn;
+        if (pass == 1) pass1_n = n;
+        if (pass == 2) pass2_n = n;
+    } ! End of pass loop
+    if (parser_trace >= 3)
+        print "Pass 1: ", pass1_n, " Pass 2: ", pass2_n, " Pass 3: ", n, "^";
+    if (pass1_n > n) n = pass1_n;
+    if (pass2_n > n) n = pass2_n;
+    wn = original_wn + n;
+    if (n == 0) return -1;
+    DetectPluralWord(original_wn, n);
+    return n;
+];
+[ Consult_Grammar_115
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -28832,7 +28985,7 @@ Verb 'slap'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_114
+[ Consult_Grammar_116
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -28847,7 +29000,7 @@ Verb 'slap'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_115
+[ Consult_Grammar_117
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -28862,7 +29015,7 @@ Verb 'slap'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_116
+[ Consult_Grammar_118
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -28877,7 +29030,7 @@ Verb 'slap'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_117
+[ Consult_Grammar_119
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -29056,7 +29209,7 @@ Array Rel_Record_65 -->
     selection = -1;
     while (true) {
         counter = 0;
-        objectloop (x in I118_mirelurk) if (CarrierOf(x)==parent(x)){
+        objectloop (x in I121_mirelurk) if (CarrierOf(x)==parent(x)){
             if ((x ofclass K16_weapon)){
                 counter++;
                 if (counter == selection) return x;
@@ -29075,7 +29228,7 @@ Array Rel_Record_65 -->
     selection = -1;
     while (true) {
         counter = 0;
-        objectloop (x in I122_mutated_crab) if (CarrierOf(x)==parent(x)){
+        objectloop (x in I125_mutated_crab) if (CarrierOf(x)==parent(x)){
             if ((x ofclass K16_weapon)){
                 counter++;
                 if (counter == selection) return x;
@@ -29094,7 +29247,7 @@ Array Rel_Record_65 -->
     selection = -1;
     while (true) {
         counter = 0;
-        objectloop (x in I124_super_mutant) if (CarrierOf(x)==parent(x)){
+        objectloop (x in I127_super_mutant) if (CarrierOf(x)==parent(x)){
             if ((x ofclass K16_weapon)){
                 counter++;
                 if (counter == selection) return x;
@@ -29543,35 +29696,36 @@ ArgumentTypeFailed(filename, line);
 Array ConstantListPointers --> 
  0 0;
 
-Constant SC_47 = " ";
+Constant SC_51 = " ";
 Constant SC_87 = " Talking to her won't do any good.";
-Constant SC_80 = " attacks ";
-Constant SC_70 = " attacks you with ";
-Constant SC_68 = " does not qualify as a weapon.";
-Constant SC_62 = " here";
-Constant SC_69 = " is not a person, and therefore can't be attacked.";
-Constant SC_74 = " of damage!";
-Constant SC_52 = " or ";
-Constant SC_73 = " point";
-Constant SC_84 = " this to heal myself if I get hurt.";
-Constant SC_79 = " with ";
-Constant SC_57 = " you ";
-Constant SC_77 = "!";
-Constant SC_38 = "(Health: ";
-Constant SC_39 = ")";
-Constant SC_53 = ", ";
-Constant SC_72 = ", causing ";
-Constant SC_71 = ", finishing you off!";
-Constant SC_76 = ", killing ";
-Constant SC_51 = ",";
-Constant SC_90 = ". But at least Pinkerton is here.";
-Constant SC_63 = ".";
-Constant SC_34 = ": ";
-Constant SC_64 = ":";
-Constant SC_54 = "> ";
-Constant SC_24 = ">";
-Constant SC_50 = "?";
-Constant SC_82 = "A blue-brown paste with a strong smell. I can probably ";
+Constant SC_89 = " There's a lot of weird things here.";
+Constant SC_84 = " attacks ";
+Constant SC_74 = " attacks you with ";
+Constant SC_72 = " does not qualify as a weapon.";
+Constant SC_66 = " here";
+Constant SC_73 = " is not a person, and therefore can't be attacked.";
+Constant SC_78 = " of damage!";
+Constant SC_56 = " or ";
+Constant SC_77 = " point";
+Constant SC_93 = " this to heal my wounds.";
+Constant SC_83 = " with ";
+Constant SC_61 = " you ";
+Constant SC_81 = "!";
+Constant SC_25 = "~Hey!~ says Pinkerton as you barge in. ~Why are you here? Don't you know a thing or two about privacy? Well, I guess if you got through those traps and those mirelurks you can't be all bad. And it doesn't seem like you want to kill me. SO, what do YOU want?~";
+Constant SC_41 = "(Health: ";
+Constant SC_42 = ")";
+Constant SC_57 = ", ";
+Constant SC_76 = ", causing ";
+Constant SC_75 = ", finishing you off!";
+Constant SC_80 = ", killing ";
+Constant SC_55 = ",";
+Constant SC_96 = ". But at least Pinkerton is here.";
+Constant SC_67 = ".";
+Constant SC_36 = ": ";
+Constant SC_68 = ":";
+Constant SC_58 = "> ";
+Constant SC_26 = ">";
+Constant SC_54 = "?";
 Constant SC_5 = "A busling lively city, full with a market place to the east, bar and hotel.. But remember your task, finding Pinkerton won't be so easy.";
 Constant SC_6 = "A greeter sits by the entrance of rivet city.";
 Constant SC_85 = "A market place with an ammunitions shop, an attire shop and a resturant. There seems to be a hotel to the north";
@@ -29580,62 +29734,67 @@ Constant SC_12 = "A really rusty stand. I'm surprised it's still standing! But t
 Constant SC_10 = "A small little diner with food. Unfortunately I'm not hungry.";
 Constant SC_9 = "A store called Patomic Attire, selling some standard goods.";
 Constant SC_8 = "Ammo and guns everywhere, too bad I'm broke.";
-Constant SC_21 = "An old fashioned shotgun. Better than nothing.";
-Constant SC_44 = "Don't need to attack him.";
-Constant SC_45 = "Don't want to attack a guard.";
-Constant SC_32 = "Game Over";
+Constant SC_16 = "An average night stand. Nothing in it.";
+Constant SC_22 = "An old fashioned shotgun. Better than nothing.";
+Constant SC_48 = "Don't need to attack him.";
+Constant SC_49 = "Don't want to attack a guard.";
+Constant SC_34 = "Game Over";
 Constant SC_2 = "Harrison Yeh";
 Constant SC_15 = "He says ~How may I help you sir?~ but doesn't seem to know anything.";
-Constant SC_48 = "Hey stop that! All is disabled.";
-Constant SC_88 = "I think this is the way to the lab";
+Constant SC_52 = "Hey stop that! All is disabled.";
+Constant SC_91 = "I can ";
+Constant SC_94 = "I think this is the way to the lab";
 Constant SC_4 = "I'm so cool. My sheriff's hat could attract any lady of the wasteland.";
-Constant SC_56 = "In ";
+Constant SC_60 = "In ";
 Constant SC_13 = "Keys to the bow.";
-Constant SC_36 = "Keys won't do it, the ancient keys would work better.";
-Constant SC_92 = "Mirelurk: ";
-Constant SC_93 = "Mutated Crab: ";
-Constant SC_22 = "Mutated hostile creatures are wandering around. Hopefully if I kill enough of them the key will drop. I better take all the loot after killing one.";
-Constant SC_58 = "On ";
-Constant SC_89 = "Pinkerton's lab is a huge pile of filth";
-Constant SC_28 = "QUIT";
-Constant SC_25 = "RESTART";
-Constant SC_26 = "RESTORE a saved game";
+Constant SC_39 = "Keys won't do it, the ancient keys would work better.";
+Constant SC_98 = "Mirelurk: ";
+Constant SC_99 = "Mutated Crab: ";
+Constant SC_23 = "Mutated hostile creatures are wandering around. Hopefully if I kill enough of them the key will drop. I better take all the loot after killing one.";
+Constant SC_62 = "On ";
+Constant SC_95 = "Pinkerton's lab is a huge pile of filth";
+Constant SC_30 = "QUIT";
+Constant SC_27 = "RESTART";
+Constant SC_28 = "RESTORE a saved game";
 Constant SC_7 = "Rivet City is well protected.";
 Constant SC_86 = "Seems senile";
-Constant SC_81 = "Stimpak x ";
-Constant SC_94 = "Super Mutant: ";
-Constant SC_33 = "The Mirelurk had the key to the corridor!";
-Constant SC_37 = "The Stimpak heals you!";
-Constant SC_17 = "The exit leads to the bow, I bet Pinkerton is down there.";
-Constant SC_66 = "The noun you said doesn't make any sense";
-Constant SC_19 = "There appears to be an old armory here to the left. Better go through the stuff just in case but I'm not expecting any laser tech. There's also a stairway to the Engine Room.";
-Constant SC_46 = "There is nothing in that direction.";
+Constant SC_90 = "Stimpak x ";
+Constant SC_100 = "Super Mutant: ";
+Constant SC_35 = "The Mirelurk had the key to the corridor!";
+Constant SC_18 = "The exit leads to the bow, I bet Pinkerton is down there.";
+Constant SC_70 = "The noun you said doesn't make any sense";
+Constant SC_20 = "There appears to be an old armory here to the left. Better go through the stuff just in case but I'm not expecting any laser tech. There's also a stairway to the Engine Room.";
+Constant SC_50 = "There is nothing in that direction.";
 Constant SC_14 = "There seems to be an old caretaker and a robbot butler named ~Mr Gusty~";
-Constant SC_35 = "There's a mine in the way, better disarm it.";
-Constant SC_16 = "These shades are pretty cool!";
-Constant SC_23 = "This old key seems to unlock the door to the next room!";
-Constant SC_29 = "UNDO the last command";
-Constant SC_18 = "Well no place to go but down!";
-Constant SC_20 = "Well, might as well take this old gun.";
-Constant SC_42 = "What do I attack the Mutated Crab with?";
-Constant SC_41 = "What do I attack the Super Mutant with?";
-Constant SC_40 = "What do I attack the mirelurk with?";
-Constant SC_49 = "Would you like to ";
-Constant SC_55 = "You ";
-Constant SC_31 = "You already took the gun.";
-Constant SC_78 = "You attack ";
-Constant SC_75 = "You attack with ";
-Constant SC_67 = "You can't disarm that";
-Constant SC_43 = "You explain your mission to the greeter. He is happy to help you and says ~You need a key to get to the bow. But no one has been there in a long time.~";
-Constant SC_65 = "You're already in ";
-Constant SC_30 = "You're in Rivet City. The goal is to find a scientist known as Pinkerton who has barricaded himself in the lower half of the ship. In order to get to him you're going to have to go through the bow. There seems to be a mysterious old door to the south, better check that out first.";
-Constant SC_91 = "You: ";
-Constant SC_60 = "also ";
-Constant SC_59 = "can ";
-Constant SC_61 = "see ";
-Constant SC_27 = "see some suggestions for AMUSING things to do";
+Constant SC_37 = "There's a mine in the way, better disarm it.";
+Constant SC_17 = "These shades are pretty cool! They appear to have belonged to a store called ~Lucky's~";
+Constant SC_24 = "This old key seems to unlock the door to the next room!";
+Constant SC_88 = "This room is the only unlocked room in the hotel";
+Constant SC_31 = "UNDO the last command";
+Constant SC_19 = "Well no place to go but down!";
+Constant SC_21 = "Well, might as well take this old gun.";
+Constant SC_46 = "What do I attack the Mutated Crab with?";
+Constant SC_45 = "What do I attack the Super Mutant with?";
+Constant SC_44 = "What do I attack the mirelurk with?";
+Constant SC_53 = "Would you like to ";
+Constant SC_59 = "You ";
+Constant SC_33 = "You already took the gun.";
+Constant SC_82 = "You attack ";
+Constant SC_79 = "You attack with ";
+Constant SC_71 = "You can't disarm that";
+Constant SC_43 = "You explain your mission to Pinkerton. He says ~Alright, I will help you with your quest. But, you must give me something in return. I want something that can act as eyewear. Im tired of getting splashed by chemicals all the time. You get that for me and in the meantime Ill write something up for you. Im sure rivet city has a store that can help you with that.";
+Constant SC_47 = "You explain your mission to the greeter. He is happy to help you and says ~You need a key to get to the bow. But no one has been there in a long time.~";
+Constant SC_69 = "You're already in ";
+Constant SC_32 = "You're in Rivet City. The goal is to find a scientist known as Pinkerton who has barricaded himself in the lower half of the ship. In order to get to him you're going to have to go through the bow. There seems to be a mysterious old door to the south, better check that out first.";
+Constant SC_97 = "You: ";
+Constant SC_40 = "Your health has increased!";
+Constant SC_64 = "also ";
+Constant SC_63 = "can ";
+Constant SC_65 = "see ";
+Constant SC_29 = "see some suggestions for AMUSING things to do";
 Constant SC_3 = "the";
-Constant SC_83 = "use";
+Constant SC_92 = "use";
+Constant SC_38 = "wait, there's a mine. But I lack the tools to disarm it.";
 
 #ifndef p0_specification; Constant p0_specification = 0; #endif;
 #ifndef p1_indefinite_appearance_tex; Constant p1_indefinite_appearance_tex = 0; #endif;

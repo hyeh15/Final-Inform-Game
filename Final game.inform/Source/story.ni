@@ -19,20 +19,15 @@ Check going by name:
 
 [healing items]
 
-The Stimpak is an object. The printed name is "Stimpak x [salve-count]". The Stimpak has a number called salve-count. The salve-count of the Stimpak is usually 0. It is in the loot. the description is "A blue-brown paste with a strong smell. I can probably [bold type]use[roman type] this to heal myself if I get hurt.".
-
+The Stimpak is an object. The printed name is "Stimpak x [salve-count]". The Stimpak has a number called salve-count. The salve-count of the Stimpak is usually 1. It is on the Night Stand. the description is "I can [bold type]use[roman type] this to heal my wounds."
 
 understand "use" as eating.
 
 Instead of eating the Stimpak:
 	increase the current hit points of the player by 50;
-	say "The Stimpak heals you![line break](Health: [the current hit points of the player])";
+	say "Your health has increased![line break](Health: [the current hit points of the player])";
+	Remove stimpak from play
 	
-
-
-
-
-
 [Rooms and Scenery]
 
 Understand "talk to [person]" as examining.
@@ -63,13 +58,13 @@ Caretaker is a person in the Hotel. "Seems senile… Talking to her won't do any
 
 Mr Gusty is a person in the hotel. "He says 'How may I help you sir?' but doesn't seem to know anything."
 
+Mysterious Hotel Room is a room. It is east of hotel. "This room is the only unlocked room in the hotel… There's a lot of weird things here." 
+
+Night Stand is scenery. It is in Mysterious Hotel Room. "An average night stand. Nothing in it."
+
 The Counter is scenery. It is in the hotel. 
 
-Shades is a thing. It is wearable. It is on the counter. The description is "These shades are pretty cool!"
-
-An every turn rule:
-	If player is wearing Shades:
-		Increase current hit points by 1. 
+Shades is a thing. It is wearable. It is on the NIght Stand. The description is "These shades are pretty cool! They appear to have belonged to a store called 'Lucky's'"
 
 Rusty Stand is scenery. It is in Old Closet. The description is "A really rusty stand. I'm surprised it's still standing! But there appears to be some keys on it."
 
@@ -103,9 +98,13 @@ An every turn rule:
 	if the Mirelurk is dead:
 		move Ancient Key to Engine.
 		
+Bomb kit is a thing. It is portable. It is on Night Stand. 
+
 A mine is a thing. It is in the stairwell. A thing can be armed or disarmed. Mine is not portable. Mine is armed.
 
 Understand "disarm [something]" as disarming it. Disarming it is an action applying to one thing. 
+
+Understand "disarming [something]" as disarming it. 
 
 Check Disarming it: 
 	If the noun is not the mine:
@@ -114,11 +113,31 @@ Check Disarming it:
 Instead of going south when player is in stairwell: 
 	If mine is armed:
 		Say "There's a mine in the way, better disarm it."
+		
+Instead of going south when player is in stairwell:
+	If player does not have bomb kit:
+		Say "wait, there's a mine. But I lack the tools to disarm it."
+		
 		  
 
 Stairwell is a room. It is south of corridor. "I think this is the way to the lab…"
 	
 Laboratory is a room. It is east of Stairwell. "Pinkerton's lab is a huge pile of filth…. But at least Pinkerton is here."
+
+[This section for each new character]
+
+Pinkerton is a person in Laboratory. "'Hey!' says Pinkerton as you barge in. 'Why are you here? Don't you know a thing or two about privacy? Well, I guess if you got through those traps and those mirelurks you can't be all bad. And it doesn't seem like you want to kill me. SO, what do YOU want?'"
+
+Understand "Pinker", "Scientist" as Pinkerton.
+
+
+An every turn rule:
+	If the player is in Laboratory:
+		Instead of examining Pinkerton: 
+			Say "You explain your mission to Pinkerton. He says 'Alright, I will help you with your quest. But, you must give me something in return. I want something that can act as eyewear. Im tired of getting splashed by chemicals all the time. You get that for me and in the meantime Ill write something up for you. Im sure rivet city has a store that can help you with that."
+			
+				
+
 
 [Health System]
 
